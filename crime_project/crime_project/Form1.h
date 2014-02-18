@@ -168,11 +168,7 @@ namespace crime_project {
 #pragma endregion
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	private: System::Void button_add_Click(System::Object^  sender, System::EventArgs^  e) {
-				 this->Hide();
-				 Form_Add^ f2 = gcnew Form_Add();
-				 f2->ShowDialog();
-			 }
+	private: System::Void button_add_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }
 

@@ -348,9 +348,6 @@ namespace crime_project {
 #pragma endregion
 	private: System::Void comboBox_category_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e) {
-			 this->Close();
-			 //Form1.Show();
-		 }
+private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }
