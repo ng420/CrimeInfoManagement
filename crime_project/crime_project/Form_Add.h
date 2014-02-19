@@ -220,6 +220,7 @@ namespace crime_project {
 			this->button_done->TabIndex = 14;
 			this->button_done->Text = L"Done";
 			this->button_done->UseVisualStyleBackColor = true;
+			this->button_done->Click += gcnew System::EventHandler(this, &Form_Add::button_done_Click);
 			// 
 			// button_cancel
 			// 
@@ -349,5 +350,6 @@ namespace crime_project {
 	private: System::Void comboBox_category_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
 private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void button_done_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }
