@@ -54,12 +54,16 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_done;
 	private: System::Windows::Forms::Button^  button_cancel;
 	private: System::Windows::Forms::Button^  button_addmore;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
+	private: System::Windows::Forms::DateTimePicker^  datePicker;
+	private: System::Windows::Forms::DateTimePicker^  timePicker;
+
+
+
 	private: System::Windows::Forms::ComboBox^  comboBox_category;
 	private: System::Windows::Forms::Button^  button_addevidence;
 	private: System::Windows::Forms::Button^  button_upload;
-	private: System::Windows::Forms::Button^  button_addanother;
+	private: System::Windows::Forms::Button^  button_addsuspect;
+
 
 	private:
 		/// <summary>
@@ -88,12 +92,12 @@ namespace crime_project {
 			this->button_done = (gcnew System::Windows::Forms::Button());
 			this->button_cancel = (gcnew System::Windows::Forms::Button());
 			this->button_addmore = (gcnew System::Windows::Forms::Button());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->datePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			this->timePicker = (gcnew System::Windows::Forms::DateTimePicker());
 			this->comboBox_category = (gcnew System::Windows::Forms::ComboBox());
 			this->button_addevidence = (gcnew System::Windows::Forms::Button());
 			this->button_upload = (gcnew System::Windows::Forms::Button());
-			this->button_addanother = (gcnew System::Windows::Forms::Button());
+			this->button_addsuspect = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label_category
@@ -245,28 +249,28 @@ namespace crime_project {
 			this->button_addmore->Text = L"Add More";
 			this->button_addmore->UseVisualStyleBackColor = true;
 			// 
-			// dateTimePicker1
+			// datePicker
 			// 
-			this->dateTimePicker1->CustomFormat = L"dd/MM/yyyy";
-			this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->datePicker->CustomFormat = L"dd/MM/yyyy";
+			this->datePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker1->Location = System::Drawing::Point(106, 67);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(88, 23);
-			this->dateTimePicker1->TabIndex = 17;
-			this->dateTimePicker1->Value = System::DateTime(2014, 2, 17, 0, 0, 0, 0);
+			this->datePicker->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->datePicker->Location = System::Drawing::Point(106, 67);
+			this->datePicker->Name = L"datePicker";
+			this->datePicker->Size = System::Drawing::Size(88, 23);
+			this->datePicker->TabIndex = 17;
+			this->datePicker->Value = System::DateTime(2014, 2, 17, 0, 0, 0, 0);
 			// 
-			// dateTimePicker2
+			// timePicker
 			// 
-			this->dateTimePicker2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->timePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->dateTimePicker2->Location = System::Drawing::Point(316, 70);
-			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->Size = System::Drawing::Size(93, 23);
-			this->dateTimePicker2->TabIndex = 18;
-			this->dateTimePicker2->Value = System::DateTime(2014, 2, 17, 19, 47, 0, 0);
+			this->timePicker->Format = System::Windows::Forms::DateTimePickerFormat::Time;
+			this->timePicker->Location = System::Drawing::Point(316, 70);
+			this->timePicker->Name = L"timePicker";
+			this->timePicker->Size = System::Drawing::Size(93, 23);
+			this->timePicker->TabIndex = 18;
+			this->timePicker->Value = System::DateTime(2014, 2, 17, 19, 47, 0, 0);
 			// 
 			// comboBox_category
 			// 
@@ -304,28 +308,28 @@ namespace crime_project {
 			this->button_upload->Text = L"Upload a File";
 			this->button_upload->UseVisualStyleBackColor = true;
 			// 
-			// button_addanother
+			// button_addsuspect
 			// 
-			this->button_addanother->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_addsuspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_addanother->Location = System::Drawing::Point(279, 327);
-			this->button_addanother->Name = L"button_addanother";
-			this->button_addanother->Size = System::Drawing::Size(88, 23);
-			this->button_addanother->TabIndex = 22;
-			this->button_addanother->Text = L"Add another";
-			this->button_addanother->UseVisualStyleBackColor = true;
+			this->button_addsuspect->Location = System::Drawing::Point(279, 327);
+			this->button_addsuspect->Name = L"button_addsuspect";
+			this->button_addsuspect->Size = System::Drawing::Size(88, 23);
+			this->button_addsuspect->TabIndex = 22;
+			this->button_addsuspect->Text = L"Add another";
+			this->button_addsuspect->UseVisualStyleBackColor = true;
 			// 
 			// Form_Add
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(705, 412);
-			this->Controls->Add(this->button_addanother);
+			this->Controls->Add(this->button_addsuspect);
 			this->Controls->Add(this->button_upload);
 			this->Controls->Add(this->button_addevidence);
 			this->Controls->Add(this->comboBox_category);
-			this->Controls->Add(this->dateTimePicker2);
-			this->Controls->Add(this->dateTimePicker1);
+			this->Controls->Add(this->timePicker);
+			this->Controls->Add(this->datePicker);
 			this->Controls->Add(this->button_addmore);
 			this->Controls->Add(this->button_cancel);
 			this->Controls->Add(this->button_done);

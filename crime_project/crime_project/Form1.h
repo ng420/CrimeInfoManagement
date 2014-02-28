@@ -3,7 +3,6 @@
 #include "Form_Add.h"
 #include "tchar.h"
 namespace crime_project {
-	//9814858345
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -44,12 +43,15 @@ namespace crime_project {
 
 	private: System::Windows::Forms::Button^  button_viewall;
 	private: System::Windows::Forms::Label^  label_searchby;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::ComboBox^  comboBox_searchby;
+
 	private: System::Windows::Forms::Label^  label_keyword;
 	private: System::Windows::Forms::TextBox^  textBox_keyword;
 	private: System::Windows::Forms::Button^  button_logout;
 	private: System::Windows::Forms::Label^  label_welcome;
 	private: System::Windows::Forms::Button^  button_update;
+	private: System::Windows::Forms::Label^  label_welcomeuser;
+
 
 
 	private:
@@ -69,12 +71,13 @@ namespace crime_project {
 			this->button_search = (gcnew System::Windows::Forms::Button());
 			this->button_viewall = (gcnew System::Windows::Forms::Button());
 			this->label_searchby = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox_searchby = (gcnew System::Windows::Forms::ComboBox());
 			this->label_keyword = (gcnew System::Windows::Forms::Label());
 			this->textBox_keyword = (gcnew System::Windows::Forms::TextBox());
 			this->button_logout = (gcnew System::Windows::Forms::Button());
 			this->label_welcome = (gcnew System::Windows::Forms::Label());
 			this->button_update = (gcnew System::Windows::Forms::Button());
+			this->label_welcomeuser = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button_add
@@ -122,15 +125,15 @@ namespace crime_project {
 			this->label_searchby->TabIndex = 3;
 			this->label_searchby->Text = L"Search By:";
 			// 
-			// comboBox1
+			// comboBox_searchby
 			// 
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->comboBox_searchby->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(102, 331);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 24);
-			this->comboBox1->TabIndex = 4;
+			this->comboBox_searchby->FormattingEnabled = true;
+			this->comboBox_searchby->Location = System::Drawing::Point(102, 331);
+			this->comboBox_searchby->Name = L"comboBox_searchby";
+			this->comboBox_searchby->Size = System::Drawing::Size(121, 24);
+			this->comboBox_searchby->TabIndex = 4;
 			// 
 			// label_keyword
 			// 
@@ -170,9 +173,9 @@ namespace crime_project {
 				static_cast<System::Byte>(0)));
 			this->label_welcome->Location = System::Drawing::Point(241, 55);
 			this->label_welcome->Name = L"label_welcome";
-			this->label_welcome->Size = System::Drawing::Size(222, 37);
+			this->label_welcome->Size = System::Drawing::Size(168, 37);
 			this->label_welcome->TabIndex = 9;
-			this->label_welcome->Text = L"Welcome XYZ";
+			this->label_welcome->Text = L"Welcome: ";
 			// 
 			// button_update
 			// 
@@ -184,18 +187,31 @@ namespace crime_project {
 			this->button_update->TabIndex = 10;
 			this->button_update->Text = L"Update";
 			this->button_update->UseVisualStyleBackColor = true;
+			this->button_update->Click += gcnew System::EventHandler(this, &Form1::button_update_Click);
+			// 
+			// label_welcomeuser
+			// 
+			this->label_welcomeuser->AutoSize = true;
+			this->label_welcomeuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label_welcomeuser->Location = System::Drawing::Point(403, 55);
+			this->label_welcomeuser->Name = L"label_welcomeuser";
+			this->label_welcomeuser->Size = System::Drawing::Size(80, 37);
+			this->label_welcomeuser->TabIndex = 11;
+			this->label_welcomeuser->Text = L"XYZ";
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(705, 412);
+			this->Controls->Add(this->label_welcomeuser);
 			this->Controls->Add(this->button_update);
 			this->Controls->Add(this->label_welcome);
 			this->Controls->Add(this->button_logout);
 			this->Controls->Add(this->textBox_keyword);
 			this->Controls->Add(this->label_keyword);
-			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->comboBox_searchby);
 			this->Controls->Add(this->label_searchby);
 			this->Controls->Add(this->button_viewall);
 			this->Controls->Add(this->button_search);
@@ -210,7 +226,12 @@ namespace crime_project {
 #pragma endregion
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 			 }
+//add button allows user to go to a new form- Form_Add, various crime related can be stored in that form.
 	private: System::Void button_add_Click(System::Object^  sender, System::EventArgs^  e);
+//by update button, user can can add more suspects and evidences. Since it can only be updated, not removed, user should be careful before adding the contents into this form. 
+private: System::Void button_update_Click(System::Object^  sender, System::EventArgs^  e){
+
+		 }
 };
 }
 
