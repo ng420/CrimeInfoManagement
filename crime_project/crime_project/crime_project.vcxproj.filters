@@ -36,6 +36,9 @@
     <ClCompile Include="Form1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Form_viewall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -50,6 +53,9 @@
     <ClInclude Include="Form_Add.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Form_viewall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -61,6 +67,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Add.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_viewall.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

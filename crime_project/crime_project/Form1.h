@@ -2,6 +2,7 @@
 #include "stdAfx.h"
 #include "Form_Add.h"
 #include "tchar.h"
+#include "Form_viewall.h"
 namespace crime_project {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -113,6 +114,7 @@ namespace crime_project {
 			this->button_viewall->TabIndex = 2;
 			this->button_viewall->Text = L"View All";
 			this->button_viewall->UseVisualStyleBackColor = true;
+			this->button_viewall->Click += gcnew System::EventHandler(this, &Form1::button_viewall_Click);
 			// 
 			// label_searchby
 			// 
@@ -217,6 +219,7 @@ namespace crime_project {
 			this->Controls->Add(this->button_search);
 			this->Controls->Add(this->button_add);
 			this->Name = L"Form1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form1";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
@@ -232,6 +235,7 @@ namespace crime_project {
 private: System::Void button_update_Click(System::Object^  sender, System::EventArgs^  e){
 
 		 }
+private: System::Void button_viewall_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }
 

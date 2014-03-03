@@ -345,7 +345,9 @@ namespace crime_project {
 			this->Controls->Add(this->label_description);
 			this->Controls->Add(this->label_category);
 			this->Name = L"Form_Add";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form_Add";
+			this->Load += gcnew System::EventHandler(this, &Form_Add::Form_Add_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -355,5 +357,7 @@ namespace crime_project {
 			 }
 private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_done_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void Form_Add_Load(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
