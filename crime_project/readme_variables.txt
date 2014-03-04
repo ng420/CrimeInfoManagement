@@ -1,8 +1,11 @@
 
 ONLINE CRIME INFORMATION MANAGEMENT PROJECT
-Various variables used in various forms:
+
+Different variables used in various forms:
+
 Form1:
 This is the main form user will see once logged in.
+
 a) Labels:
 	1. label_welcomeuser: will display the user name of the person logged in.
 	2. label_welcome,label_search,lable_keyword: just displays the texts.
@@ -19,7 +22,11 @@ c) Combo-boxes:
 	1. comboBox_search: by the text in the options of this combo-box, user can search by category of the crime, suspects, evidences or some keywords of the 		description.
 d) TextBoxes:
 	1. textBox_keyword: to type the keyword to search.
+
+
 Form_Add:
+In this form, user can add various details of the criminal activity.
+
 a)Labels:
 	1.label_category,  label_date, label_time, label_location, label_description, label_evidence, label_suspect: These labels only used to display the text         headings.
 b)Buttons:
@@ -39,4 +46,18 @@ d)TextBoxes:
 e)Datepickers:
 	1.datePicker: data is selected through the calendar.
 	2.timePicker: to set time.
+
+
+Form_viewall:
+This form is used to display all the records of different criminal activities.
+
+a)Labels:
+	label_allrecords, label_sno, label_dateplace, label_category, label_description, label_status: all these display simply the text.
+
+b)Buttons:
+	Button_back: to get back to Form1.
+
+c)TableLayoutPanel:
+	table_database: displays all the criminal activity’s records.
+
 

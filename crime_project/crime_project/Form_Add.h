@@ -54,6 +54,8 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_done;
 	private: System::Windows::Forms::Button^  button_cancel;
 	private: System::Windows::Forms::Button^  button_addmore;
+
+
 	private: System::Windows::Forms::DateTimePicker^  datePicker;
 	private: System::Windows::Forms::DateTimePicker^  timePicker;
 
@@ -104,77 +106,84 @@ namespace crime_project {
 			// label_category
 			// 
 			this->label_category->AutoSize = true;
-			this->label_category->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_category->BackColor = System::Drawing::Color::Transparent;
+			this->label_category->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_category->Location = System::Drawing::Point(29, 41);
+			this->label_category->Location = System::Drawing::Point(12, 41);
 			this->label_category->Name = L"label_category";
-			this->label_category->Size = System::Drawing::Size(69, 17);
+			this->label_category->Size = System::Drawing::Size(98, 25);
 			this->label_category->TabIndex = 0;
 			this->label_category->Text = L"Category:";
 			// 
 			// label_description
 			// 
 			this->label_description->AutoSize = true;
-			this->label_description->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_description->BackColor = System::Drawing::Color::Transparent;
+			this->label_description->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_description->Location = System::Drawing::Point(29, 135);
+			this->label_description->Location = System::Drawing::Point(12, 135);
 			this->label_description->Name = L"label_description";
-			this->label_description->Size = System::Drawing::Size(83, 17);
+			this->label_description->Size = System::Drawing::Size(115, 25);
 			this->label_description->TabIndex = 1;
 			this->label_description->Text = L"Description:";
 			// 
 			// label_evidence
 			// 
 			this->label_evidence->AutoSize = true;
-			this->label_evidence->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_evidence->BackColor = System::Drawing::Color::Transparent;
+			this->label_evidence->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_evidence->Location = System::Drawing::Point(29, 277);
+			this->label_evidence->Location = System::Drawing::Point(12, 334);
 			this->label_evidence->Name = L"label_evidence";
-			this->label_evidence->Size = System::Drawing::Size(87, 17);
+			this->label_evidence->Size = System::Drawing::Size(123, 25);
 			this->label_evidence->TabIndex = 2;
 			this->label_evidence->Text = L"Evidence(s):";
 			// 
 			// label_suspect
 			// 
 			this->label_suspect->AutoSize = true;
-			this->label_suspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_suspect->BackColor = System::Drawing::Color::Transparent;
+			this->label_suspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_suspect->Location = System::Drawing::Point(29, 333);
+			this->label_suspect->Location = System::Drawing::Point(12, 390);
 			this->label_suspect->Name = L"label_suspect";
-			this->label_suspect->Size = System::Drawing::Size(80, 17);
+			this->label_suspect->Size = System::Drawing::Size(114, 25);
 			this->label_suspect->TabIndex = 3;
 			this->label_suspect->Text = L"Suspect(s):";
 			// 
 			// label_location
 			// 
 			this->label_location->AutoSize = true;
-			this->label_location->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_location->BackColor = System::Drawing::Color::Transparent;
+			this->label_location->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_location->Location = System::Drawing::Point(506, 70);
+			this->label_location->Location = System::Drawing::Point(635, 90);
 			this->label_location->Name = L"label_location";
-			this->label_location->Size = System::Drawing::Size(66, 17);
+			this->label_location->Size = System::Drawing::Size(92, 25);
 			this->label_location->TabIndex = 4;
 			this->label_location->Text = L"Location:";
 			// 
 			// label_time
 			// 
 			this->label_time->AutoSize = true;
-			this->label_time->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_time->BackColor = System::Drawing::Color::Transparent;
+			this->label_time->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_time->Location = System::Drawing::Point(257, 70);
+			this->label_time->Location = System::Drawing::Point(240, 87);
 			this->label_time->Name = L"label_time";
-			this->label_time->Size = System::Drawing::Size(43, 17);
+			this->label_time->Size = System::Drawing::Size(62, 25);
 			this->label_time->TabIndex = 5;
 			this->label_time->Text = L"Time:";
 			// 
 			// label_date
 			// 
 			this->label_date->AutoSize = true;
-			this->label_date->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_date->BackColor = System::Drawing::Color::Transparent;
+			this->label_date->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_date->Location = System::Drawing::Point(29, 70);
+			this->label_date->Location = System::Drawing::Point(12, 87);
 			this->label_date->Name = L"label_date";
-			this->label_date->Size = System::Drawing::Size(42, 17);
+			this->label_date->Size = System::Drawing::Size(59, 25);
 			this->label_date->TabIndex = 6;
 			this->label_date->Text = L"Date:";
 			// 
@@ -182,46 +191,47 @@ namespace crime_project {
 			// 
 			this->textBox_description->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox_description->Location = System::Drawing::Point(113, 135);
+			this->textBox_description->Location = System::Drawing::Point(126, 135);
 			this->textBox_description->Multiline = true;
 			this->textBox_description->Name = L"textBox_description";
-			this->textBox_description->Size = System::Drawing::Size(459, 121);
+			this->textBox_description->Size = System::Drawing::Size(722, 173);
 			this->textBox_description->TabIndex = 8;
 			// 
 			// textBox_place
 			// 
-			this->textBox_place->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->textBox_place->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_place->Location = System::Drawing::Point(578, 64);
+			this->textBox_place->Location = System::Drawing::Point(733, 89);
 			this->textBox_place->Name = L"textBox_place";
-			this->textBox_place->Size = System::Drawing::Size(100, 23);
+			this->textBox_place->Size = System::Drawing::Size(129, 27);
 			this->textBox_place->TabIndex = 11;
 			// 
 			// textBox_evidence
 			// 
-			this->textBox_evidence->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->textBox_evidence->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_evidence->Location = System::Drawing::Point(115, 274);
+			this->textBox_evidence->Location = System::Drawing::Point(132, 334);
 			this->textBox_evidence->Name = L"textBox_evidence";
-			this->textBox_evidence->Size = System::Drawing::Size(79, 23);
+			this->textBox_evidence->Size = System::Drawing::Size(129, 27);
 			this->textBox_evidence->TabIndex = 12;
 			// 
 			// textBox_suspect
 			// 
-			this->textBox_suspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->textBox_suspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_suspect->Location = System::Drawing::Point(115, 330);
+			this->textBox_suspect->Location = System::Drawing::Point(132, 391);
 			this->textBox_suspect->Name = L"textBox_suspect";
-			this->textBox_suspect->Size = System::Drawing::Size(129, 23);
+			this->textBox_suspect->Size = System::Drawing::Size(129, 27);
 			this->textBox_suspect->TabIndex = 13;
 			// 
 			// button_done
 			// 
-			this->button_done->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_done->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->button_done->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_done->Location = System::Drawing::Point(489, 377);
+			this->button_done->Location = System::Drawing::Point(629, 454);
 			this->button_done->Name = L"button_done";
-			this->button_done->Size = System::Drawing::Size(75, 23);
+			this->button_done->Size = System::Drawing::Size(98, 32);
 			this->button_done->TabIndex = 14;
 			this->button_done->Text = L"Done";
 			this->button_done->UseVisualStyleBackColor = true;
@@ -229,11 +239,12 @@ namespace crime_project {
 			// 
 			// button_cancel
 			// 
-			this->button_cancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_cancel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->button_cancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_cancel->Location = System::Drawing::Point(588, 377);
+			this->button_cancel->Location = System::Drawing::Point(750, 454);
 			this->button_cancel->Name = L"button_cancel";
-			this->button_cancel->Size = System::Drawing::Size(75, 23);
+			this->button_cancel->Size = System::Drawing::Size(98, 32);
 			this->button_cancel->TabIndex = 15;
 			this->button_cancel->Text = L"Cancel";
 			this->button_cancel->UseVisualStyleBackColor = true;
@@ -241,14 +252,16 @@ namespace crime_project {
 			// 
 			// button_addmore
 			// 
-			this->button_addmore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_addmore->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->button_addmore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_addmore->Location = System::Drawing::Point(376, 377);
+			this->button_addmore->Location = System::Drawing::Point(470, 454);
 			this->button_addmore->Name = L"button_addmore";
-			this->button_addmore->Size = System::Drawing::Size(89, 23);
+			this->button_addmore->Size = System::Drawing::Size(136, 32);
 			this->button_addmore->TabIndex = 16;
-			this->button_addmore->Text = L"Add More";
+			this->button_addmore->Text = L"Add Another";
 			this->button_addmore->UseVisualStyleBackColor = true;
+			this->button_addmore->Click += gcnew System::EventHandler(this, &Form_Add::button_addmore_Click);
 			// 
 			// datePicker
 			// 
@@ -256,7 +269,7 @@ namespace crime_project {
 			this->datePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->datePicker->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->datePicker->Location = System::Drawing::Point(106, 67);
+			this->datePicker->Location = System::Drawing::Point(77, 90);
 			this->datePicker->Name = L"datePicker";
 			this->datePicker->Size = System::Drawing::Size(88, 23);
 			this->datePicker->TabIndex = 17;
@@ -267,7 +280,7 @@ namespace crime_project {
 			this->timePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->timePicker->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->timePicker->Location = System::Drawing::Point(316, 70);
+			this->timePicker->Location = System::Drawing::Point(335, 87);
 			this->timePicker->Name = L"timePicker";
 			this->timePicker->Size = System::Drawing::Size(93, 23);
 			this->timePicker->TabIndex = 18;
@@ -277,23 +290,25 @@ namespace crime_project {
 			// 
 			this->comboBox_category->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->comboBox_category->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+			this->comboBox_category->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->comboBox_category->FormattingEnabled = true;
 			this->comboBox_category->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Arms Trafficking", L"Corruption", L"Cyber Crime", 
 				L"Dowry", L"Illegal Drug Trade", L"Kidnapping", L"Murder", L"Rape"});
-			this->comboBox_category->Location = System::Drawing::Point(106, 40);
+			this->comboBox_category->Location = System::Drawing::Point(113, 41);
 			this->comboBox_category->Name = L"comboBox_category";
-			this->comboBox_category->Size = System::Drawing::Size(121, 21);
+			this->comboBox_category->Size = System::Drawing::Size(121, 28);
 			this->comboBox_category->Sorted = true;
 			this->comboBox_category->TabIndex = 19;
 			this->comboBox_category->SelectedIndexChanged += gcnew System::EventHandler(this, &Form_Add::comboBox_category_SelectedIndexChanged);
 			// 
 			// button_addevidence
 			// 
-			this->button_addevidence->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_addevidence->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_addevidence->Location = System::Drawing::Point(212, 274);
+			this->button_addevidence->Location = System::Drawing::Point(282, 330);
 			this->button_addevidence->Name = L"button_addevidence";
-			this->button_addevidence->Size = System::Drawing::Size(88, 23);
+			this->button_addevidence->Size = System::Drawing::Size(136, 31);
 			this->button_addevidence->TabIndex = 20;
 			this->button_addevidence->Text = L"Add more";
 			this->button_addevidence->UseVisualStyleBackColor = true;
@@ -301,11 +316,11 @@ namespace crime_project {
 			// 
 			// button_upload
 			// 
-			this->button_upload->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_upload->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_upload->Location = System::Drawing::Point(316, 270);
+			this->button_upload->Location = System::Drawing::Point(449, 334);
 			this->button_upload->Name = L"button_upload";
-			this->button_upload->Size = System::Drawing::Size(120, 31);
+			this->button_upload->Size = System::Drawing::Size(136, 31);
 			this->button_upload->TabIndex = 21;
 			this->button_upload->Text = L"Upload a File";
 			this->button_upload->UseVisualStyleBackColor = true;
@@ -313,13 +328,13 @@ namespace crime_project {
 			// 
 			// button_addsuspect
 			// 
-			this->button_addsuspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_addsuspect->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_addsuspect->Location = System::Drawing::Point(279, 327);
+			this->button_addsuspect->Location = System::Drawing::Point(335, 390);
 			this->button_addsuspect->Name = L"button_addsuspect";
-			this->button_addsuspect->Size = System::Drawing::Size(88, 23);
+			this->button_addsuspect->Size = System::Drawing::Size(136, 31);
 			this->button_addsuspect->TabIndex = 22;
-			this->button_addsuspect->Text = L"Add another";
+			this->button_addsuspect->Text = L"Add more";
 			this->button_addsuspect->UseVisualStyleBackColor = true;
 			this->button_addsuspect->Click += gcnew System::EventHandler(this, &Form_Add::button_addsuspect_Click);
 			// 
@@ -329,7 +344,8 @@ namespace crime_project {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(705, 412);
+			this->ClientSize = System::Drawing::Size(889, 498);
+			this->ControlBox = false;
 			this->Controls->Add(this->button_addsuspect);
 			this->Controls->Add(this->button_upload);
 			this->Controls->Add(this->button_addevidence);
@@ -353,6 +369,7 @@ namespace crime_project {
 			this->Name = L"Form_Add";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form_Add";
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &Form_Add::Form_Add_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -361,12 +378,15 @@ namespace crime_project {
 #pragma endregion
 	private: System::Void comboBox_category_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);
-private: System::Void button_done_Click(System::Object^  sender, System::EventArgs^  e);
+
 private: System::Void Form_Add_Load(System::Object^  sender, System::EventArgs^  e) {
 		 }
-private: System::Void button_addsuspect_Click(System::Object^  sender, System::EventArgs^  e);
-private: System::Void button_upload_Click(System::Object^  sender, System::EventArgs^  e);
-private: System::Void button_addevidence_Click(System::Object^  sender, System::EventArgs^  e);
+//All the below button events and their functions are defined in the Form_Add.cpp file.
+private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);		//this button event allows user to cancel and go to the Form1 on single click.   
+private: System::Void button_done_Click(System::Object^  sender, System::EventArgs^  e);        //user on filling all the necessary fields clicks on this button to add all the data to the database.
+private: System::Void button_addsuspect_Click(System::Object^  sender, System::EventArgs^  e);	//this button event allows user to add suspects to the database on single click.
+private: System::Void button_upload_Click(System::Object^  sender, System::EventArgs^  e);      //this button event allows user to upload any file that can be used as an evidence on single click.
+private: System::Void button_addevidence_Click(System::Object^  sender, System::EventArgs^  e); //this button event allows user to add evidences of the crime activity record on single click.
+private: System::Void button_addmore_Click(System::Object^  sender, System::EventArgs^  e);		//this button event allows user to add a new criminal activity record and the details into the database on single click.
 };
 }
