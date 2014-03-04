@@ -68,6 +68,7 @@ namespace crime_project {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->button_add = (gcnew System::Windows::Forms::Button());
 			this->button_search = (gcnew System::Windows::Forms::Button());
 			this->button_viewall = (gcnew System::Windows::Forms::Button());
@@ -121,7 +122,7 @@ namespace crime_project {
 			this->label_searchby->AutoSize = true;
 			this->label_searchby->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_searchby->Location = System::Drawing::Point(19, 331);
+			this->label_searchby->Location = System::Drawing::Point(12, 327);
 			this->label_searchby->Name = L"label_searchby";
 			this->label_searchby->Size = System::Drawing::Size(77, 17);
 			this->label_searchby->TabIndex = 3;
@@ -132,7 +133,7 @@ namespace crime_project {
 			this->comboBox_searchby->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->comboBox_searchby->FormattingEnabled = true;
-			this->comboBox_searchby->Location = System::Drawing::Point(102, 331);
+			this->comboBox_searchby->Location = System::Drawing::Point(102, 324);
 			this->comboBox_searchby->Name = L"comboBox_searchby";
 			this->comboBox_searchby->Size = System::Drawing::Size(121, 24);
 			this->comboBox_searchby->TabIndex = 4;
@@ -142,7 +143,7 @@ namespace crime_project {
 			this->label_keyword->AutoSize = true;
 			this->label_keyword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_keyword->Location = System::Drawing::Point(19, 373);
+			this->label_keyword->Location = System::Drawing::Point(12, 372);
 			this->label_keyword->Name = L"label_keyword";
 			this->label_keyword->Size = System::Drawing::Size(83, 17);
 			this->label_keyword->TabIndex = 5;
@@ -152,7 +153,7 @@ namespace crime_project {
 			// 
 			this->textBox_keyword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_keyword->Location = System::Drawing::Point(102, 374);
+			this->textBox_keyword->Location = System::Drawing::Point(102, 369);
 			this->textBox_keyword->Name = L"textBox_keyword";
 			this->textBox_keyword->Size = System::Drawing::Size(121, 23);
 			this->textBox_keyword->TabIndex = 6;
@@ -173,7 +174,7 @@ namespace crime_project {
 			this->label_welcome->AutoSize = true;
 			this->label_welcome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_welcome->Location = System::Drawing::Point(241, 55);
+			this->label_welcome->Location = System::Drawing::Point(229, 27);
 			this->label_welcome->Name = L"label_welcome";
 			this->label_welcome->Size = System::Drawing::Size(168, 37);
 			this->label_welcome->TabIndex = 9;
@@ -196,7 +197,7 @@ namespace crime_project {
 			this->label_welcomeuser->AutoSize = true;
 			this->label_welcomeuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_welcomeuser->Location = System::Drawing::Point(403, 55);
+			this->label_welcomeuser->Location = System::Drawing::Point(403, 27);
 			this->label_welcomeuser->Name = L"label_welcomeuser";
 			this->label_welcomeuser->Size = System::Drawing::Size(80, 37);
 			this->label_welcomeuser->TabIndex = 11;
@@ -206,6 +207,8 @@ namespace crime_project {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(705, 412);
 			this->Controls->Add(this->label_welcomeuser);
 			this->Controls->Add(this->button_update);

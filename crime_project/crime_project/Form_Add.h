@@ -78,6 +78,7 @@ namespace crime_project {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form_Add::typeid));
 			this->label_category = (gcnew System::Windows::Forms::Label());
 			this->label_description = (gcnew System::Windows::Forms::Label());
 			this->label_evidence = (gcnew System::Windows::Forms::Label());
@@ -323,6 +324,8 @@ namespace crime_project {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(705, 412);
 			this->Controls->Add(this->button_addsuspect);
 			this->Controls->Add(this->button_upload);

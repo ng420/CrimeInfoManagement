@@ -57,6 +57,7 @@ namespace crime_project {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form_viewall::typeid));
 			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->label_sno = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -80,7 +81,7 @@ namespace crime_project {
 				40)));
 			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 
 				15)));
-			this->tableLayoutPanel1->Location = System::Drawing::Point(12, 116);
+			this->tableLayoutPanel1->Location = System::Drawing::Point(12, 120);
 			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
 			this->tableLayoutPanel1->RowCount = 1;
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
@@ -146,7 +147,7 @@ namespace crime_project {
 			// 
 			this->button_back->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_back->Location = System::Drawing::Point(616, 22);
+			this->button_back->Location = System::Drawing::Point(616, 19);
 			this->button_back->Name = L"button_back";
 			this->button_back->Size = System::Drawing::Size(75, 23);
 			this->button_back->TabIndex = 6;
@@ -159,7 +160,7 @@ namespace crime_project {
 			this->label_allrecords->AutoSize = true;
 			this->label_allrecords->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_allrecords->Location = System::Drawing::Point(72, 22);
+			this->label_allrecords->Location = System::Drawing::Point(72, 19);
 			this->label_allrecords->Name = L"label_allrecords";
 			this->label_allrecords->Size = System::Drawing::Size(107, 24);
 			this->label_allrecords->TabIndex = 7;
@@ -169,6 +170,8 @@ namespace crime_project {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(705, 412);
 			this->Controls->Add(this->label_allrecords);
 			this->Controls->Add(this->button_back);
