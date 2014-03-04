@@ -5,10 +5,11 @@
 
 using namespace crime_project;
 void Form_Add::button_cancel_Click(System::Object^  sender, System::EventArgs^  e){
-			this->Hide();
+			//this->Close();
 			Form1^ f1 = gcnew Form1();
-			f1->ShowDialog();
-			//Form_Add::SetVisibleCore(false);	 
+			f1->ShowDialog(); 
+			this->Close();
+			Form_Add::SetVisibleCore(false);
 }
 
 void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e){
@@ -25,4 +26,19 @@ void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e)
 		f1->ShowDialog();
 		Form_Add::SetVisibleCore(false);	 
 	}
+}
+
+void Form_Add::button_upload_Click(System::Object^  sender, System::EventArgs^  e){
+	OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;
+	openFileDialog1->ShowDialog();
+	textBox_evidence->Text = openFileDialog1->FileName;
+}
+void Form_Add::button_addevidence_Click(System::Object^  sender, System::EventArgs^  e){
+	//first assign textBox_evidence.Text to the database.
+	textBox_evidence->Text = "";
+}
+
+void Form_Add::button_addsuspect_Click(System::Object^  sender, System::EventArgs^  e){
+	//first assign textBox_suspect.Text to the database.
+	textBox_suspect->Text = "";
 }

@@ -297,6 +297,7 @@ namespace crime_project {
 			this->button_addevidence->TabIndex = 20;
 			this->button_addevidence->Text = L"Add more";
 			this->button_addevidence->UseVisualStyleBackColor = true;
+			this->button_addevidence->Click += gcnew System::EventHandler(this, &Form_Add::button_addevidence_Click);
 			// 
 			// button_upload
 			// 
@@ -308,6 +309,7 @@ namespace crime_project {
 			this->button_upload->TabIndex = 21;
 			this->button_upload->Text = L"Upload a File";
 			this->button_upload->UseVisualStyleBackColor = true;
+			this->button_upload->Click += gcnew System::EventHandler(this, &Form_Add::button_upload_Click);
 			// 
 			// button_addsuspect
 			// 
@@ -319,6 +321,7 @@ namespace crime_project {
 			this->button_addsuspect->TabIndex = 22;
 			this->button_addsuspect->Text = L"Add another";
 			this->button_addsuspect->UseVisualStyleBackColor = true;
+			this->button_addsuspect->Click += gcnew System::EventHandler(this, &Form_Add::button_addsuspect_Click);
 			// 
 			// Form_Add
 			// 
@@ -362,5 +365,8 @@ private: System::Void button_cancel_Click(System::Object^  sender, System::Event
 private: System::Void button_done_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void Form_Add_Load(System::Object^  sender, System::EventArgs^  e) {
 		 }
+private: System::Void button_addsuspect_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void button_upload_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void button_addevidence_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }

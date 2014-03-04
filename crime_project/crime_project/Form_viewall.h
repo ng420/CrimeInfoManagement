@@ -1,7 +1,7 @@
 #pragma once
 
 namespace crime_project {
-
+	
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;

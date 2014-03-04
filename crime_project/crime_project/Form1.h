@@ -50,8 +50,9 @@ namespace crime_project {
 	private: System::Windows::Forms::TextBox^  textBox_keyword;
 	private: System::Windows::Forms::Button^  button_logout;
 	private: System::Windows::Forms::Label^  label_welcome;
-	private: System::Windows::Forms::Button^  button_update;
+
 	private: System::Windows::Forms::Label^  label_welcomeuser;
+
 
 
 
@@ -78,7 +79,6 @@ namespace crime_project {
 			this->textBox_keyword = (gcnew System::Windows::Forms::TextBox());
 			this->button_logout = (gcnew System::Windows::Forms::Button());
 			this->label_welcome = (gcnew System::Windows::Forms::Label());
-			this->button_update = (gcnew System::Windows::Forms::Button());
 			this->label_welcomeuser = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
@@ -86,7 +86,7 @@ namespace crime_project {
 			// 
 			this->button_add->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_add->Location = System::Drawing::Point(606, 279);
+			this->button_add->Location = System::Drawing::Point(606, 318);
 			this->button_add->Name = L"button_add";
 			this->button_add->Size = System::Drawing::Size(74, 25);
 			this->button_add->TabIndex = 0;
@@ -109,7 +109,7 @@ namespace crime_project {
 			// 
 			this->button_viewall->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_viewall->Location = System::Drawing::Point(606, 365);
+			this->button_viewall->Location = System::Drawing::Point(606, 364);
 			this->button_viewall->Name = L"button_viewall";
 			this->button_viewall->Size = System::Drawing::Size(74, 25);
 			this->button_viewall->TabIndex = 2;
@@ -162,7 +162,7 @@ namespace crime_project {
 			// 
 			this->button_logout->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_logout->Location = System::Drawing::Point(607, 231);
+			this->button_logout->Location = System::Drawing::Point(606, 272);
 			this->button_logout->Name = L"button_logout";
 			this->button_logout->Size = System::Drawing::Size(74, 25);
 			this->button_logout->TabIndex = 7;
@@ -179,18 +179,6 @@ namespace crime_project {
 			this->label_welcome->Size = System::Drawing::Size(168, 37);
 			this->label_welcome->TabIndex = 9;
 			this->label_welcome->Text = L"Welcome: ";
-			// 
-			// button_update
-			// 
-			this->button_update->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->button_update->Location = System::Drawing::Point(606, 323);
-			this->button_update->Name = L"button_update";
-			this->button_update->Size = System::Drawing::Size(74, 25);
-			this->button_update->TabIndex = 10;
-			this->button_update->Text = L"Update";
-			this->button_update->UseVisualStyleBackColor = true;
-			this->button_update->Click += gcnew System::EventHandler(this, &Form1::button_update_Click);
 			// 
 			// label_welcomeuser
 			// 
@@ -211,7 +199,6 @@ namespace crime_project {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(705, 412);
 			this->Controls->Add(this->label_welcomeuser);
-			this->Controls->Add(this->button_update);
 			this->Controls->Add(this->label_welcome);
 			this->Controls->Add(this->button_logout);
 			this->Controls->Add(this->textBox_keyword);
