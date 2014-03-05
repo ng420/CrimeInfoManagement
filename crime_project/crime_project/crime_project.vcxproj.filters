@@ -39,6 +39,12 @@
     <ClCompile Include="Form_viewall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="verifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -54,6 +60,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Form_viewall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="verifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="login.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
