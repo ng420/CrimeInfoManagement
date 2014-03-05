@@ -85,7 +85,7 @@ namespace crime_project {
 			// 
 			// button_back
 			// 
-			this->button_back->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button_back->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button_back->Location = System::Drawing::Point(760, 19);
 			this->button_back->Name = L"button_back";
@@ -99,12 +99,12 @@ namespace crime_project {
 			// 
 			this->label_allrecords->AutoSize = true;
 			this->label_allrecords->BackColor = System::Drawing::Color::Transparent;
-			this->label_allrecords->Font = (gcnew System::Drawing::Font(L"Stencil", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
+			this->label_allrecords->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 20.25F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label_allrecords->ForeColor = System::Drawing::Color::Black;
 			this->label_allrecords->Location = System::Drawing::Point(12, 19);
 			this->label_allrecords->Name = L"label_allrecords";
-			this->label_allrecords->Size = System::Drawing::Size(187, 32);
+			this->label_allrecords->Size = System::Drawing::Size(156, 35);
 			this->label_allrecords->TabIndex = 7;
 			this->label_allrecords->Text = L"All Records";
 			// 

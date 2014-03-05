@@ -21,7 +21,10 @@ Void Form1::button_viewall_Click(System::Object^  sender, System::EventArgs^  e)
 //as of now, this button is used to exit from the current session
 //to logout from current session
 Void Form1::button_logout_Click(System::Object^  sender, System::EventArgs^  e) {
-	Application::Exit();
+	this->Hide();
+	this->Close();	//close Form1
+	login^ f1 = gcnew login();
+	f1->ShowDialog();							//show Form_viewall
 }
 
 //to search the keywords in textBox_keyword

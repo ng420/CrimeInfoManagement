@@ -2,13 +2,19 @@
 #include "login.h"
 #include "verifier.h"
 #include "Form1.h"
-#pragma once
 
+#pragma once
 using namespace crime_project;
+ref class Variables{
+	public : static String^ name = nullptr;
+};
 
 Void login::log_in_Click(System::Object^  sender, System::EventArgs^  e) {
+				 
 				 String^ a = this->user_type_select->Text;  // Store text from all boxes in variables a, b and c.
 				 String^ b = this->user_id->Text;
+				 Variables obj;
+				 obj.name = b;
 				 String^ c = this->pass->Text;
 				 verifier^ vf = gcnew verifier(a, b, c);    // Create vf object of class verifier to verify against user credentials from database.
 				 if (vf->verified == true) {
@@ -17,8 +23,17 @@ Void login::log_in_Click(System::Object^  sender, System::EventArgs^  e) {
 					 form1->ShowDialog();					// Show new Form1
 				 }
 				 else {
-					 this->fail_status->Text = "Incorrect User Credentials";
+					 this->fail_status->Text = "Incorrect User Credentials! Please Login Again.";
 					 this->user_id->Text = "";
 					 this->pass->Text = "";
 				 }
+}
+
+
+Void login::button_exit_Click(System::Object^  sender, System::EventArgs^  e) {
+	Application::Exit();
+}
+Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) {
+	Variables obj1;
+	label_welcomeuser->Text = obj1.name;		//to display the name
 }
