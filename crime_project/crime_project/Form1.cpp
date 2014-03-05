@@ -24,4 +24,11 @@ Void Form1::button_logout_Click(System::Object^  sender, System::EventArgs^  e) 
 	Application::Exit();
 }
 
+//to search the keywords in textBox_keyword
+Void Form1::button_search_Click(System::Object^  sender, System::EventArgs^  e) {
+	//search function yet to be defined
+	this->Hide();								//hide Form1
+	Form_viewall^ f2 = gcnew Form_viewall();
+	f2->ShowDialog();							//show Form_viewall
+}
 

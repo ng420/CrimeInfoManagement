@@ -105,6 +105,7 @@ namespace crime_project {
 			this->button_search->TabIndex = 1;
 			this->button_search->Text = L"Search";
 			this->button_search->UseVisualStyleBackColor = true;
+			this->button_search->Click += gcnew System::EventHandler(this, &Form1::button_search_Click);
 			// 
 			// button_viewall
 			// 
@@ -141,8 +142,8 @@ namespace crime_project {
 			this->comboBox_searchby->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->comboBox_searchby->FormattingEnabled = true;
-			this->comboBox_searchby->Items->AddRange(gcnew cli::array< System::Object^  >(7) {L"Category", L"Date", L"Location", L"Description", 
-				L"Status", L"Evidences", L"Suspects"});
+			this->comboBox_searchby->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Category", L"Date", L"Location", L"Description", 
+				L"Status", L"Suspects"});
 			this->comboBox_searchby->Location = System::Drawing::Point(197, 409);
 			this->comboBox_searchby->Name = L"comboBox_searchby";
 			this->comboBox_searchby->Size = System::Drawing::Size(179, 33);
@@ -247,6 +248,7 @@ namespace crime_project {
 private: System::Void button_add_Click(System::Object^  sender, System::EventArgs^  e);		//add button allows user to go to a new form- Form_Add, various crime related can be stored in that form.
 private: System::Void button_viewall_Click(System::Object^  sender, System::EventArgs^  e); //to view all records on criminal activities.
 private: System::Void button_logout_Click(System::Object^  sender, System::EventArgs^  e);  //to logout from the current session
+private: System::Void button_search_Click(System::Object^  sender, System::EventArgs^  e); //to search the keywords in textBox_keyword
 };
 }
 
