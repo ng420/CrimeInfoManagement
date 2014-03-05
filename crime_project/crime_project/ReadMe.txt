@@ -27,6 +27,18 @@ crime_project.cpp
 Form1.h
     Contains the implementation of your form class and InitializeComponent() function.
 
+login.h
+	Contains the implementation of login form. 
+
+login.cpp
+	Contains functions associated with login form.
+
+verifier.h
+	Contains verifier class for verifying user credentials.
+
+verifier.cpp
+	Contains definitions for functions associated with user credentials.
+
 AssemblyInfo.cpp
     Contains custom attributes for modifying assembly metadata.
 

@@ -1,6 +1,4 @@
 #pragma once
-#include  "verifier.h"
-#include "Form1.h"
 
 namespace crime_project {
 
@@ -49,6 +47,8 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  password;
 	private: System::Windows::Forms::Label^  user_type;
 	private: System::Windows::Forms::TextBox^  pass;
+	private: System::Windows::Forms::Label^  fail_status;
+
 
 
 
@@ -74,6 +74,7 @@ namespace crime_project {
 			this->password = (gcnew System::Windows::Forms::Label());
 			this->user_type = (gcnew System::Windows::Forms::Label());
 			this->pass = (gcnew System::Windows::Forms::TextBox());
+			this->fail_status = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// log_in
@@ -145,11 +146,20 @@ namespace crime_project {
 			this->pass->Size = System::Drawing::Size(121, 20);
 			this->pass->TabIndex = 6;
 			// 
+			// fail_status
+			// 
+			this->fail_status->AutoSize = true;
+			this->fail_status->Location = System::Drawing::Point(302, 327);
+			this->fail_status->Name = L"fail_status";
+			this->fail_status->Size = System::Drawing::Size(0, 13);
+			this->fail_status->TabIndex = 7;
+			// 
 			// login
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(720, 379);
+			this->Controls->Add(this->fail_status);
 			this->Controls->Add(this->pass);
 			this->Controls->Add(this->user_type);
 			this->Controls->Add(this->password);
@@ -167,19 +177,6 @@ namespace crime_project {
 #pragma endregion
 	private: System::Void login_Load(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	private: System::Void log_in_Click(System::Object^  sender, System::EventArgs^  e) {
-				 String^ a = this->user_type_select->Text;
-				 String^ b = this->user_id->Text;
-				 String^ c = this->pass->Text;
-				 verifier^ vf = gcnew verifier(a, b, c);
-				 if (vf->verified == true) {
-					 this->Visible = false;
-					 Form1^ form1  = gcnew Form1();
-					 form1->ShowDialog();
-				 }
-				 else {
-					 ;
-				 }
-			 }
+	private: System::Void log_in_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }
