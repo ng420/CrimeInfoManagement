@@ -277,6 +277,7 @@ namespace crime_project {
 			// 
 			// timePicker
 			// 
+			this->timePicker->AllowDrop = true;
 			this->timePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->timePicker->Format = System::Windows::Forms::DateTimePickerFormat::Time;
@@ -284,7 +285,7 @@ namespace crime_project {
 			this->timePicker->Name = L"timePicker";
 			this->timePicker->Size = System::Drawing::Size(93, 23);
 			this->timePicker->TabIndex = 18;
-			this->timePicker->Value = System::DateTime(2014, 2, 17, 19, 47, 0, 0);
+			this->timePicker->Value = System::DateTime(2014, 3, 5, 19, 47, 0, 0);
 			// 
 			// comboBox_category
 			// 
@@ -369,7 +370,6 @@ namespace crime_project {
 			this->Name = L"Form_Add";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form_Add";
-			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &Form_Add::Form_Add_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

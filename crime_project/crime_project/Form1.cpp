@@ -19,6 +19,13 @@ Void Form1::button_viewall_Click(System::Object^  sender, System::EventArgs^  e)
 	Form_viewall^ f2 = gcnew Form_viewall();
 	f2->ShowDialog();							//show Form_viewall
 	Form1::SetVisibleCore(false);				//hide this form.
-	this->Hide();
+	this->Close();
 }
+
+//as of now, this button is used to exit from the current session
+//to logout from current session
+Void Form1::button_logout_Click(System::Object^  sender, System::EventArgs^  e) {
+	Application::Exit();
+}
+
 

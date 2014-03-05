@@ -57,7 +57,5 @@ a)Labels:
 b)Buttons:
 	Button_back: to get back to Form1.
 
-c)TableLayoutPanel:
-	table_database: displays all the criminal activity’s records.
-
-
+c)DataGridView:
+	dataGridView_records: to display all the records of different crime activities.
