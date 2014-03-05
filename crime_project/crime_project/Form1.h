@@ -193,12 +193,12 @@ namespace crime_project {
 			this->label_welcome->AutoSize = true;
 			this->label_welcome->BackColor = System::Drawing::Color::Transparent;
 			this->label_welcome->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label_welcome->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_welcome->Font = (gcnew System::Drawing::Font(L"Century Gothic", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label_welcome->ForeColor = System::Drawing::Color::Black;
 			this->label_welcome->Location = System::Drawing::Point(199, 43);
 			this->label_welcome->Name = L"label_welcome";
-			this->label_welcome->Size = System::Drawing::Size(219, 50);
+			this->label_welcome->Size = System::Drawing::Size(234, 49);
 			this->label_welcome->TabIndex = 9;
 			this->label_welcome->Text = L"Welcome: ";
 			// 
@@ -207,12 +207,12 @@ namespace crime_project {
 			this->label_welcomeuser->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->label_welcomeuser->AutoSize = true;
 			this->label_welcomeuser->BackColor = System::Drawing::Color::Transparent;
-			this->label_welcomeuser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label_welcomeuser->Font = (gcnew System::Drawing::Font(L"Century Gothic", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label_welcomeuser->ForeColor = System::Drawing::Color::Black;
 			this->label_welcomeuser->Location = System::Drawing::Point(509, 43);
 			this->label_welcomeuser->Name = L"label_welcomeuser";
-			this->label_welcomeuser->Size = System::Drawing::Size(96, 50);
+			this->label_welcomeuser->Size = System::Drawing::Size(88, 49);
 			this->label_welcomeuser->TabIndex = 11;
 			this->label_welcomeuser->Text = L"XYZ";
 			// 
@@ -220,7 +220,7 @@ namespace crime_project {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::Control;
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;

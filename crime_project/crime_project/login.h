@@ -47,8 +47,12 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  user_type;
 	private: System::Windows::Forms::TextBox^  pass;
 	private: System::Windows::Forms::Label^  fail_status;
-	private: System::Windows::Forms::PictureBox^  pictureBox_welcom;
+
 	private: System::Windows::Forms::Button^  button_exit;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
+
+
 
 
 
@@ -68,6 +72,7 @@ namespace crime_project {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(login::typeid));
 			this->log_in = (gcnew System::Windows::Forms::Button());
 			this->user_name = (gcnew System::Windows::Forms::Label());
 			this->user_id = (gcnew System::Windows::Forms::TextBox());
@@ -76,9 +81,9 @@ namespace crime_project {
 			this->user_type = (gcnew System::Windows::Forms::Label());
 			this->pass = (gcnew System::Windows::Forms::TextBox());
 			this->fail_status = (gcnew System::Windows::Forms::Label());
-			this->pictureBox_welcom = (gcnew System::Windows::Forms::PictureBox());
 			this->button_exit = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox_welcom))->BeginInit();
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// log_in
@@ -163,19 +168,11 @@ namespace crime_project {
 			this->fail_status->Size = System::Drawing::Size(0, 20);
 			this->fail_status->TabIndex = 7;
 			// 
-			// pictureBox_welcom
-			// 
-			this->pictureBox_welcom->Location = System::Drawing::Point(169, 12);
-			this->pictureBox_welcom->Name = L"pictureBox_welcom";
-			this->pictureBox_welcom->Size = System::Drawing::Size(503, 117);
-			this->pictureBox_welcom->TabIndex = 8;
-			this->pictureBox_welcom->TabStop = false;
-			// 
 			// button_exit
 			// 
 			this->button_exit->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_exit->Location = System::Drawing::Point(416, 425);
+			this->button_exit->Location = System::Drawing::Point(526, 425);
 			this->button_exit->Name = L"button_exit";
 			this->button_exit->Size = System::Drawing::Size(121, 31);
 			this->button_exit->TabIndex = 9;
@@ -183,14 +180,25 @@ namespace crime_project {
 			this->button_exit->UseVisualStyleBackColor = true;
 			this->button_exit->Click += gcnew System::EventHandler(this, &login::button_exit_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(238, 12);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(409, 155);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 10;
+			this->pictureBox1->TabStop = false;
+			// 
 			// login
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->button_exit);
-			this->Controls->Add(this->pictureBox_welcom);
 			this->Controls->Add(this->fail_status);
 			this->Controls->Add(this->pass);
 			this->Controls->Add(this->user_type);
@@ -203,7 +211,7 @@ namespace crime_project {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"login";
 			this->Load += gcnew System::EventHandler(this, &login::login_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox_welcom))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -213,5 +221,9 @@ namespace crime_project {
 			 }
 	private: System::Void log_in_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_exit_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void softname_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void pictureBox_welcom_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
