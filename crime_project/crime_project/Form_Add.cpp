@@ -7,10 +7,10 @@ using namespace crime_project;
 
 //this button event allows user to cancel and go to the Form1 on single click.   
 void Form_Add::button_cancel_Click(System::Object^  sender, System::EventArgs^  e){
+			this->Hide();
 			this->Close();					//close Form_Add 
 			Form1^ f1 = gcnew Form1();
 			f1->ShowDialog();				//show Form1, the main form once the user logs in.
-			Form_Add::SetVisibleCore(false); //set the visibility of the Form_Add to "false".
 }
 
 //after filling all the necessary fields, click on this button to add all the data to the database.
@@ -23,10 +23,10 @@ void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e)
 	else
 	{   // if all fields are filled perform below operations.
 		MessageBox::Show("Record Added.");
+		this->Hide();
+		this->Close();					//close Form_Add 
 		Form1^ f1 = gcnew Form1();			
 		f1->ShowDialog();					//to show this form
-		Form_Add::SetVisibleCore(false);	//set visibility of this form to false	 
-		this->Close();						//closes this form 
 	}
 }
 

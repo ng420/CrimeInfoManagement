@@ -221,6 +221,7 @@ namespace crime_project {
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(889, 498);
+			this->ControlBox = false;
 			this->Controls->Add(this->label_welcomeuser);
 			this->Controls->Add(this->label_welcome);
 			this->Controls->Add(this->button_logout);
