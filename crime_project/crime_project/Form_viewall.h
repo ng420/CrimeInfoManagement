@@ -175,7 +175,7 @@ namespace crime_project {
 #pragma endregion
 
 //defined in Form_viewall.cpp
-private: System::Void button_back_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void button_back_Click(System::Object^  sender, System::EventArgs^  e);      //to get bak to Form1
 private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 
 		 }

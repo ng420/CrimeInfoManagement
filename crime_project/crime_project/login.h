@@ -155,6 +155,7 @@ namespace crime_project {
 				static_cast<System::Byte>(0)));
 			this->pass->Location = System::Drawing::Point(461, 335);
 			this->pass->Name = L"pass";
+			this->pass->PasswordChar = '*';
 			this->pass->Size = System::Drawing::Size(121, 28);
 			this->pass->TabIndex = 6;
 			// 
