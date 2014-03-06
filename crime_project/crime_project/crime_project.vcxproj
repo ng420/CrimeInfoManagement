@@ -96,12 +96,16 @@
     <ClCompile Include="crime_project.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="Form_Add.cpp" />
+    <ClCompile Include="Form_admin.cpp" />
+    <ClCompile Include="Form_records.cpp" />
+    <ClCompile Include="Form_users.cpp" />
     <ClCompile Include="Form_viewall.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="useridinput.cpp" />
     <ClCompile Include="verifier.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +113,15 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Form_Add.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Form_admin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Form_records.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Form_users.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Form_viewall.h">
@@ -119,6 +132,9 @@
     </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="useridinput.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="verifier.h" />
   </ItemGroup>
   <ItemGroup>
@@ -132,11 +148,23 @@
     <EmbeddedResource Include="Form_Add.resx">
       <DependentUpon>Form_Add.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_admin.resx">
+      <DependentUpon>Form_admin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_records.resx">
+      <DependentUpon>Form_records.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_users.resx">
+      <DependentUpon>Form_users.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_viewall.resx">
       <DependentUpon>Form_viewall.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useridinput.resx">
+      <DependentUpon>useridinput.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

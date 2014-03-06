@@ -13,6 +13,8 @@ namespace crime_project {
 	/// </summary>
 	public ref class login : public System::Windows::Forms::Form
 	{
+	public: static	String^ usertype;
+	public: static	String^ username;
 	public:
 		login(void)
 		{
@@ -50,6 +52,7 @@ namespace crime_project {
 
 	private: System::Windows::Forms::Button^  button_exit;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::GroupBox^  groupBox_login;
 
 
 
@@ -83,14 +86,16 @@ namespace crime_project {
 			this->fail_status = (gcnew System::Windows::Forms::Label());
 			this->button_exit = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->groupBox_login = (gcnew System::Windows::Forms::GroupBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
+			this->groupBox_login->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// log_in
 			// 
 			this->log_in->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->log_in->Location = System::Drawing::Point(247, 425);
+			this->log_in->Location = System::Drawing::Point(20, 224);
 			this->log_in->Name = L"log_in";
 			this->log_in->Size = System::Drawing::Size(121, 31);
 			this->log_in->TabIndex = 0;
@@ -102,7 +107,7 @@ namespace crime_project {
 			// 
 			this->user_name->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->user_name->Location = System::Drawing::Point(284, 279);
+			this->user_name->Location = System::Drawing::Point(74, 103);
 			this->user_name->Name = L"user_name";
 			this->user_name->Size = System::Drawing::Size(143, 20);
 			this->user_name->TabIndex = 1;
@@ -112,7 +117,7 @@ namespace crime_project {
 			// 
 			this->user_id->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->user_id->Location = System::Drawing::Point(461, 276);
+			this->user_id->Location = System::Drawing::Point(251, 100);
 			this->user_id->Name = L"user_id";
 			this->user_id->Size = System::Drawing::Size(121, 28);
 			this->user_id->TabIndex = 2;
@@ -123,7 +128,7 @@ namespace crime_project {
 				static_cast<System::Byte>(0)));
 			this->user_type_select->FormattingEnabled = true;
 			this->user_type_select->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
-			this->user_type_select->Location = System::Drawing::Point(461, 217);
+			this->user_type_select->Location = System::Drawing::Point(251, 41);
 			this->user_type_select->Name = L"user_type_select";
 			this->user_type_select->Size = System::Drawing::Size(121, 28);
 			this->user_type_select->TabIndex = 3;
@@ -133,17 +138,17 @@ namespace crime_project {
 			// 
 			this->password->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->password->Location = System::Drawing::Point(284, 338);
+			this->password->Location = System::Drawing::Point(74, 162);
 			this->password->Name = L"password";
-			this->password->Size = System::Drawing::Size(160, 20);
+			this->password->Size = System::Drawing::Size(143, 20);
 			this->password->TabIndex = 4;
-			this->password->Text = L"Password            :";
+			this->password->Text = L"Password           :";
 			// 
 			// user_type
 			// 
 			this->user_type->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->user_type->Location = System::Drawing::Point(284, 220);
+			this->user_type->Location = System::Drawing::Point(74, 44);
 			this->user_type->Name = L"user_type";
 			this->user_type->Size = System::Drawing::Size(143, 20);
 			this->user_type->TabIndex = 5;
@@ -153,7 +158,7 @@ namespace crime_project {
 			// 
 			this->pass->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->pass->Location = System::Drawing::Point(461, 335);
+			this->pass->Location = System::Drawing::Point(251, 159);
 			this->pass->Name = L"pass";
 			this->pass->PasswordChar = '*';
 			this->pass->Size = System::Drawing::Size(121, 28);
@@ -173,7 +178,7 @@ namespace crime_project {
 			// 
 			this->button_exit->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_exit->Location = System::Drawing::Point(526, 425);
+			this->button_exit->Location = System::Drawing::Point(299, 224);
 			this->button_exit->Name = L"button_exit";
 			this->button_exit->Size = System::Drawing::Size(121, 31);
 			this->button_exit->TabIndex = 9;
@@ -191,6 +196,25 @@ namespace crime_project {
 			this->pictureBox1->TabIndex = 10;
 			this->pictureBox1->TabStop = false;
 			// 
+			// groupBox_login
+			// 
+			this->groupBox_login->Controls->Add(this->user_type);
+			this->groupBox_login->Controls->Add(this->user_name);
+			this->groupBox_login->Controls->Add(this->button_exit);
+			this->groupBox_login->Controls->Add(this->user_id);
+			this->groupBox_login->Controls->Add(this->log_in);
+			this->groupBox_login->Controls->Add(this->user_type_select);
+			this->groupBox_login->Controls->Add(this->pass);
+			this->groupBox_login->Controls->Add(this->password);
+			this->groupBox_login->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->groupBox_login->Location = System::Drawing::Point(214, 214);
+			this->groupBox_login->Name = L"groupBox_login";
+			this->groupBox_login->Size = System::Drawing::Size(448, 272);
+			this->groupBox_login->TabIndex = 11;
+			this->groupBox_login->TabStop = false;
+			this->groupBox_login->Text = L"Log in";
+			// 
 			// login
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -198,21 +222,16 @@ namespace crime_project {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
+			this->Controls->Add(this->groupBox_login);
 			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->button_exit);
 			this->Controls->Add(this->fail_status);
-			this->Controls->Add(this->pass);
-			this->Controls->Add(this->user_type);
-			this->Controls->Add(this->password);
-			this->Controls->Add(this->user_type_select);
-			this->Controls->Add(this->user_id);
-			this->Controls->Add(this->user_name);
-			this->Controls->Add(this->log_in);
 			this->Name = L"login";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"login";
 			this->Load += gcnew System::EventHandler(this, &login::login_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
+			this->groupBox_login->ResumeLayout(false);
+			this->groupBox_login->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

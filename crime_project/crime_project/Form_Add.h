@@ -80,7 +80,6 @@ namespace crime_project {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form_Add::typeid));
 			this->label_category = (gcnew System::Windows::Forms::Label());
 			this->label_description = (gcnew System::Windows::Forms::Label());
 			this->label_evidence = (gcnew System::Windows::Forms::Label());
@@ -343,7 +342,6 @@ namespace crime_project {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
@@ -379,7 +377,8 @@ namespace crime_project {
 	private: System::Void comboBox_category_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
 
-private: System::Void Form_Add_Load(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void Form_Add_Load(System::Object^  sender, System::EventArgs^  e){
+
 		 }
 //All the below button events and their functions are defined in the Form_Add.cpp file.
 private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);		//this button event allows user to cancel and go to the Form1 on single click.   

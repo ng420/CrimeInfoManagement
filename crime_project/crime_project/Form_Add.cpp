@@ -1,16 +1,37 @@
 #include "StdAfx.h"
 #include "Form_Add.h"
+#include "login.h"
 #include "Form1.h"
 #include "Form_viewall.h"
+#include "Form_records.h"
 
 using namespace crime_project;
 
 //this button event allows user to cancel and go to the Form1 on single click.   
 void Form_Add::button_cancel_Click(System::Object^  sender, System::EventArgs^  e){
-			this->Hide();
-			this->Close();					//close Form_Add 
-			Form1^ f1 = gcnew Form1();
-			f1->ShowDialog();				//show Form1, the main form once the user logs in.
+			
+			if (login::usertype=="Regular")
+			{
+				this->Hide();
+				this->Close();					//close Form_Add 
+				Form1^ f1 = gcnew Form1();
+				f1->ShowDialog();				//show Form1, the main form once the user logs in.
+			}
+			else
+			{
+				this->Hide();
+				this->Close();					//close Form_Add 
+				Form_records^ f1 = gcnew Form_records();
+				f1->ShowDialog();				//show Form1, the main form once the user logs in.
+			}
+			if (Form_records::boo = true)
+			{
+				this->Hide();
+				this->Close();					//close Form_Add 
+				Form_records^ f1 = gcnew Form_records();
+				f1->ShowDialog();				//show Form1, the main form once the user logs in.
+				Form_records::boo = false;
+			}
 }
 
 //after filling all the necessary fields, click on this button to add all the data to the database.
@@ -23,10 +44,28 @@ void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e)
 	else
 	{   // if all fields are filled perform below operations.
 		MessageBox::Show("Record Added.");
-		this->Hide();
-		this->Close();					//close Form_Add 
-		Form1^ f1 = gcnew Form1();			
-		f1->ShowDialog();					//to show this form
+		if (login::usertype=="Regular")
+		{
+			this->Hide();
+			this->Close();					//close Form_Add 
+			Form1^ f1 = gcnew Form1();
+			f1->ShowDialog();				//show Form1, the main form once the user logs in.
+		}
+		else
+		{
+			this->Hide();
+			this->Close();					//close Form_Add 
+			Form_records^ f1 = gcnew Form_records();
+			f1->ShowDialog();				//show Form_record
+		}
+		if (Form_records::boo = true)
+		{
+			this->Hide();
+			this->Close();					//close Form_Add 
+			Form_records^ f1 = gcnew Form_records();
+			f1->ShowDialog();				//show Form1, the main form once the user logs in.
+			Form_records::boo = false;
+		}
 	}
 }
 

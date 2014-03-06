@@ -198,9 +198,9 @@ namespace crime_project {
 			this->label_welcome->ForeColor = System::Drawing::Color::Black;
 			this->label_welcome->Location = System::Drawing::Point(199, 43);
 			this->label_welcome->Name = L"label_welcome";
-			this->label_welcome->Size = System::Drawing::Size(234, 49);
+			this->label_welcome->Size = System::Drawing::Size(245, 49);
 			this->label_welcome->TabIndex = 9;
-			this->label_welcome->Text = L"Welcome: ";
+			this->label_welcome->Text = L"Welcome : ";
 			// 
 			// label_welcomeuser
 			// 
