@@ -276,7 +276,6 @@ namespace crime_project {
 			// 
 			// timePicker
 			// 
-			this->timePicker->AllowDrop = true;
 			this->timePicker->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->timePicker->Format = System::Windows::Forms::DateTimePickerFormat::Time;
@@ -285,6 +284,7 @@ namespace crime_project {
 			this->timePicker->Size = System::Drawing::Size(114, 28);
 			this->timePicker->TabIndex = 18;
 			this->timePicker->Value = System::DateTime(2014, 3, 5, 19, 47, 0, 0);
+			this->timePicker->ShowUpDown = true;
 			// 
 			// comboBox_category
 			// 
