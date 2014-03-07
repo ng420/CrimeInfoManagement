@@ -15,13 +15,7 @@ namespace crime_project {
 	public ref class Form_viewall : public System::Windows::Forms::Form
 	{
 	public:
-		Form_viewall(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-		}
+		Form_viewall();
 
 	protected:
 		/// <summary>
@@ -48,11 +42,11 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  label_allrecords;
 	private: System::Windows::Forms::DataGridView^  dataGridView_records;
 
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  sno;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  date_place;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  category;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  descrip;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  status;
+
+
+
+
+
 
 
 
@@ -75,11 +69,6 @@ namespace crime_project {
 			this->button_back = (gcnew System::Windows::Forms::Button());
 			this->label_allrecords = (gcnew System::Windows::Forms::Label());
 			this->dataGridView_records = (gcnew System::Windows::Forms::DataGridView());
-			this->sno = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->date_place = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->category = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->descrip = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->status = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_records))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -110,48 +99,17 @@ namespace crime_project {
 			// 
 			// dataGridView_records
 			// 
+			this->dataGridView_records->AllowUserToAddRows = false;
+			this->dataGridView_records->AllowUserToDeleteRows = false;
 			this->dataGridView_records->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView_records->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView_records->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {this->sno, 
-				this->date_place, this->category, this->descrip, this->status});
 			this->dataGridView_records->Location = System::Drawing::Point(18, 70);
 			this->dataGridView_records->Name = L"dataGridView_records";
+			this->dataGridView_records->ReadOnly = true;
 			this->dataGridView_records->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->dataGridView_records->Size = System::Drawing::Size(833, 48);
+			this->dataGridView_records->Size = System::Drawing::Size(833, 394);
 			this->dataGridView_records->TabIndex = 8;
 			this->dataGridView_records->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form_viewall::dataGridView1_CellContentClick);
-			// 
-			// sno
-			// 
-			this->sno->HeaderText = L"S.No.";
-			this->sno->MaxInputLength = 10;
-			this->sno->Name = L"sno";
-			this->sno->ReadOnly = true;
-			this->sno->Resizable = System::Windows::Forms::DataGridViewTriState::False;
-			// 
-			// date_place
-			// 
-			this->date_place->HeaderText = L"Date-Location";
-			this->date_place->Name = L"date_place";
-			this->date_place->ReadOnly = true;
-			// 
-			// category
-			// 
-			this->category->HeaderText = L"Category";
-			this->category->Name = L"category";
-			this->category->ReadOnly = true;
-			// 
-			// descrip
-			// 
-			this->descrip->HeaderText = L"Description";
-			this->descrip->Name = L"descrip";
-			this->descrip->ReadOnly = true;
-			// 
-			// status
-			// 
-			this->status->HeaderText = L"Status";
-			this->status->Name = L"status";
-			this->status->ReadOnly = true;
 			// 
 			// Form_viewall
 			// 

@@ -81,6 +81,7 @@
     <Reference Include="*System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs" />
+    <Reference Include="MySql.Data" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -94,6 +95,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="crime_project.cpp" />
+    <ClCompile Include="dbconnect.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="Form_Add.cpp" />
     <ClCompile Include="Form_admin.cpp" />
@@ -109,6 +111,7 @@
     <ClCompile Include="verifier.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dbconnect.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>

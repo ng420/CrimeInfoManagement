@@ -57,6 +57,9 @@
     <ClCompile Include="useridinput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dbconnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -92,6 +95,9 @@
     <ClInclude Include="useridinput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dbconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -112,6 +118,15 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_admin.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_records.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_users.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useridinput.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
