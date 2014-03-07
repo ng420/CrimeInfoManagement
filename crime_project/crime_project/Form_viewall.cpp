@@ -22,3 +22,13 @@ Form_viewall::Form_viewall()
 	dataGridView_records->DataMember = "std";
 	dataGridView_records->Refresh();
 }
+
+Form_viewall::Form_viewall(String^ query,String^ field)
+{
+	InitializeComponent();
+	dbconnect db;
+	dataGridView_records->DataSource = db.search(query,field);
+	
+	dataGridView_records->DataMember = "std";
+	dataGridView_records->Refresh();
+}

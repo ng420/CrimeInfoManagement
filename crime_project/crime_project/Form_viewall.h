@@ -16,6 +16,7 @@ namespace crime_project {
 	{
 	public:
 		Form_viewall();
+		Form_viewall(String^,String^);
 
 	protected:
 		/// <summary>

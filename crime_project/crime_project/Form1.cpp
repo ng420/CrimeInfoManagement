@@ -30,7 +30,7 @@ Void Form1::button_logout_Click(System::Object^  sender, System::EventArgs^  e) 
 Void Form1::button_search_Click(System::Object^  sender, System::EventArgs^  e) {
 	//search function yet to be defined
 	this->Hide();								//hide Form1
-	Form_viewall^ f2 = gcnew Form_viewall();
+	Form_viewall^ f2 = gcnew Form_viewall(textBox_keyword->Text,comboBox_searchby->SelectedItem->ToString());
 	f2->ShowDialog();							//show Form_viewall
 }
 

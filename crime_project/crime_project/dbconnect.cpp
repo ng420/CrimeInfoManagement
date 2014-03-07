@@ -20,7 +20,8 @@ dbconnect::dbconnect(void)
 
 DataSet^ dbconnect::search(String^ query,String^ field)
 {
-	auto da=gcnew MySqlDataAdapter("Select * from crimetable where "+field+"="+query,con);
+	MessageBox::Show("Select * from crimetable where "+field+" like \'%"+query+"%\'");
+	auto da=gcnew MySqlDataAdapter("Select * from crimetable where "+field+" like \'%"+query+"%\'",con);
 	auto ds=gcnew DataSet;
 	da->Fill(ds,"std");
 	return ds;
