@@ -4,7 +4,7 @@
 #include "Form1.h"
 #include "Form_viewall.h"
 #include "Form_records.h"
-
+#include "dbconnect.h"
 using namespace crime_project;
 
 //this button event allows user to cancel and go to the Form1 on single click.   
@@ -43,6 +43,9 @@ void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e)
 	}
 	else
 	{   // if all fields are filled perform below operations.
+		dbconnect db;
+//		add(String^ cat, String^ date,String^ time, String^ loc, String^ des,String^ evi,String^ susp)
+		db.add(comboBox_category->SelectedItem->ToString(),datePicker->Value.ToString("yyyy-MM-dd"),timePicker->Value.ToString("hh:mm:ss"),textBox_place->Text,textBox_evidence->Text,textBox_description->Text,textBox_suspect->Text);
 		MessageBox::Show("Record Added.");
 		if (login::usertype=="Regular")
 		{
@@ -99,6 +102,8 @@ void Form_Add::button_addmore_Click(System::Object^  sender, System::EventArgs^ 
 	}
 	else
 	{   // if all fields are filled perform below operations.
+		dbconnect db;
+		db.add(comboBox_category->SelectedItem->ToString(),datePicker->Value.ToString("yyyy-MM-dd"),timePicker->Value.ToString("HH:MM"),textBox_place->Text,textBox_evidence->Text,textBox_description->Text,textBox_suspect->Text);
 		MessageBox::Show("Record Added. New Record to be added.");
 		//clear all the following fields before entering new a record.
 		comboBox_category->Text = "";

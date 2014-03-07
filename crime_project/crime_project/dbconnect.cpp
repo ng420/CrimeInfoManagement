@@ -34,3 +34,13 @@ DataSet^ dbconnect::viewall()
 	da->Fill(ds,"std");
 	return ds;
 }
+
+void dbconnect::add(String^ cat, String^ date,String^ time, String^ loc, String^ des,String^ evi,String^ susp)
+{
+	String^ query="INSERT INTO crimetable (`Category`, `Date`, `Time`, `Location`, `Description`, `Evidence`, `Suspects`) VALUES ( \'"+cat+"\', \'"+date+"\', \'"+time+"\', \'"+loc+"\', \'"+des+"\', \'"+evi+"\', \'"+susp+"\')";
+	MySqlCommand^ cmd = gcnew MySqlCommand;
+	cmd->Connection = con;
+    cmd->CommandText = query;
+	MessageBox::Show(query);
+	cmd->ExecuteNonQuery();
+}
