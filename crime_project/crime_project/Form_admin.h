@@ -39,12 +39,15 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  label_adname;
 	private: System::Windows::Forms::Label^  label_adsearchby;
 	private: System::Windows::Forms::Label^  label_adkeyword;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::TextBox^  textBox1;
+	private: System::Windows::Forms::ComboBox^  comboBox_searchadmin;
+	private: System::Windows::Forms::TextBox^  textBox_adkeyword;
+
+
 	private: System::Windows::Forms::Button^  button_adsearch;
 	private: System::Windows::Forms::Button^  button_adlogout;
 	private: System::Windows::Forms::Button^  button_aduser;
 	private: System::Windows::Forms::Button^  button_adrecord;
+	private: System::Windows::Forms::Label^  label_adwarn;
 
 
 
@@ -65,12 +68,13 @@ namespace crime_project {
 			this->label_adname = (gcnew System::Windows::Forms::Label());
 			this->label_adsearchby = (gcnew System::Windows::Forms::Label());
 			this->label_adkeyword = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox_searchadmin = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox_adkeyword = (gcnew System::Windows::Forms::TextBox());
 			this->button_adsearch = (gcnew System::Windows::Forms::Button());
 			this->button_adlogout = (gcnew System::Windows::Forms::Button());
 			this->button_aduser = (gcnew System::Windows::Forms::Button());
 			this->button_adrecord = (gcnew System::Windows::Forms::Button());
+			this->label_adwarn = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label_adwelcome
@@ -117,24 +121,27 @@ namespace crime_project {
 			this->label_adkeyword->TabIndex = 3;
 			this->label_adkeyword->Text = L"Keyword(s):";
 			// 
-			// comboBox1
+			// comboBox_searchadmin
 			// 
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->comboBox_searchadmin->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_searchadmin->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->comboBox_searchadmin->FormattingEnabled = true;
+			this->comboBox_searchadmin->Items->AddRange(gcnew cli::array< System::Object^  >(7) {L"Category", L"Date", L"Location", L"Description", 
+				L"Status", L"Suspects", L"Users"});
+			this->comboBox_searchadmin->Location = System::Drawing::Point(197, 409);
+			this->comboBox_searchadmin->Name = L"comboBox_searchadmin";
+			this->comboBox_searchadmin->Size = System::Drawing::Size(179, 33);
+			this->comboBox_searchadmin->TabIndex = 4;
+			// 
+			// textBox_adkeyword
+			// 
+			this->textBox_adkeyword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(197, 409);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(179, 33);
-			this->comboBox1->TabIndex = 4;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(197, 450);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(179, 33);
-			this->textBox1->TabIndex = 5;
+			this->textBox_adkeyword->Location = System::Drawing::Point(197, 450);
+			this->textBox_adkeyword->Name = L"textBox_adkeyword";
+			this->textBox_adkeyword->Size = System::Drawing::Size(179, 33);
+			this->textBox_adkeyword->TabIndex = 5;
 			// 
 			// button_adsearch
 			// 
@@ -146,6 +153,7 @@ namespace crime_project {
 			this->button_adsearch->TabIndex = 6;
 			this->button_adsearch->Text = L"Search";
 			this->button_adsearch->UseVisualStyleBackColor = true;
+			this->button_adsearch->Click += gcnew System::EventHandler(this, &Form_admin::button_adsearch_Click);
 			// 
 			// button_adlogout
 			// 
@@ -183,6 +191,18 @@ namespace crime_project {
 			this->button_adrecord->UseVisualStyleBackColor = true;
 			this->button_adrecord->Click += gcnew System::EventHandler(this, &Form_admin::button_adrecord_Click);
 			// 
+			// label_adwarn
+			// 
+			this->label_adwarn->AutoSize = true;
+			this->label_adwarn->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label_adwarn->Location = System::Drawing::Point(13, 369);
+			this->label_adwarn->Name = L"label_adwarn";
+			this->label_adwarn->Size = System::Drawing::Size(201, 20);
+			this->label_adwarn->TabIndex = 10;
+			this->label_adwarn->Text = L"Please fill correctly below!";
+			this->label_adwarn->Visible = false;
+			// 
 			// Form_admin
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -190,12 +210,13 @@ namespace crime_project {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
+			this->Controls->Add(this->label_adwarn);
 			this->Controls->Add(this->button_adrecord);
 			this->Controls->Add(this->button_aduser);
 			this->Controls->Add(this->button_adlogout);
 			this->Controls->Add(this->button_adsearch);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->textBox_adkeyword);
+			this->Controls->Add(this->comboBox_searchadmin);
 			this->Controls->Add(this->label_adkeyword);
 			this->Controls->Add(this->label_adsearchby);
 			this->Controls->Add(this->label_adname);
@@ -215,5 +236,6 @@ private: System::Void Form_admin_Load(System::Object^  sender, System::EventArgs
 private: System::Void button_adlogout_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_aduser_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_adrecord_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void button_adsearch_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }

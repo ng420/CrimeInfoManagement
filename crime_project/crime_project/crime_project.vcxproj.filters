@@ -54,9 +54,6 @@
     <ClCompile Include="Form_records.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="useridinput.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dbconnect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -90,9 +87,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Form_records.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="useridinput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dbconnect.h">

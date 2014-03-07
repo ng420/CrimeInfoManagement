@@ -7,5 +7,7 @@ verifier::verifier(String^ utype, String^ uname, String^ pwd)  // Verifies user 
 	verified=false;
 	if ( uname == "Ranu" ) {
 		if ( pwd == "Vikram" ) {
-			verified=true;}}
+			verified=true;
+		}
+	}
 }

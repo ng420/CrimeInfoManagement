@@ -2,7 +2,6 @@
 #include "Form_admin.h"
 #include "Form_records.h"
 #include "Form_Add.h"
-#include "useridinput.h"
 
 using namespace crime_project;
 
@@ -22,8 +21,5 @@ Void Form_records::button_recadd_Click(System::Object^  sender, System::EventArg
 
 
 Void Form_records::button_editrec_Click(System::Object^  sender, System::EventArgs^  e) {
-	Form_records::boo = true;
-	this->Hide();
-	useridinput^ f1 = gcnew useridinput();
-	f1->ShowDialog();							//show login form
+								//show login form
 }

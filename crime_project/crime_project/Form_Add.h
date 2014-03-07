@@ -281,15 +281,16 @@ namespace crime_project {
 			this->timePicker->Format = System::Windows::Forms::DateTimePickerFormat::Time;
 			this->timePicker->Location = System::Drawing::Point(415, 81);
 			this->timePicker->Name = L"timePicker";
+			this->timePicker->ShowUpDown = true;
 			this->timePicker->Size = System::Drawing::Size(114, 28);
 			this->timePicker->TabIndex = 18;
 			this->timePicker->Value = System::DateTime(2014, 3, 5, 19, 47, 0, 0);
-			this->timePicker->ShowUpDown = true;
 			// 
 			// comboBox_category
 			// 
 			this->comboBox_category->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->comboBox_category->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+			this->comboBox_category->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_category->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->comboBox_category->FormattingEnabled = true;
@@ -297,7 +298,7 @@ namespace crime_project {
 				L"Dowry", L"Illegal Drug Trade", L"Kidnapping", L"Murder", L"Rape"});
 			this->comboBox_category->Location = System::Drawing::Point(100, 38);
 			this->comboBox_category->Name = L"comboBox_category";
-			this->comboBox_category->Size = System::Drawing::Size(121, 28);
+			this->comboBox_category->Size = System::Drawing::Size(150, 28);
 			this->comboBox_category->Sorted = true;
 			this->comboBox_category->TabIndex = 19;
 			this->comboBox_category->SelectedIndexChanged += gcnew System::EventHandler(this, &Form_Add::comboBox_category_SelectedIndexChanged);

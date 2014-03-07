@@ -4,9 +4,23 @@
 #include "login.h"
 #include "Form_Add.h"
 #include "Form_records.h"
+#include "Form_viewall.h"
 
 using namespace crime_project;
 
+
+Void Form_admin::button_adsearch_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (comboBox_searchadmin->Text==""||textBox_adkeyword->Text=="")
+	{
+		label_adwarn->Visible = true;
+	}
+	else{
+		this->Hide();
+		this->Close();	//close Form_admin
+		Form_viewall^ f1 = gcnew Form_viewall();
+		f1->ShowDialog();							//show login form
+	}
+}
 
 //to logout from current session
 Void Form_admin::button_adlogout_Click(System::Object^  sender, System::EventArgs^  e) {

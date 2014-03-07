@@ -35,7 +35,7 @@ Void login::log_in_Click(System::Object^  sender, System::EventArgs^  e) {
 						 this->Visible = false;					// Hide login form
 						 Form_admin^ form1  = gcnew Form_admin();			// New instance of Form1
 						 form1->ShowDialog();					// Show new Form1
-					 }
+					}
 					 else {
 						 this->fail_status->Text = "Incorrect User Credentials! Please Login Again.";
 						 this->user_id->Text = "";
@@ -57,3 +57,4 @@ Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 Void Form_admin::Form_admin_Load(System::Object^  sender, System::EventArgs^  e) {
 	label_adname->Text = login::username;		//to display the name
 }
+

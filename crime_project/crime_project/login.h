@@ -98,7 +98,7 @@ namespace crime_project {
 			this->log_in->Location = System::Drawing::Point(20, 224);
 			this->log_in->Name = L"log_in";
 			this->log_in->Size = System::Drawing::Size(121, 31);
-			this->log_in->TabIndex = 0;
+			this->log_in->TabIndex = 4;
 			this->log_in->Text = L"Log In";
 			this->log_in->UseVisualStyleBackColor = true;
 			this->log_in->Click += gcnew System::EventHandler(this, &login::log_in_Click);
@@ -124,6 +124,7 @@ namespace crime_project {
 			// 
 			// user_type_select
 			// 
+			this->user_type_select->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->user_type_select->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->user_type_select->FormattingEnabled = true;
@@ -131,8 +132,8 @@ namespace crime_project {
 			this->user_type_select->Location = System::Drawing::Point(251, 41);
 			this->user_type_select->Name = L"user_type_select";
 			this->user_type_select->Size = System::Drawing::Size(121, 28);
-			this->user_type_select->TabIndex = 3;
-			this->user_type_select->Text = L"Regular";
+			this->user_type_select->TabIndex = 1;
+			this->user_type_select->SelectedIndexChanged += gcnew System::EventHandler(this, &login::user_type_select_SelectedIndexChanged);
 			// 
 			// password
 			// 
@@ -162,7 +163,7 @@ namespace crime_project {
 			this->pass->Name = L"pass";
 			this->pass->PasswordChar = '*';
 			this->pass->Size = System::Drawing::Size(121, 28);
-			this->pass->TabIndex = 6;
+			this->pass->TabIndex = 3;
 			// 
 			// fail_status
 			// 
@@ -181,7 +182,7 @@ namespace crime_project {
 			this->button_exit->Location = System::Drawing::Point(299, 224);
 			this->button_exit->Name = L"button_exit";
 			this->button_exit->Size = System::Drawing::Size(121, 31);
-			this->button_exit->TabIndex = 9;
+			this->button_exit->TabIndex = 5;
 			this->button_exit->Text = L"Exit";
 			this->button_exit->UseVisualStyleBackColor = true;
 			this->button_exit->Click += gcnew System::EventHandler(this, &login::button_exit_Click);
@@ -237,13 +238,17 @@ namespace crime_project {
 
 		}
 #pragma endregion
-	private: System::Void login_Load(System::Object^  sender, System::EventArgs^  e) {
-			 }
-	private: System::Void log_in_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void login_Load(System::Object^  sender, System::EventArgs^  e) {
+	user_type_select->Focus();		
+	user_id->Focus();
+}
+private: System::Void log_in_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_exit_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void softname_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void pictureBox_welcom_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void user_type_select_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e){
 		 }
 };
 }

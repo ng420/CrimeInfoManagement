@@ -14,6 +14,7 @@ namespace crime_project {
 	/// </summary>
 	public ref class Form_viewall : public System::Windows::Forms::Form
 	{
+	public: static bool^ boo1=false;
 	public:
 		Form_viewall();
 		Form_viewall(String^,String^);
@@ -33,25 +34,16 @@ namespace crime_project {
 	protected: 
 
 	protected: 
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^  button_back;
 	private: System::Windows::Forms::Label^  label_allrecords;
 	private: System::Windows::Forms::DataGridView^  dataGridView_records;
+	private: System::Windows::Forms::Label^  label_recsearchedby;
+	private: System::Windows::Forms::Label^  label_searchcategory;
+	private: System::Windows::Forms::Label^  label_searchkeyword;
+	private: System::Windows::Forms::Label^  label_reckeyword;
+	private: System::Windows::Forms::Panel^  panel_viewall;
 
-
-
-
-
-
-
-
-
-
+	private: 
 
 
 	private:
@@ -70,7 +62,13 @@ namespace crime_project {
 			this->button_back = (gcnew System::Windows::Forms::Button());
 			this->label_allrecords = (gcnew System::Windows::Forms::Label());
 			this->dataGridView_records = (gcnew System::Windows::Forms::DataGridView());
+			this->label_recsearchedby = (gcnew System::Windows::Forms::Label());
+			this->label_searchcategory = (gcnew System::Windows::Forms::Label());
+			this->label_searchkeyword = (gcnew System::Windows::Forms::Label());
+			this->label_reckeyword = (gcnew System::Windows::Forms::Label());
+			this->panel_viewall = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_records))->BeginInit();
+			this->panel_viewall->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button_back
@@ -104,13 +102,69 @@ namespace crime_project {
 			this->dataGridView_records->AllowUserToDeleteRows = false;
 			this->dataGridView_records->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView_records->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView_records->Location = System::Drawing::Point(18, 70);
+			this->dataGridView_records->Location = System::Drawing::Point(18, 130);
 			this->dataGridView_records->Name = L"dataGridView_records";
 			this->dataGridView_records->ReadOnly = true;
 			this->dataGridView_records->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->dataGridView_records->Size = System::Drawing::Size(833, 394);
+			this->dataGridView_records->Size = System::Drawing::Size(833, 334);
 			this->dataGridView_records->TabIndex = 8;
 			this->dataGridView_records->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form_viewall::dataGridView1_CellContentClick);
+			// 
+			// label_recsearchedby
+			// 
+			this->label_recsearchedby->AutoSize = true;
+			this->label_recsearchedby->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label_recsearchedby->Location = System::Drawing::Point(3, 11);
+			this->label_recsearchedby->Name = L"label_recsearchedby";
+			this->label_recsearchedby->Size = System::Drawing::Size(105, 20);
+			this->label_recsearchedby->TabIndex = 9;
+			this->label_recsearchedby->Text = L"Searched By:";
+			// 
+			// label_searchcategory
+			// 
+			this->label_searchcategory->AutoSize = true;
+			this->label_searchcategory->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label_searchcategory->Location = System::Drawing::Point(114, 11);
+			this->label_searchcategory->Name = L"label_searchcategory";
+			this->label_searchcategory->Size = System::Drawing::Size(76, 20);
+			this->label_searchcategory->TabIndex = 10;
+			this->label_searchcategory->Text = L"abcdefgh";
+			// 
+			// label_searchkeyword
+			// 
+			this->label_searchkeyword->AutoSize = true;
+			this->label_searchkeyword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label_searchkeyword->Location = System::Drawing::Point(357, 11);
+			this->label_searchkeyword->Name = L"label_searchkeyword";
+			this->label_searchkeyword->Size = System::Drawing::Size(78, 20);
+			this->label_searchkeyword->TabIndex = 11;
+			this->label_searchkeyword->Text = L"Keyword:";
+			// 
+			// label_reckeyword
+			// 
+			this->label_reckeyword->AutoSize = true;
+			this->label_reckeyword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label_reckeyword->Location = System::Drawing::Point(441, 11);
+			this->label_reckeyword->Name = L"label_reckeyword";
+			this->label_reckeyword->Size = System::Drawing::Size(63, 20);
+			this->label_reckeyword->TabIndex = 12;
+			this->label_reckeyword->Text = L"uvwxyz";
+			// 
+			// panel_viewall
+			// 
+			this->panel_viewall->Controls->Add(this->label_recsearchedby);
+			this->panel_viewall->Controls->Add(this->label_reckeyword);
+			this->panel_viewall->Controls->Add(this->label_searchcategory);
+			this->panel_viewall->Controls->Add(this->label_searchkeyword);
+			this->panel_viewall->Location = System::Drawing::Point(18, 65);
+			this->panel_viewall->Name = L"panel_viewall";
+			this->panel_viewall->Size = System::Drawing::Size(833, 59);
+			this->panel_viewall->TabIndex = 13;
+			this->panel_viewall->Visible = false;
 			// 
 			// Form_viewall
 			// 
@@ -120,13 +174,17 @@ namespace crime_project {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
+			this->Controls->Add(this->panel_viewall);
 			this->Controls->Add(this->dataGridView_records);
 			this->Controls->Add(this->label_allrecords);
 			this->Controls->Add(this->button_back);
 			this->Name = L"Form_viewall";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form_viewall";
+			this->Load += gcnew System::EventHandler(this, &Form_viewall::Form_viewall_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_records))->EndInit();
+			this->panel_viewall->ResumeLayout(false);
+			this->panel_viewall->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -138,5 +196,6 @@ private: System::Void button_back_Click(System::Object^  sender, System::EventAr
 private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 
 		 }
+private: System::Void Form_viewall_Load(System::Object^  sender, System::EventArgs^  e);
 };
 }

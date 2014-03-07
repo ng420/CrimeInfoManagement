@@ -140,6 +140,7 @@ namespace crime_project {
 			this->comboBox_searchby->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->comboBox_searchby->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->comboBox_searchby->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+			this->comboBox_searchby->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_searchby->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 14.25F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->comboBox_searchby->FormattingEnabled = true;
