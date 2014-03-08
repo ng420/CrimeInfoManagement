@@ -131,7 +131,7 @@ namespace crime_project {
 			this->user_type_select->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
 			this->user_type_select->Location = System::Drawing::Point(251, 41);
 			this->user_type_select->Name = L"user_type_select";
-			this->user_type_select->Size = System::Drawing::Size(121, 28);
+			this->user_type_select->Size = System::Drawing::Size(121, 29);
 			this->user_type_select->TabIndex = 1;
 			this->user_type_select->SelectedIndexChanged += gcnew System::EventHandler(this, &login::user_type_select_SelectedIndexChanged);
 			// 
@@ -172,7 +172,7 @@ namespace crime_project {
 				static_cast<System::Byte>(0)));
 			this->fail_status->Location = System::Drawing::Point(300, 170);
 			this->fail_status->Name = L"fail_status";
-			this->fail_status->Size = System::Drawing::Size(0, 20);
+			this->fail_status->Size = System::Drawing::Size(0, 21);
 			this->fail_status->TabIndex = 7;
 			// 
 			// button_exit
@@ -250,5 +250,7 @@ private: System::Void pictureBox_welcom_Click(System::Object^  sender, System::E
 		 }
 private: System::Void user_type_select_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e){
 		 }
+
+
 };
 }
