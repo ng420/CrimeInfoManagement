@@ -3,8 +3,9 @@
 #include "dbconnect.h"
 #pragma once
 
+using namespace System::IO;
 
-verifier::verifier(String^ utype, String^ uname, String^ pwd)  // Verifies user credentials against possible user_id and password combinations.
+verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user credentials against possible user_id and password combinations.
 {	
 	bool sql_con_estb = 0;
 	MySqlConnection^ con = gcnew MySqlConnection();
@@ -19,15 +20,30 @@ verifier::verifier(String^ utype, String^ uname, String^ pwd)  // Verifies user 
 		{
 			sql_con_estb = 1;
 		}
+	String^ stationid = "";
+	String^ fileName = "station_id.txt";
+	try 
+	{
+		StreamReader^ din = File::OpenText(fileName);
+		stationid = din->ReadLine();
+	}
+	catch (Exception^ e)
+	{ ;}
 	verified=false;
-	dbconnect db;
 	if ( sql_con_estb == 1 ) {
-		if ( uname == "Ranu" ) {
+		if ( userid == "Ranu" ) {
 			if ( pwd == "Vikram" ) {
 				verified=true;
 			}
 		}
 	}
-	else 
-		verified = db.verify_user(utype, uname, Convert::ToString(12113), pwd) ; 
+	else {
+		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
+		MySqlCommand^ cmd = gcnew MySqlCommand;
+		cmd->Connection = con;
+		cmd->CommandText = query;
+		//MessageBox::Show(query);
+		if(cmd->ExecuteNonQuery()) 
+		verified = true;
+	}
 }

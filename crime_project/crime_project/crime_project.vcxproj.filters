@@ -19,6 +19,9 @@
     <None Include="app.ico">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="station_id.txt">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crime_project.cpp">
@@ -118,9 +121,6 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_users.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="useridinput.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

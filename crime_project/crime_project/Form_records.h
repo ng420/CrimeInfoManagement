@@ -190,6 +190,7 @@ namespace crime_project {
 			this->Name = L"Form_records";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form_records";
+			this->Load += gcnew System::EventHandler(this, &Form_records::Form_records_Load);
 			this->groupBox_recopts->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
@@ -201,5 +202,7 @@ private: System::Void button_recback_Click(System::Object^  sender, System::Even
 private: System::Void button_recadd_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_editrec_Click(System::Object^  sender, System::EventArgs^  e);
 
+private: System::Void Form_records_Load(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
