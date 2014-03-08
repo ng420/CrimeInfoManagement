@@ -44,7 +44,10 @@ Form_viewall::Form_viewall(String^ query,String^ field)
 	InitializeComponent();
 	dbconnect db;
 	dataGridView_records->DataSource = db.search(query,field);
-	
+	label_recsearchedby->Text = "Search By:";
+	label_searchcategory->Text = field;
+	label_searchkeyword->Text = "Keyword:";
+	label_reckeyword->Text = query;
 	dataGridView_records->DataMember = "std";
 	dataGridView_records->Refresh();
 }
