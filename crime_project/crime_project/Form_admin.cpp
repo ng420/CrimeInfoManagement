@@ -17,7 +17,7 @@ Void Form_admin::button_adsearch_Click(System::Object^  sender, System::EventArg
 	else{
 		this->Hide();
 		this->Close();	//close Form_admin
-		Form_viewall^ f1 = gcnew Form_viewall();
+		Form_viewall^ f1 = gcnew Form_viewall(textBox_adkeyword->Text, comboBox_searchadmin->Text, "admin");
 		f1->ShowDialog();							//show login form
 	}
 }

@@ -14,7 +14,7 @@ Void Form1::button_add_Click(System::Object^  sender, System::EventArgs^  e) {
 //to view all records on criminal activities.
 Void Form1::button_viewall_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();								//hide Form1
-	Form_viewall^ f2 = gcnew Form_viewall();
+	Form_viewall^ f2 = gcnew Form_viewall("regular");
 	f2->ShowDialog();							//show Form_viewall
 }
 
@@ -31,7 +31,7 @@ Void Form1::button_search_Click(System::Object^  sender, System::EventArgs^  e) 
 	//search function yet to be defined
 	Form_viewall::boo1=true;
 	this->Hide();								//hide Form1
-	Form_viewall^ f2 = gcnew Form_viewall(textBox_keyword->Text,comboBox_searchby->SelectedItem->ToString());
+	Form_viewall^ f2 = gcnew Form_viewall(textBox_keyword->Text,comboBox_searchby->SelectedItem->ToString(), "regular");
 	f2->ShowDialog();							//show Form_viewall
 }
 

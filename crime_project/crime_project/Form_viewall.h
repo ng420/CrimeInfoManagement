@@ -16,9 +16,9 @@ namespace crime_project {
 	{
 	public: static bool^ boo1=false;
 	public:
-		Form_viewall();
-		Form_viewall(String^,String^);
-
+		Form_viewall(String^);
+		Form_viewall(String^,String^, String^);
+		String^ use_type;
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
