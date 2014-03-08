@@ -286,6 +286,7 @@ namespace crime_project {
 			this->button_helpadd->TabIndex = 10;
 			this->button_helpadd->Text = L"Help";
 			this->button_helpadd->UseVisualStyleBackColor = true;
+			this->button_helpadd->Click += gcnew System::EventHandler(this, &Form_users::button_helpadd_Click);
 			// 
 			// textBox_repassword
 			// 
@@ -523,5 +524,6 @@ private: System::Void button_userdelfinal_Click(System::Object^  sender, System:
 private: System::Void button_canceldel_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void Form_users_Load(System::Object^  sender, System::EventArgs^  e) {
 		 }
+private: System::Void button_helpadd_Click(System::Object^  sender, System::EventArgs^  e);
 };
 }

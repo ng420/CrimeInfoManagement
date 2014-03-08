@@ -93,3 +93,9 @@ Void Form_users::button_canceldel_Click(System::Object^  sender, System::EventAr
 	groupBox_adduser->Visible = false;
 	groupBox_deleteuser->Visible = false;
 }
+
+Void Form_users::button_helpadd_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	MessageBox::Show("Add user");
+
+}
