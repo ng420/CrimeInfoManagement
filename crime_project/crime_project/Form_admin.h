@@ -132,7 +132,7 @@ namespace crime_project {
 			this->comboBox_searchadmin->Location = System::Drawing::Point(197, 409);
 			this->comboBox_searchadmin->Name = L"comboBox_searchadmin";
 			this->comboBox_searchadmin->Size = System::Drawing::Size(179, 33);
-			this->comboBox_searchadmin->TabIndex = 4;
+			this->comboBox_searchadmin->TabIndex = 1;
 			// 
 			// textBox_adkeyword
 			// 
@@ -141,7 +141,7 @@ namespace crime_project {
 			this->textBox_adkeyword->Location = System::Drawing::Point(197, 450);
 			this->textBox_adkeyword->Name = L"textBox_adkeyword";
 			this->textBox_adkeyword->Size = System::Drawing::Size(179, 33);
-			this->textBox_adkeyword->TabIndex = 5;
+			this->textBox_adkeyword->TabIndex = 2;
 			// 
 			// button_adsearch
 			// 
@@ -150,7 +150,7 @@ namespace crime_project {
 			this->button_adsearch->Location = System::Drawing::Point(410, 452);
 			this->button_adsearch->Name = L"button_adsearch";
 			this->button_adsearch->Size = System::Drawing::Size(153, 30);
-			this->button_adsearch->TabIndex = 6;
+			this->button_adsearch->TabIndex = 3;
 			this->button_adsearch->Text = L"Search";
 			this->button_adsearch->UseVisualStyleBackColor = true;
 			this->button_adsearch->Click += gcnew System::EventHandler(this, &Form_admin::button_adsearch_Click);
@@ -162,7 +162,7 @@ namespace crime_project {
 			this->button_adlogout->Location = System::Drawing::Point(759, 298);
 			this->button_adlogout->Name = L"button_adlogout";
 			this->button_adlogout->Size = System::Drawing::Size(103, 33);
-			this->button_adlogout->TabIndex = 7;
+			this->button_adlogout->TabIndex = 4;
 			this->button_adlogout->Text = L"Logout";
 			this->button_adlogout->UseVisualStyleBackColor = true;
 			this->button_adlogout->Click += gcnew System::EventHandler(this, &Form_admin::button_adlogout_Click);
@@ -174,7 +174,7 @@ namespace crime_project {
 			this->button_aduser->Location = System::Drawing::Point(759, 369);
 			this->button_aduser->Name = L"button_aduser";
 			this->button_aduser->Size = System::Drawing::Size(103, 33);
-			this->button_aduser->TabIndex = 8;
+			this->button_aduser->TabIndex = 5;
 			this->button_aduser->Text = L"Users";
 			this->button_aduser->UseVisualStyleBackColor = true;
 			this->button_aduser->Click += gcnew System::EventHandler(this, &Form_admin::button_aduser_Click);
@@ -186,7 +186,7 @@ namespace crime_project {
 			this->button_adrecord->Location = System::Drawing::Point(759, 441);
 			this->button_adrecord->Name = L"button_adrecord";
 			this->button_adrecord->Size = System::Drawing::Size(103, 33);
-			this->button_adrecord->TabIndex = 9;
+			this->button_adrecord->TabIndex = 6;
 			this->button_adrecord->Text = L"Records";
 			this->button_adrecord->UseVisualStyleBackColor = true;
 			this->button_adrecord->Click += gcnew System::EventHandler(this, &Form_admin::button_adrecord_Click);

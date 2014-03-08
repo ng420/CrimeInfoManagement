@@ -144,7 +144,7 @@ namespace crime_project {
 			this->button_adback->Location = System::Drawing::Point(8, 47);
 			this->button_adback->Name = L"button_adback";
 			this->button_adback->Size = System::Drawing::Size(93, 32);
-			this->button_adback->TabIndex = 0;
+			this->button_adback->TabIndex = 1;
 			this->button_adback->Text = L"Back";
 			this->button_adback->UseVisualStyleBackColor = true;
 			this->button_adback->Click += gcnew System::EventHandler(this, &Form_users::button_adback_Click);
@@ -156,7 +156,7 @@ namespace crime_project {
 			this->button_adusradd->Location = System::Drawing::Point(333, 47);
 			this->button_adusradd->Name = L"button_adusradd";
 			this->button_adusradd->Size = System::Drawing::Size(161, 32);
-			this->button_adusradd->TabIndex = 1;
+			this->button_adusradd->TabIndex = 2;
 			this->button_adusradd->Text = L"Add New User";
 			this->button_adusradd->UseVisualStyleBackColor = true;
 			this->button_adusradd->Click += gcnew System::EventHandler(this, &Form_users::button_adusradd_Click);
@@ -168,7 +168,7 @@ namespace crime_project {
 			this->button_adusredit->Location = System::Drawing::Point(511, 47);
 			this->button_adusredit->Name = L"button_adusredit";
 			this->button_adusredit->Size = System::Drawing::Size(161, 32);
-			this->button_adusredit->TabIndex = 2;
+			this->button_adusredit->TabIndex = 3;
 			this->button_adusredit->Text = L"Edit User Info";
 			this->button_adusredit->UseVisualStyleBackColor = true;
 			// 
@@ -179,7 +179,7 @@ namespace crime_project {
 			this->button_adusrdel->Location = System::Drawing::Point(679, 47);
 			this->button_adusrdel->Name = L"button_adusrdel";
 			this->button_adusrdel->Size = System::Drawing::Size(161, 32);
-			this->button_adusrdel->TabIndex = 3;
+			this->button_adusrdel->TabIndex = 4;
 			this->button_adusrdel->Text = L"Delete User";
 			this->button_adusrdel->UseVisualStyleBackColor = true;
 			this->button_adusrdel->Click += gcnew System::EventHandler(this, &Form_users::button_adusrdel_Click);
@@ -216,7 +216,7 @@ namespace crime_project {
 			this->groupBox_allusers->Location = System::Drawing::Point(12, 113);
 			this->groupBox_allusers->Name = L"groupBox_allusers";
 			this->groupBox_allusers->Size = System::Drawing::Size(850, 96);
-			this->groupBox_allusers->TabIndex = 7;
+			this->groupBox_allusers->TabIndex = 5;
 			this->groupBox_allusers->TabStop = false;
 			this->groupBox_allusers->Text = L"All Users";
 			// 
@@ -239,9 +239,9 @@ namespace crime_project {
 			this->groupBox_adduser->Controls->Add(this->label_viewaddby);
 			this->groupBox_adduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_adduser->Location = System::Drawing::Point(12, 145);
+			this->groupBox_adduser->Location = System::Drawing::Point(8, 136);
 			this->groupBox_adduser->Name = L"groupBox_adduser";
-			this->groupBox_adduser->Size = System::Drawing::Size(850, 201);
+			this->groupBox_adduser->Size = System::Drawing::Size(854, 203);
 			this->groupBox_adduser->TabIndex = 8;
 			this->groupBox_adduser->TabStop = false;
 			this->groupBox_adduser->Text = L"Add New User";
@@ -263,7 +263,7 @@ namespace crime_project {
 			this->button_canceladd->Location = System::Drawing::Point(700, 162);
 			this->button_canceladd->Name = L"button_canceladd";
 			this->button_canceladd->Size = System::Drawing::Size(75, 23);
-			this->button_canceladd->TabIndex = 14;
+			this->button_canceladd->TabIndex = 12;
 			this->button_canceladd->Text = L"Cancel";
 			this->button_canceladd->UseVisualStyleBackColor = true;
 			this->button_canceladd->Click += gcnew System::EventHandler(this, &Form_users::button_canceladd_Click);
@@ -275,7 +275,7 @@ namespace crime_project {
 			this->button_usraddfinal->Location = System::Drawing::Point(700, 125);
 			this->button_usraddfinal->Name = L"button_usraddfinal";
 			this->button_usraddfinal->Size = System::Drawing::Size(75, 23);
-			this->button_usraddfinal->TabIndex = 13;
+			this->button_usraddfinal->TabIndex = 11;
 			this->button_usraddfinal->Text = L"Add";
 			this->button_usraddfinal->UseVisualStyleBackColor = true;
 			this->button_usraddfinal->Click += gcnew System::EventHandler(this, &Form_users::button_usraddfinal_Click);
@@ -287,7 +287,7 @@ namespace crime_project {
 			this->button_helpadd->Location = System::Drawing::Point(700, 88);
 			this->button_helpadd->Name = L"button_helpadd";
 			this->button_helpadd->Size = System::Drawing::Size(75, 23);
-			this->button_helpadd->TabIndex = 12;
+			this->button_helpadd->TabIndex = 10;
 			this->button_helpadd->Text = L"Help";
 			this->button_helpadd->UseVisualStyleBackColor = true;
 			// 
@@ -299,7 +299,7 @@ namespace crime_project {
 			this->textBox_repassword->Name = L"textBox_repassword";
 			this->textBox_repassword->PasswordChar = '*';
 			this->textBox_repassword->Size = System::Drawing::Size(100, 24);
-			this->textBox_repassword->TabIndex = 11;
+			this->textBox_repassword->TabIndex = 9;
 			// 
 			// textBox_password
 			// 
@@ -309,7 +309,7 @@ namespace crime_project {
 			this->textBox_password->Name = L"textBox_password";
 			this->textBox_password->PasswordChar = '*';
 			this->textBox_password->Size = System::Drawing::Size(100, 24);
-			this->textBox_password->TabIndex = 10;
+			this->textBox_password->TabIndex = 8;
 			// 
 			// textBox_username
 			// 
@@ -318,7 +318,7 @@ namespace crime_project {
 			this->textBox_username->Location = System::Drawing::Point(478, 88);
 			this->textBox_username->Name = L"textBox_username";
 			this->textBox_username->Size = System::Drawing::Size(100, 24);
-			this->textBox_username->TabIndex = 9;
+			this->textBox_username->TabIndex = 7;
 			// 
 			// label_viewrepass
 			// 
@@ -361,7 +361,7 @@ namespace crime_project {
 			this->maskedTextBox_policeidadd->Mask = L"00000";
 			this->maskedTextBox_policeidadd->Name = L"maskedTextBox_policeidadd";
 			this->maskedTextBox_policeidadd->Size = System::Drawing::Size(100, 24);
-			this->maskedTextBox_policeidadd->TabIndex = 4;
+			this->maskedTextBox_policeidadd->TabIndex = 6;
 			this->maskedTextBox_policeidadd->ValidatingType = System::Int32::typeid;
 			// 
 			// label_addby
@@ -423,7 +423,7 @@ namespace crime_project {
 			this->groupBox_deleteuser->Controls->Add(this->label_viewpoliceiddel);
 			this->groupBox_deleteuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_deleteuser->Location = System::Drawing::Point(12, 168);
+			this->groupBox_deleteuser->Location = System::Drawing::Point(6, 197);
 			this->groupBox_deleteuser->Name = L"groupBox_deleteuser";
 			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 137);
 			this->groupBox_deleteuser->TabIndex = 9;
@@ -436,7 +436,7 @@ namespace crime_project {
 			this->textBox_addedbydel->Location = System::Drawing::Point(165, 62);
 			this->textBox_addedbydel->Name = L"textBox_addedbydel";
 			this->textBox_addedbydel->Size = System::Drawing::Size(100, 22);
-			this->textBox_addedbydel->TabIndex = 10;
+			this->textBox_addedbydel->TabIndex = 13;
 			// 
 			// label_viewaddbydel
 			// 
@@ -452,7 +452,7 @@ namespace crime_project {
 			this->button_canceldel->Location = System::Drawing::Point(700, 101);
 			this->button_canceldel->Name = L"button_canceldel";
 			this->button_canceldel->Size = System::Drawing::Size(75, 23);
-			this->button_canceldel->TabIndex = 8;
+			this->button_canceldel->TabIndex = 18;
 			this->button_canceldel->Text = L"Cancel";
 			this->button_canceldel->UseVisualStyleBackColor = true;
 			this->button_canceldel->Click += gcnew System::EventHandler(this, &Form_users::button_canceldel_Click);
@@ -472,7 +472,7 @@ namespace crime_project {
 			this->button_helpdel->Location = System::Drawing::Point(700, 29);
 			this->button_helpdel->Name = L"button_helpdel";
 			this->button_helpdel->Size = System::Drawing::Size(75, 23);
-			this->button_helpdel->TabIndex = 6;
+			this->button_helpdel->TabIndex = 17;
 			this->button_helpdel->Text = L"Help";
 			this->button_helpdel->UseVisualStyleBackColor = true;
 			// 
@@ -481,7 +481,7 @@ namespace crime_project {
 			this->textBox_usernamedel->Location = System::Drawing::Point(462, 90);
 			this->textBox_usernamedel->Name = L"textBox_usernamedel";
 			this->textBox_usernamedel->Size = System::Drawing::Size(100, 22);
-			this->textBox_usernamedel->TabIndex = 5;
+			this->textBox_usernamedel->TabIndex = 16;
 			// 
 			// label_viewusernamedel
 			// 
@@ -498,7 +498,7 @@ namespace crime_project {
 			this->maskedTextBox_useriddel->Mask = L"00000";
 			this->maskedTextBox_useriddel->Name = L"maskedTextBox_useriddel";
 			this->maskedTextBox_useriddel->Size = System::Drawing::Size(100, 22);
-			this->maskedTextBox_useriddel->TabIndex = 3;
+			this->maskedTextBox_useriddel->TabIndex = 15;
 			this->maskedTextBox_useriddel->ValidatingType = System::Int32::typeid;
 			// 
 			// label_viewuseriddel
@@ -516,7 +516,7 @@ namespace crime_project {
 			this->maskedTextBox_policeiddel->Mask = L"00000";
 			this->maskedTextBox_policeiddel->Name = L"maskedTextBox_policeiddel";
 			this->maskedTextBox_policeiddel->Size = System::Drawing::Size(100, 22);
-			this->maskedTextBox_policeiddel->TabIndex = 1;
+			this->maskedTextBox_policeiddel->TabIndex = 14;
 			this->maskedTextBox_policeiddel->ValidatingType = System::Int32::typeid;
 			// 
 			// label_viewpoliceiddel
