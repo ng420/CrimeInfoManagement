@@ -62,11 +62,11 @@ Void Form_users::button_adusrdel_Click(System::Object^  sender, System::EventArg
 
 Void Form_users::button_userdelfinal_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	if (maskedTextBox_policeiddel->Text!="" &&  maskedTextBox_useriddel->Text!="" && comboBox1->Text != "")
+	if (police_st_id->Text!="" &&  us_id->Text!="" && comboBox1->Text != "")
 	{	
 		dbconnect db;
 
-		db.del_user(comboBox1->Text,Convert::ToString(maskedTextBox_policeiddel->Text), Convert::ToString(maskedTextBox_useriddel->Text));
+		db.del_user(us_id->Text);
 		MessageBox::Show("User Deleted Successfully from the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
 		button_adusrdel->Enabled = true;
