@@ -64,14 +64,14 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_canceldel;
 	private: System::Windows::Forms::Button^  button_userdelfinal;
 	private: System::Windows::Forms::Button^  button_helpdel;
-	private: System::Windows::Forms::TextBox^  textBox_usernamedel;
-	private: System::Windows::Forms::Label^  label_viewusernamedel;
+
+
 	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox_useriddel;
 	private: System::Windows::Forms::Label^  label_viewuseriddel;
 	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox_policeiddel;
 	private: System::Windows::Forms::Label^  label_viewpoliceiddel;
-	private: System::Windows::Forms::Label^  label_viewaddbydel;
-	private: System::Windows::Forms::TextBox^  textBox_addedbydel;
+
+
 
 
 
@@ -119,13 +119,9 @@ namespace crime_project {
 			this->label_viewpoliceidadd = (gcnew System::Windows::Forms::Label());
 			this->label_viewaddby = (gcnew System::Windows::Forms::Label());
 			this->groupBox_deleteuser = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox_addedbydel = (gcnew System::Windows::Forms::TextBox());
-			this->label_viewaddbydel = (gcnew System::Windows::Forms::Label());
 			this->button_canceldel = (gcnew System::Windows::Forms::Button());
 			this->button_userdelfinal = (gcnew System::Windows::Forms::Button());
 			this->button_helpdel = (gcnew System::Windows::Forms::Button());
-			this->textBox_usernamedel = (gcnew System::Windows::Forms::TextBox());
-			this->label_viewusernamedel = (gcnew System::Windows::Forms::Label());
 			this->maskedTextBox_useriddel = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label_viewuseriddel = (gcnew System::Windows::Forms::Label());
 			this->maskedTextBox_policeiddel = (gcnew System::Windows::Forms::MaskedTextBox());
@@ -410,13 +406,9 @@ namespace crime_project {
 			// 
 			// groupBox_deleteuser
 			// 
-			this->groupBox_deleteuser->Controls->Add(this->textBox_addedbydel);
-			this->groupBox_deleteuser->Controls->Add(this->label_viewaddbydel);
 			this->groupBox_deleteuser->Controls->Add(this->button_canceldel);
 			this->groupBox_deleteuser->Controls->Add(this->button_userdelfinal);
 			this->groupBox_deleteuser->Controls->Add(this->button_helpdel);
-			this->groupBox_deleteuser->Controls->Add(this->textBox_usernamedel);
-			this->groupBox_deleteuser->Controls->Add(this->label_viewusernamedel);
 			this->groupBox_deleteuser->Controls->Add(this->maskedTextBox_useriddel);
 			this->groupBox_deleteuser->Controls->Add(this->label_viewuseriddel);
 			this->groupBox_deleteuser->Controls->Add(this->maskedTextBox_policeiddel);
@@ -430,22 +422,6 @@ namespace crime_project {
 			this->groupBox_deleteuser->TabStop = false;
 			this->groupBox_deleteuser->Text = L"Delete User:";
 			this->groupBox_deleteuser->Visible = false;
-			// 
-			// textBox_addedbydel
-			// 
-			this->textBox_addedbydel->Location = System::Drawing::Point(165, 62);
-			this->textBox_addedbydel->Name = L"textBox_addedbydel";
-			this->textBox_addedbydel->Size = System::Drawing::Size(100, 22);
-			this->textBox_addedbydel->TabIndex = 13;
-			// 
-			// label_viewaddbydel
-			// 
-			this->label_viewaddbydel->AutoSize = true;
-			this->label_viewaddbydel->Location = System::Drawing::Point(85, 65);
-			this->label_viewaddbydel->Name = L"label_viewaddbydel";
-			this->label_viewaddbydel->Size = System::Drawing::Size(71, 16);
-			this->label_viewaddbydel->TabIndex = 9;
-			this->label_viewaddbydel->Text = L"Added By:";
 			// 
 			// button_canceldel
 			// 
@@ -476,22 +452,6 @@ namespace crime_project {
 			this->button_helpdel->Text = L"Help";
 			this->button_helpdel->UseVisualStyleBackColor = true;
 			// 
-			// textBox_usernamedel
-			// 
-			this->textBox_usernamedel->Location = System::Drawing::Point(462, 90);
-			this->textBox_usernamedel->Name = L"textBox_usernamedel";
-			this->textBox_usernamedel->Size = System::Drawing::Size(100, 22);
-			this->textBox_usernamedel->TabIndex = 16;
-			// 
-			// label_viewusernamedel
-			// 
-			this->label_viewusernamedel->AutoSize = true;
-			this->label_viewusernamedel->Location = System::Drawing::Point(371, 96);
-			this->label_viewusernamedel->Name = L"label_viewusernamedel";
-			this->label_viewusernamedel->Size = System::Drawing::Size(74, 16);
-			this->label_viewusernamedel->TabIndex = 4;
-			this->label_viewusernamedel->Text = L"Username:";
-			// 
 			// maskedTextBox_useriddel
 			// 
 			this->maskedTextBox_useriddel->Location = System::Drawing::Point(462, 62);
@@ -512,7 +472,7 @@ namespace crime_project {
 			// 
 			// maskedTextBox_policeiddel
 			// 
-			this->maskedTextBox_policeiddel->Location = System::Drawing::Point(165, 90);
+			this->maskedTextBox_policeiddel->Location = System::Drawing::Point(154, 62);
 			this->maskedTextBox_policeiddel->Mask = L"00000";
 			this->maskedTextBox_policeiddel->Name = L"maskedTextBox_policeiddel";
 			this->maskedTextBox_policeiddel->Size = System::Drawing::Size(100, 22);
@@ -522,7 +482,7 @@ namespace crime_project {
 			// label_viewpoliceiddel
 			// 
 			this->label_viewpoliceiddel->AutoSize = true;
-			this->label_viewpoliceiddel->Location = System::Drawing::Point(50, 96);
+			this->label_viewpoliceiddel->Location = System::Drawing::Point(39, 68);
 			this->label_viewpoliceiddel->Name = L"label_viewpoliceiddel";
 			this->label_viewpoliceiddel->Size = System::Drawing::Size(109, 16);
 			this->label_viewpoliceiddel->TabIndex = 0;

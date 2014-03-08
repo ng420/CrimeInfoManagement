@@ -63,7 +63,7 @@ Void Form_users::button_adusrdel_Click(System::Object^  sender, System::EventArg
 
 Void Form_users::button_userdelfinal_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	if (maskedTextBox_policeiddel->Text!="" && textBox_usernamedel->Text!="" && textBox_addedbydel->Text!="" && maskedTextBox_useriddel->Text!="")
+	if (maskedTextBox_policeiddel->Text!="" &&  maskedTextBox_useriddel->Text!="")
 	{
 		MessageBox::Show("User Deleted Successfully from the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
