@@ -66,7 +66,7 @@ void dbconnect::add_user(String^ utype,String^ stationid, String^ userid, String
 
 void dbconnect::del_user(String^ utype,String^ stationid, String^ userid)
 {
-	String^ query="DELETE FROM usertable WHERE `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
+	String^ query="DELETE FROM usertable WHERE `User Type`=\'"+utype+" AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
 	MySqlCommand^ cmd = gcnew MySqlCommand;
 	cmd->Connection = con;
     cmd->CommandText = query;
