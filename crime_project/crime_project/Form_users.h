@@ -55,10 +55,10 @@ namespace crime_project {
 	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox_policeidadd;
 
 
-	private: System::Windows::Forms::Label^  label_addby;
+
 	private: System::Windows::Forms::Label^  label_viewuseridadd;
 	private: System::Windows::Forms::Label^  label_viewpoliceidadd;
-	private: System::Windows::Forms::Label^  label_viewaddby;
+
 	private: System::Windows::Forms::Label^  label_useridadd;
 	private: System::Windows::Forms::GroupBox^  groupBox_deleteuser;
 	private: System::Windows::Forms::Button^  button_canceldel;
@@ -117,10 +117,8 @@ namespace crime_project {
 			this->label_viewpassword = (gcnew System::Windows::Forms::Label());
 			this->label_viewusername = (gcnew System::Windows::Forms::Label());
 			this->maskedTextBox_policeidadd = (gcnew System::Windows::Forms::MaskedTextBox());
-			this->label_addby = (gcnew System::Windows::Forms::Label());
 			this->label_viewuseridadd = (gcnew System::Windows::Forms::Label());
 			this->label_viewpoliceidadd = (gcnew System::Windows::Forms::Label());
-			this->label_viewaddby = (gcnew System::Windows::Forms::Label());
 			this->groupBox_deleteuser = (gcnew System::Windows::Forms::GroupBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -202,7 +200,7 @@ namespace crime_project {
 			this->groupBox_allusers->Controls->Add(this->dataGridView_users);
 			this->groupBox_allusers->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_allusers->Location = System::Drawing::Point(12, 113);
+			this->groupBox_allusers->Location = System::Drawing::Point(12, 120);
 			this->groupBox_allusers->Name = L"groupBox_allusers";
 			this->groupBox_allusers->Size = System::Drawing::Size(850, 96);
 			this->groupBox_allusers->TabIndex = 5;
@@ -222,13 +220,11 @@ namespace crime_project {
 			this->groupBox_adduser->Controls->Add(this->label_viewpassword);
 			this->groupBox_adduser->Controls->Add(this->label_viewusername);
 			this->groupBox_adduser->Controls->Add(this->maskedTextBox_policeidadd);
-			this->groupBox_adduser->Controls->Add(this->label_addby);
 			this->groupBox_adduser->Controls->Add(this->label_viewuseridadd);
 			this->groupBox_adduser->Controls->Add(this->label_viewpoliceidadd);
-			this->groupBox_adduser->Controls->Add(this->label_viewaddby);
 			this->groupBox_adduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_adduser->Location = System::Drawing::Point(8, 136);
+			this->groupBox_adduser->Location = System::Drawing::Point(12, 143);
 			this->groupBox_adduser->Name = L"groupBox_adduser";
 			this->groupBox_adduser->Size = System::Drawing::Size(854, 203);
 			this->groupBox_adduser->TabIndex = 8;
@@ -355,17 +351,6 @@ namespace crime_project {
 			this->maskedTextBox_policeidadd->TabIndex = 6;
 			this->maskedTextBox_policeidadd->ValidatingType = System::Int32::typeid;
 			// 
-			// label_addby
-			// 
-			this->label_addby->AutoSize = true;
-			this->label_addby->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label_addby->Location = System::Drawing::Point(425, 32);
-			this->label_addby->Name = L"label_addby";
-			this->label_addby->Size = System::Drawing::Size(45, 24);
-			this->label_addby->TabIndex = 3;
-			this->label_addby->Text = L"XYZ";
-			// 
 			// label_viewuseridadd
 			// 
 			this->label_viewuseridadd->AutoSize = true;
@@ -388,17 +373,6 @@ namespace crime_project {
 			this->label_viewpoliceidadd->TabIndex = 1;
 			this->label_viewpoliceidadd->Text = L"Police Station ID:";
 			// 
-			// label_viewaddby
-			// 
-			this->label_viewaddby->AutoSize = true;
-			this->label_viewaddby->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewaddby->Location = System::Drawing::Point(318, 32);
-			this->label_viewaddby->Name = L"label_viewaddby";
-			this->label_viewaddby->Size = System::Drawing::Size(101, 24);
-			this->label_viewaddby->TabIndex = 0;
-			this->label_viewaddby->Text = L"Added By:";
-			// 
 			// groupBox_deleteuser
 			// 
 			this->groupBox_deleteuser->Controls->Add(this->comboBox1);
@@ -412,7 +386,7 @@ namespace crime_project {
 			this->groupBox_deleteuser->Controls->Add(this->label_viewpoliceiddel);
 			this->groupBox_deleteuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_deleteuser->Location = System::Drawing::Point(8, 369);
+			this->groupBox_deleteuser->Location = System::Drawing::Point(8, 356);
 			this->groupBox_deleteuser->Name = L"groupBox_deleteuser";
 			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 160);
 			this->groupBox_deleteuser->TabIndex = 9;

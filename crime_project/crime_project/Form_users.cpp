@@ -89,12 +89,12 @@ Void Form_users::button_canceldel_Click(System::Object^  sender, System::EventAr
 
 Void Form_users::button_helpadd_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	MessageBox::Show("Enter data in proper fields and click on Add to add entry to database.");
+	MessageBox::Show("Enter data in proper fields and click on Add to add entry to database. Press Cancel to abort.");
 
 }
 
 Void Form_users::button_helpdel_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	MessageBox::Show("Enter data in proper fields and click on Delete to delete entry from database.");
+	MessageBox::Show("Enter data in proper fields and click on Delete to delete entry from database. Press Cancel to abort.");
 
 }
