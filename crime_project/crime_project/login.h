@@ -170,6 +170,7 @@ namespace crime_project {
 			this->pass->PasswordChar = '*';
 			this->pass->Size = System::Drawing::Size(121, 28);
 			this->pass->TabIndex = 3;
+			this->pass->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &login::pass_KeyPress);
 			// 
 			// fail_status
 			// 
@@ -258,5 +259,6 @@ private: System::Void user_type_select_SelectedIndexChanged(System::Object^  sen
 		 }
 
 
+private: System::Void pass_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) ;
 };
 }
