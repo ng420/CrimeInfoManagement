@@ -64,9 +64,9 @@ void dbconnect::add_user(String^ utype,String^ stationid, String^ userid, String
 	cmd->ExecuteNonQuery();
 }
 
-void dbconnect::del_user(String^ utype,String^ stationid, String^ userid)
+void dbconnect::del_user(String^ utype,String^ stationid, String^ userid, String^ pass)
 {
-	String^ query="DELETE FROM usertable WHERE `User Type`=\'"+utype+" AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
+	String^ query="DELETE FROM usertable WHERE `User Type`=\'"+utype+" AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=\'"+pass+"\'" ;
 	MySqlCommand^ cmd = gcnew MySqlCommand;
 	cmd->Connection = con;
     cmd->CommandText = query;
