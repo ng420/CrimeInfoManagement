@@ -7,6 +7,7 @@ using namespace System::IO;
 
 verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user credentials against possible user_id and password combinations.
 {	
+	verified = false;
 	bool sql_con_estb = 0;
 	MySqlConnection^ con = gcnew MySqlConnection();
 		try
@@ -29,7 +30,6 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 	}
 	catch (Exception^ e)
 	{}
-	verified=false;
 	if ( sql_con_estb == 1 ) {
 		if ( userid == "Ranu" ) {
 			if ( pwd == "Vikram" ) {
@@ -38,12 +38,11 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 		}
 	}
 	else {
-		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
-		MySqlCommand^ cmd = gcnew MySqlCommand;
-		cmd->Connection = con;
-		cmd->CommandText = query;
-		//MessageBox::Show(query);
-		if(cmd->ExecuteNonQuery()) 
-		verified = true;
+		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=\'"+pwd+"\'" ;
+		MySqlCommand^ cmd = gcnew MySqlCommand(query, con);
+		MySqlDataReader^ rdr = cmd->ExecuteReader();
+		if(rdr->Read()) {
+			verified = true;
+		} 
 	}
 }
