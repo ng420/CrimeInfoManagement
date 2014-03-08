@@ -106,6 +106,7 @@ namespace crime_project {
 			this->dataGridView_users = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox_allusers = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox_adduser = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox_utype = (gcnew System::Windows::Forms::ComboBox());
 			this->label_useridadd = (gcnew System::Windows::Forms::Label());
 			this->button_canceladd = (gcnew System::Windows::Forms::Button());
 			this->button_usraddfinal = (gcnew System::Windows::Forms::Button());
@@ -121,6 +122,8 @@ namespace crime_project {
 			this->label_viewpoliceidadd = (gcnew System::Windows::Forms::Label());
 			this->label_viewaddby = (gcnew System::Windows::Forms::Label());
 			this->groupBox_deleteuser = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button_canceldel = (gcnew System::Windows::Forms::Button());
 			this->button_userdelfinal = (gcnew System::Windows::Forms::Button());
 			this->button_helpdel = (gcnew System::Windows::Forms::Button());
@@ -128,9 +131,6 @@ namespace crime_project {
 			this->label_viewuseriddel = (gcnew System::Windows::Forms::Label());
 			this->maskedTextBox_policeiddel = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label_viewpoliceiddel = (gcnew System::Windows::Forms::Label());
-			this->comboBox_utype = (gcnew System::Windows::Forms::ComboBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox_options->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_users))->BeginInit();
 			this->groupBox_allusers->SuspendLayout();
@@ -235,6 +235,16 @@ namespace crime_project {
 			this->groupBox_adduser->TabStop = false;
 			this->groupBox_adduser->Text = L"Add New User";
 			this->groupBox_adduser->Visible = false;
+			// 
+			// comboBox_utype
+			// 
+			this->comboBox_utype->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_utype->FormattingEnabled = true;
+			this->comboBox_utype->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
+			this->comboBox_utype->Location = System::Drawing::Point(478, 86);
+			this->comboBox_utype->Name = L"comboBox_utype";
+			this->comboBox_utype->Size = System::Drawing::Size(100, 25);
+			this->comboBox_utype->TabIndex = 16;
 			// 
 			// label_useridadd
 			// 
@@ -410,6 +420,27 @@ namespace crime_project {
 			this->groupBox_deleteuser->Text = L"Delete User:";
 			this->groupBox_deleteuser->Visible = false;
 			// 
+			// comboBox1
+			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
+			this->comboBox1->Location = System::Drawing::Point(462, 32);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(100, 24);
+			this->comboBox1->TabIndex = 20;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(351, 35);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(68, 17);
+			this->label1->TabIndex = 19;
+			this->label1->Text = L"User Type";
+			// 
 			// button_canceldel
 			// 
 			this->button_canceldel->Location = System::Drawing::Point(700, 101);
@@ -475,37 +506,6 @@ namespace crime_project {
 			this->label_viewpoliceiddel->Size = System::Drawing::Size(109, 16);
 			this->label_viewpoliceiddel->TabIndex = 0;
 			this->label_viewpoliceiddel->Text = L"Police Station ID:";
-			// 
-			// comboBox_utype
-			// 
-			this->comboBox_utype->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox_utype->FormattingEnabled = true;
-			this->comboBox_utype->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
-			this->comboBox_utype->Location = System::Drawing::Point(478, 86);
-			this->comboBox_utype->Name = L"comboBox_utype";
-			this->comboBox_utype->Size = System::Drawing::Size(100, 25);
-			this->comboBox_utype->TabIndex = 16;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(351, 35);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(68, 17);
-			this->label1->TabIndex = 19;
-			this->label1->Text = L"User Type";
-			// 
-			// comboBox1
-			// 
-			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
-			this->comboBox1->Location = System::Drawing::Point(462, 32);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(100, 24);
-			this->comboBox1->TabIndex = 20;
 			// 
 			// Form_users
 			// 
