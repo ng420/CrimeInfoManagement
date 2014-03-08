@@ -111,7 +111,7 @@ namespace crime_project {
 			this->user_name->Name = L"user_name";
 			this->user_name->Size = System::Drawing::Size(143, 20);
 			this->user_name->TabIndex = 1;
-			this->user_name->Text = L"User Name         :";
+			this->user_name->Text = L"User Id        :";
 			// 
 			// user_id
 			// 

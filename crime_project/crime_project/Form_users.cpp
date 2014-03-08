@@ -18,7 +18,6 @@ Void Form_users::button_adback_Click(System::Object^  sender, System::EventArgs^
 
 Void Form_users::button_adusradd_Click(System::Object^  sender, System::EventArgs^  e) {
 	button_adusradd->Enabled = false;
-	button_adusredit->Enabled = false;
 	button_adusrdel->Enabled = false;
 	groupBox_allusers->Visible = false;
 	groupBox_adduser->Visible = true;
@@ -26,7 +25,6 @@ Void Form_users::button_adusradd_Click(System::Object^  sender, System::EventArg
 
 Void Form_users::button_canceladd_Click(System::Object^  sender, System::EventArgs^  e) {
 	button_adusradd->Enabled = true;
-	button_adusredit->Enabled = true;
 	button_adusrdel->Enabled = true;
 	groupBox_allusers->Visible = true;
 	groupBox_adduser->Visible = false;
@@ -35,13 +33,12 @@ Void Form_users::button_canceladd_Click(System::Object^  sender, System::EventAr
 
 Void Form_users::button_usraddfinal_Click(System::Object^  sender, System::EventArgs^  e) {
 	
-	if (maskedTextBox_policeidadd->Text!="" && textBox_username->Text!="" && textBox_password->Text!="" && textBox_password->Text==textBox_repassword->Text)
+	if (maskedTextBox_policeidadd->Text!="" && comboBox_utype->Text!="" && textBox_password->Text!="" && textBox_password->Text==textBox_repassword->Text)
 	{
 		dbconnect db;
-		db.add_user(Convert::ToString(maskedTextBox_policeidadd->Text), Convert::ToString(label_useridadd->Text), textBox_password->Text);
+		db.add_user(comboBox_utype->Text, Convert::ToString(maskedTextBox_policeidadd->Text), Convert::ToString(label_useridadd->Text), textBox_password->Text);
 		MessageBox::Show("User Added Successfully into the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
-		button_adusredit->Enabled = true;
 		button_adusrdel->Enabled = true;
 		groupBox_allusers->Visible = true;
 		groupBox_adduser->Visible = false;
@@ -57,7 +54,6 @@ Void Form_users::button_usraddfinal_Click(System::Object^  sender, System::Event
 
 Void Form_users::button_adusrdel_Click(System::Object^  sender, System::EventArgs^  e) {
 	button_adusradd->Enabled = false;
-	button_adusredit->Enabled = false;
 	button_adusrdel->Enabled = false;
 	groupBox_allusers->Visible = false;
 	groupBox_adduser->Visible = false;
@@ -66,14 +62,13 @@ Void Form_users::button_adusrdel_Click(System::Object^  sender, System::EventArg
 
 Void Form_users::button_userdelfinal_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	if (maskedTextBox_policeiddel->Text!="" &&  maskedTextBox_useriddel->Text!="")
+	if (maskedTextBox_policeiddel->Text!="" &&  maskedTextBox_useriddel->Text!="" && comboBox1->Text != "")
 	{	
 		dbconnect db;
 
-		db.del_user(Convert::ToString(maskedTextBox_policeiddel->Text), Convert::ToString(maskedTextBox_useriddel->Text));
+		db.del_user(comboBox1->Text,Convert::ToString(maskedTextBox_policeiddel->Text), Convert::ToString(maskedTextBox_useriddel->Text));
 		MessageBox::Show("User Deleted Successfully from the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
-		button_adusredit->Enabled = true;
 		button_adusrdel->Enabled = true;
 		groupBox_allusers->Visible = true;
 		groupBox_adduser->Visible = false;
@@ -86,7 +81,6 @@ Void Form_users::button_userdelfinal_Click(System::Object^  sender, System::Even
 
 Void Form_users::button_canceldel_Click(System::Object^  sender, System::EventArgs^  e) {
 	button_adusradd->Enabled = true;
-	button_adusredit->Enabled = true;
 	button_adusrdel->Enabled = true;
 	groupBox_allusers->Visible = true;
 	groupBox_adduser->Visible = false;

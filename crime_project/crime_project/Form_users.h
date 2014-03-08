@@ -36,7 +36,7 @@ namespace crime_project {
 		}
 	private: System::Windows::Forms::Button^  button_adback;
 	private: System::Windows::Forms::Button^  button_adusradd;
-	private: System::Windows::Forms::Button^  button_adusredit;
+
 	private: System::Windows::Forms::Button^  button_adusrdel;
 	private: System::Windows::Forms::GroupBox^  groupBox_options;
 
@@ -48,7 +48,7 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_helpadd;
 	private: System::Windows::Forms::TextBox^  textBox_repassword;
 	private: System::Windows::Forms::TextBox^  textBox_password;
-	private: System::Windows::Forms::TextBox^  textBox_username;
+
 	private: System::Windows::Forms::Label^  label_viewrepass;
 	private: System::Windows::Forms::Label^  label_viewpassword;
 	private: System::Windows::Forms::Label^  label_viewusername;
@@ -70,6 +70,10 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  label_viewuseriddel;
 	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox_policeiddel;
 	private: System::Windows::Forms::Label^  label_viewpoliceiddel;
+	private: System::Windows::Forms::ComboBox^  comboBox_utype;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::Label^  label1;
+
 
 
 
@@ -97,7 +101,6 @@ namespace crime_project {
 		{
 			this->button_adback = (gcnew System::Windows::Forms::Button());
 			this->button_adusradd = (gcnew System::Windows::Forms::Button());
-			this->button_adusredit = (gcnew System::Windows::Forms::Button());
 			this->button_adusrdel = (gcnew System::Windows::Forms::Button());
 			this->groupBox_options = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridView_users = (gcnew System::Windows::Forms::DataGridView());
@@ -109,7 +112,6 @@ namespace crime_project {
 			this->button_helpadd = (gcnew System::Windows::Forms::Button());
 			this->textBox_repassword = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_password = (gcnew System::Windows::Forms::TextBox());
-			this->textBox_username = (gcnew System::Windows::Forms::TextBox());
 			this->label_viewrepass = (gcnew System::Windows::Forms::Label());
 			this->label_viewpassword = (gcnew System::Windows::Forms::Label());
 			this->label_viewusername = (gcnew System::Windows::Forms::Label());
@@ -126,6 +128,9 @@ namespace crime_project {
 			this->label_viewuseriddel = (gcnew System::Windows::Forms::Label());
 			this->maskedTextBox_policeiddel = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label_viewpoliceiddel = (gcnew System::Windows::Forms::Label());
+			this->comboBox_utype = (gcnew System::Windows::Forms::ComboBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox_options->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_users))->BeginInit();
 			this->groupBox_allusers->SuspendLayout();
@@ -149,24 +154,13 @@ namespace crime_project {
 			// 
 			this->button_adusradd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_adusradd->Location = System::Drawing::Point(333, 47);
+			this->button_adusradd->Location = System::Drawing::Point(413, 47);
 			this->button_adusradd->Name = L"button_adusradd";
 			this->button_adusradd->Size = System::Drawing::Size(161, 32);
 			this->button_adusradd->TabIndex = 2;
 			this->button_adusradd->Text = L"Add New User";
 			this->button_adusradd->UseVisualStyleBackColor = true;
 			this->button_adusradd->Click += gcnew System::EventHandler(this, &Form_users::button_adusradd_Click);
-			// 
-			// button_adusredit
-			// 
-			this->button_adusredit->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->button_adusredit->Location = System::Drawing::Point(511, 47);
-			this->button_adusredit->Name = L"button_adusredit";
-			this->button_adusredit->Size = System::Drawing::Size(161, 32);
-			this->button_adusredit->TabIndex = 3;
-			this->button_adusredit->Text = L"Edit User Info";
-			this->button_adusredit->UseVisualStyleBackColor = true;
 			// 
 			// button_adusrdel
 			// 
@@ -185,7 +179,6 @@ namespace crime_project {
 			this->groupBox_options->Controls->Add(this->button_adusradd);
 			this->groupBox_options->Controls->Add(this->button_adusrdel);
 			this->groupBox_options->Controls->Add(this->button_adback);
-			this->groupBox_options->Controls->Add(this->button_adusredit);
 			this->groupBox_options->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->groupBox_options->Location = System::Drawing::Point(12, 12);
@@ -218,13 +211,13 @@ namespace crime_project {
 			// 
 			// groupBox_adduser
 			// 
+			this->groupBox_adduser->Controls->Add(this->comboBox_utype);
 			this->groupBox_adduser->Controls->Add(this->label_useridadd);
 			this->groupBox_adduser->Controls->Add(this->button_canceladd);
 			this->groupBox_adduser->Controls->Add(this->button_usraddfinal);
 			this->groupBox_adduser->Controls->Add(this->button_helpadd);
 			this->groupBox_adduser->Controls->Add(this->textBox_repassword);
 			this->groupBox_adduser->Controls->Add(this->textBox_password);
-			this->groupBox_adduser->Controls->Add(this->textBox_username);
 			this->groupBox_adduser->Controls->Add(this->label_viewrepass);
 			this->groupBox_adduser->Controls->Add(this->label_viewpassword);
 			this->groupBox_adduser->Controls->Add(this->label_viewusername);
@@ -308,15 +301,6 @@ namespace crime_project {
 			this->textBox_password->Size = System::Drawing::Size(100, 24);
 			this->textBox_password->TabIndex = 8;
 			// 
-			// textBox_username
-			// 
-			this->textBox_username->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox_username->Location = System::Drawing::Point(478, 88);
-			this->textBox_username->Name = L"textBox_username";
-			this->textBox_username->Size = System::Drawing::Size(100, 24);
-			this->textBox_username->TabIndex = 7;
-			// 
 			// label_viewrepass
 			// 
 			this->label_viewrepass->AutoSize = true;
@@ -346,9 +330,9 @@ namespace crime_project {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label_viewusername->Location = System::Drawing::Point(383, 95);
 			this->label_viewusername->Name = L"label_viewusername";
-			this->label_viewusername->Size = System::Drawing::Size(73, 17);
+			this->label_viewusername->Size = System::Drawing::Size(68, 17);
 			this->label_viewusername->TabIndex = 6;
-			this->label_viewusername->Text = L"Username:";
+			this->label_viewusername->Text = L"User Type";
 			// 
 			// maskedTextBox_policeidadd
 			// 
@@ -407,6 +391,8 @@ namespace crime_project {
 			// 
 			// groupBox_deleteuser
 			// 
+			this->groupBox_deleteuser->Controls->Add(this->comboBox1);
+			this->groupBox_deleteuser->Controls->Add(this->label1);
 			this->groupBox_deleteuser->Controls->Add(this->button_canceldel);
 			this->groupBox_deleteuser->Controls->Add(this->button_userdelfinal);
 			this->groupBox_deleteuser->Controls->Add(this->button_helpdel);
@@ -466,7 +452,7 @@ namespace crime_project {
 			// label_viewuseriddel
 			// 
 			this->label_viewuseriddel->AutoSize = true;
-			this->label_viewuseriddel->Location = System::Drawing::Point(387, 65);
+			this->label_viewuseriddel->Location = System::Drawing::Point(351, 65);
 			this->label_viewuseriddel->Name = L"label_viewuseriddel";
 			this->label_viewuseriddel->Size = System::Drawing::Size(56, 16);
 			this->label_viewuseriddel->TabIndex = 2;
@@ -474,7 +460,7 @@ namespace crime_project {
 			// 
 			// maskedTextBox_policeiddel
 			// 
-			this->maskedTextBox_policeiddel->Location = System::Drawing::Point(154, 62);
+			this->maskedTextBox_policeiddel->Location = System::Drawing::Point(165, 49);
 			this->maskedTextBox_policeiddel->Mask = L"00000";
 			this->maskedTextBox_policeiddel->Name = L"maskedTextBox_policeiddel";
 			this->maskedTextBox_policeiddel->Size = System::Drawing::Size(100, 22);
@@ -484,11 +470,42 @@ namespace crime_project {
 			// label_viewpoliceiddel
 			// 
 			this->label_viewpoliceiddel->AutoSize = true;
-			this->label_viewpoliceiddel->Location = System::Drawing::Point(39, 68);
+			this->label_viewpoliceiddel->Location = System::Drawing::Point(39, 49);
 			this->label_viewpoliceiddel->Name = L"label_viewpoliceiddel";
 			this->label_viewpoliceiddel->Size = System::Drawing::Size(109, 16);
 			this->label_viewpoliceiddel->TabIndex = 0;
 			this->label_viewpoliceiddel->Text = L"Police Station ID:";
+			// 
+			// comboBox_utype
+			// 
+			this->comboBox_utype->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_utype->FormattingEnabled = true;
+			this->comboBox_utype->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
+			this->comboBox_utype->Location = System::Drawing::Point(478, 86);
+			this->comboBox_utype->Name = L"comboBox_utype";
+			this->comboBox_utype->Size = System::Drawing::Size(100, 25);
+			this->comboBox_utype->TabIndex = 16;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(351, 35);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(68, 17);
+			this->label1->TabIndex = 19;
+			this->label1->Text = L"User Type";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
+			this->comboBox1->Location = System::Drawing::Point(462, 32);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(100, 24);
+			this->comboBox1->TabIndex = 20;
 			// 
 			// Form_users
 			// 
