@@ -38,7 +38,6 @@ Void Form_users::button_usraddfinal_Click(System::Object^  sender, System::Event
 	if (maskedTextBox_policeidadd->Text!="" && textBox_username->Text!="" && textBox_password->Text!="" && textBox_password->Text==textBox_repassword->Text)
 	{
 		dbconnect db;
-
 		db.add_user(Convert::ToString(maskedTextBox_policeidadd->Text), Convert::ToString(label_useridadd->Text), textBox_password->Text);
 		MessageBox::Show("User Added Successfully into the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
