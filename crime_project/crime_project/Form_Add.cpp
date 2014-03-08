@@ -37,7 +37,7 @@ void Form_Add::button_cancel_Click(System::Object^  sender, System::EventArgs^  
 //after filling all the necessary fields, click on this button to add all the data to the database.
 void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e){
 	// crime location, category and description are necessary fields to be filled
-	if (comboBox_category->Text==""||textBox_place->Text==""||textBox_description->Text=="") //if condition to check that whether location, category and description of the crime is defined or not.
+	if (comboBox_category->Text==""||textBox_place->Text==""||textBox_description->Text==""||label1->Text=="") //if condition to check that whether location, category and description of the crime is defined or not.
 	{
 		MessageBox::Show("Some fields are not filled. Please fill.");  //if all fields are not filled, display message. 
 	}

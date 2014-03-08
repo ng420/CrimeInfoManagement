@@ -67,7 +67,8 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_upload;
 	private: System::Windows::Forms::Button^  button_addsuspect;
 	private: System::Windows::Forms::Label^  label_viewid;
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::TextBox^  label1;
+
 
 
 
@@ -106,7 +107,7 @@ namespace crime_project {
 			this->button_upload = (gcnew System::Windows::Forms::Button());
 			this->button_addsuspect = (gcnew System::Windows::Forms::Button());
 			this->label_viewid = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label_category
@@ -163,7 +164,7 @@ namespace crime_project {
 			this->label_location->BackColor = System::Drawing::Color::Transparent;
 			this->label_location->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_location->Location = System::Drawing::Point(625, 87);
+			this->label_location->Location = System::Drawing::Point(612, 87);
 			this->label_location->Name = L"label_location";
 			this->label_location->Size = System::Drawing::Size(78, 20);
 			this->label_location->TabIndex = 4;
@@ -351,7 +352,7 @@ namespace crime_project {
 			this->label_viewid->AutoSize = true;
 			this->label_viewid->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_viewid->Location = System::Drawing::Point(585, 41);
+			this->label_viewid->Location = System::Drawing::Point(585, 38);
 			this->label_viewid->Name = L"label_viewid";
 			this->label_viewid->Size = System::Drawing::Size(105, 25);
 			this->label_viewid->TabIndex = 23;
@@ -359,14 +360,12 @@ namespace crime_project {
 			// 
 			// label1
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(718, 41);
+			this->label1->Location = System::Drawing::Point(723, 38);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(72, 25);
+			this->label1->Size = System::Drawing::Size(136, 28);
 			this->label1->TabIndex = 24;
-			this->label1->Text = L"12345";
 			// 
 			// Form_Add
 			// 

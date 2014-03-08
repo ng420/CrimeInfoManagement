@@ -29,9 +29,15 @@ Void Form1::button_logout_Click(System::Object^  sender, System::EventArgs^  e) 
 //to search the keywords in textBox_keyword
 Void Form1::button_search_Click(System::Object^  sender, System::EventArgs^  e) {
 	//search function yet to be defined
-	Form_viewall::boo1=true;
-	this->Hide();								//hide Form1
-	Form_viewall^ f2 = gcnew Form_viewall(textBox_keyword->Text,comboBox_searchby->SelectedItem->ToString(), "regular");
-	f2->ShowDialog();							//show Form_viewall
+	if (comboBox_searchby->Text==""||textBox_keyword->Text=="")
+	{
+		label_adwarn->Visible = true;
+	}
+	else{
+		this->Hide();
+		this->Close();	//close Form_admin
+		Form_viewall^ f2 = gcnew Form_viewall(textBox_keyword->Text, comboBox_searchby->Text, "regular");
+		f2->ShowDialog();							//show login form
+	}
 }
 

@@ -50,6 +50,7 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  label_keyword;
 	private: System::Windows::Forms::TextBox^  textBox_keyword;
 	private: System::Windows::Forms::Button^  button_logout;
+	private: System::Windows::Forms::Label^  label_adwarn;
 
 
 
@@ -78,6 +79,7 @@ namespace crime_project {
 			this->label_keyword = (gcnew System::Windows::Forms::Label());
 			this->textBox_keyword = (gcnew System::Windows::Forms::TextBox());
 			this->button_logout = (gcnew System::Windows::Forms::Button());
+			this->label_adwarn = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button_add
@@ -186,6 +188,18 @@ namespace crime_project {
 			this->button_logout->UseVisualStyleBackColor = true;
 			this->button_logout->Click += gcnew System::EventHandler(this, &Form1::button_logout_Click);
 			// 
+			// label_adwarn
+			// 
+			this->label_adwarn->AutoSize = true;
+			this->label_adwarn->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label_adwarn->Location = System::Drawing::Point(59, 35);
+			this->label_adwarn->Name = L"label_adwarn";
+			this->label_adwarn->Size = System::Drawing::Size(201, 20);
+			this->label_adwarn->TabIndex = 11;
+			this->label_adwarn->Text = L"Please fill correctly below!";
+			this->label_adwarn->Visible = false;
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -194,6 +208,7 @@ namespace crime_project {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
+			this->Controls->Add(this->label_adwarn);
 			this->Controls->Add(this->button_logout);
 			this->Controls->Add(this->textBox_keyword);
 			this->Controls->Add(this->label_keyword);
