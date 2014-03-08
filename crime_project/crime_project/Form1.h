@@ -50,9 +50,9 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  label_keyword;
 	private: System::Windows::Forms::TextBox^  textBox_keyword;
 	private: System::Windows::Forms::Button^  button_logout;
-	private: System::Windows::Forms::Label^  label_welcome;
 
-	private: System::Windows::Forms::Label^  label_welcomeuser;
+
+
 
 
 
@@ -78,8 +78,6 @@ namespace crime_project {
 			this->label_keyword = (gcnew System::Windows::Forms::Label());
 			this->textBox_keyword = (gcnew System::Windows::Forms::TextBox());
 			this->button_logout = (gcnew System::Windows::Forms::Button());
-			this->label_welcome = (gcnew System::Windows::Forms::Label());
-			this->label_welcomeuser = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button_add
@@ -87,7 +85,7 @@ namespace crime_project {
 			this->button_add->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button_add->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_add->Location = System::Drawing::Point(759, 369);
+			this->button_add->Location = System::Drawing::Point(535, 441);
 			this->button_add->Name = L"button_add";
 			this->button_add->Size = System::Drawing::Size(103, 33);
 			this->button_add->TabIndex = 0;
@@ -100,7 +98,7 @@ namespace crime_project {
 			this->button_search->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->button_search->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_search->Location = System::Drawing::Point(408, 450);
+			this->button_search->Location = System::Drawing::Point(632, 158);
 			this->button_search->Name = L"button_search";
 			this->button_search->Size = System::Drawing::Size(153, 30);
 			this->button_search->TabIndex = 1;
@@ -129,7 +127,7 @@ namespace crime_project {
 			this->label_searchby->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label_searchby->ForeColor = System::Drawing::Color::Black;
-			this->label_searchby->Location = System::Drawing::Point(12, 410);
+			this->label_searchby->Location = System::Drawing::Point(59, 90);
 			this->label_searchby->Name = L"label_searchby";
 			this->label_searchby->Size = System::Drawing::Size(101, 24);
 			this->label_searchby->TabIndex = 3;
@@ -146,9 +144,9 @@ namespace crime_project {
 			this->comboBox_searchby->FormattingEnabled = true;
 			this->comboBox_searchby->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Category", L"Date", L"Location", L"Description", 
 				L"Status", L"Suspects"});
-			this->comboBox_searchby->Location = System::Drawing::Point(197, 409);
+			this->comboBox_searchby->Location = System::Drawing::Point(302, 90);
 			this->comboBox_searchby->Name = L"comboBox_searchby";
-			this->comboBox_searchby->Size = System::Drawing::Size(179, 32);
+			this->comboBox_searchby->Size = System::Drawing::Size(179, 33);
 			this->comboBox_searchby->TabIndex = 4;
 			// 
 			// label_keyword
@@ -159,7 +157,7 @@ namespace crime_project {
 			this->label_keyword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label_keyword->ForeColor = System::Drawing::Color::Black;
-			this->label_keyword->Location = System::Drawing::Point(12, 455);
+			this->label_keyword->Location = System::Drawing::Point(59, 156);
 			this->label_keyword->Name = L"label_keyword";
 			this->label_keyword->Size = System::Drawing::Size(114, 24);
 			this->label_keyword->TabIndex = 5;
@@ -170,7 +168,7 @@ namespace crime_project {
 			this->textBox_keyword->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->textBox_keyword->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_keyword->Location = System::Drawing::Point(197, 450);
+			this->textBox_keyword->Location = System::Drawing::Point(302, 156);
 			this->textBox_keyword->Name = L"textBox_keyword";
 			this->textBox_keyword->Size = System::Drawing::Size(179, 32);
 			this->textBox_keyword->TabIndex = 6;
@@ -180,42 +178,13 @@ namespace crime_project {
 			this->button_logout->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button_logout->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_logout->Location = System::Drawing::Point(759, 298);
+			this->button_logout->Location = System::Drawing::Point(302, 441);
 			this->button_logout->Name = L"button_logout";
 			this->button_logout->Size = System::Drawing::Size(103, 33);
 			this->button_logout->TabIndex = 7;
 			this->button_logout->Text = L"Logout";
 			this->button_logout->UseVisualStyleBackColor = true;
 			this->button_logout->Click += gcnew System::EventHandler(this, &Form1::button_logout_Click);
-			// 
-			// label_welcome
-			// 
-			this->label_welcome->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->label_welcome->AutoSize = true;
-			this->label_welcome->BackColor = System::Drawing::Color::Transparent;
-			this->label_welcome->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label_welcome->Font = (gcnew System::Drawing::Font(L"Century Gothic", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label_welcome->ForeColor = System::Drawing::Color::Black;
-			this->label_welcome->Location = System::Drawing::Point(199, 43);
-			this->label_welcome->Name = L"label_welcome";
-			this->label_welcome->Size = System::Drawing::Size(245, 49);
-			this->label_welcome->TabIndex = 9;
-			this->label_welcome->Text = L"Welcome : ";
-			// 
-			// label_welcomeuser
-			// 
-			this->label_welcomeuser->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->label_welcomeuser->AutoSize = true;
-			this->label_welcomeuser->BackColor = System::Drawing::Color::Transparent;
-			this->label_welcomeuser->Font = (gcnew System::Drawing::Font(L"Century Gothic", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label_welcomeuser->ForeColor = System::Drawing::Color::Black;
-			this->label_welcomeuser->Location = System::Drawing::Point(509, 43);
-			this->label_welcomeuser->Name = L"label_welcomeuser";
-			this->label_welcomeuser->Size = System::Drawing::Size(88, 49);
-			this->label_welcomeuser->TabIndex = 11;
-			this->label_welcomeuser->Text = L"XYZ";
 			// 
 			// Form1
 			// 
@@ -225,8 +194,6 @@ namespace crime_project {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
-			this->Controls->Add(this->label_welcomeuser);
-			this->Controls->Add(this->label_welcome);
 			this->Controls->Add(this->button_logout);
 			this->Controls->Add(this->textBox_keyword);
 			this->Controls->Add(this->label_keyword);

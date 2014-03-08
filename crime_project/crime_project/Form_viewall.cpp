@@ -31,6 +31,10 @@ Form_viewall::Form_viewall()
 	InitializeComponent();
 	dbconnect db;
 	dataGridView_records->DataSource = db.viewall();
+	label_recsearchedby->Text = "";
+	label_searchcategory->Text = "";
+	label_searchkeyword->Text = "";
+	label_reckeyword->Text = "";
 	dataGridView_records->DataMember = "std";
 	dataGridView_records->Refresh();
 }

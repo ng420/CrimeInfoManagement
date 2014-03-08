@@ -52,7 +52,7 @@ Void login::button_exit_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 
 Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) {
-	label_welcomeuser->Text = login::username;		//to display the name
+	;		//to display the name
 }
 
 Void Form_admin::Form_admin_Load(System::Object^  sender, System::EventArgs^  e) {
