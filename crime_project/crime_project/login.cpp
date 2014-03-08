@@ -56,6 +56,6 @@ Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 
 Void Form_admin::Form_admin_Load(System::Object^  sender, System::EventArgs^  e) {
-	label_adname->Text = login::username;		//to display the name
+	//to display the name
 }
 

@@ -68,8 +68,8 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_addsuspect;
 	private: System::Windows::Forms::Label^  label_viewid;
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Label^  label_viewaddbyrecord;
-	private: System::Windows::Forms::Label^  label2;
+
+
 
 
 	private:
@@ -107,8 +107,6 @@ namespace crime_project {
 			this->button_addsuspect = (gcnew System::Windows::Forms::Button());
 			this->label_viewid = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label_viewaddbyrecord = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label_category
@@ -353,45 +351,22 @@ namespace crime_project {
 			this->label_viewid->AutoSize = true;
 			this->label_viewid->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_viewid->Location = System::Drawing::Point(340, 36);
+			this->label_viewid->Location = System::Drawing::Point(585, 41);
 			this->label_viewid->Name = L"label_viewid";
-			this->label_viewid->Size = System::Drawing::Size(38, 25);
+			this->label_viewid->Size = System::Drawing::Size(105, 25);
 			this->label_viewid->TabIndex = 23;
-			this->label_viewid->Text = L"ID:";
+			this->label_viewid->Text = L"CRIME ID:";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(410, 36);
+			this->label1->Location = System::Drawing::Point(718, 41);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(72, 25);
 			this->label1->TabIndex = 24;
 			this->label1->Text = L"12345";
-			// 
-			// label_viewaddbyrecord
-			// 
-			this->label_viewaddbyrecord->AutoSize = true;
-			this->label_viewaddbyrecord->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewaddbyrecord->Location = System::Drawing::Point(598, 36);
-			this->label_viewaddbyrecord->Name = L"label_viewaddbyrecord";
-			this->label_viewaddbyrecord->Size = System::Drawing::Size(108, 25);
-			this->label_viewaddbyrecord->TabIndex = 25;
-			this->label_viewaddbyrecord->Text = L"Added By:";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(718, 36);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(49, 25);
-			this->label2->TabIndex = 26;
-			this->label2->Text = L"XYZ";
-			this->label2->Click += gcnew System::EventHandler(this, &Form_Add::label2_Click);
 			// 
 			// Form_Add
 			// 
@@ -400,8 +375,6 @@ namespace crime_project {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label_viewaddbyrecord);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->label_viewid);
 			this->Controls->Add(this->button_addsuspect);
@@ -437,7 +410,7 @@ namespace crime_project {
 			 }
 
 private: System::Void Form_Add_Load(System::Object^  sender, System::EventArgs^  e){
-			 label2->Text = login::username;
+			 ;
 		 }
 //All the below button events and their functions are defined in the Form_Add.cpp file.
 private: System::Void button_cancel_Click(System::Object^  sender, System::EventArgs^  e);		//this button event allows user to cancel and go to the Form1 on single click.   
@@ -446,8 +419,6 @@ private: System::Void button_addsuspect_Click(System::Object^  sender, System::E
 private: System::Void button_upload_Click(System::Object^  sender, System::EventArgs^  e);      //this button event allows user to upload any file that can be used as an evidence on single click.
 private: System::Void button_addevidence_Click(System::Object^  sender, System::EventArgs^  e); //this button event allows user to add evidences of the crime activity record on single click.
 private: System::Void button_addmore_Click(System::Object^  sender, System::EventArgs^  e);		//this button event allows user to add a new criminal activity record and the details into the database on single click.
-private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 
-		 }
+
 };
 }
