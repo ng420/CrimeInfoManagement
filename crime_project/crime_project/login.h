@@ -14,6 +14,12 @@ namespace crime_project {
 	public ref class login : public System::Windows::Forms::Form
 	{
 	public: static	String^ usertype;
+
+	public: 
+
+
+
+	public: 
 	public: static	String^ username;
 	public:
 		login(void)
