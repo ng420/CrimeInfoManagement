@@ -452,6 +452,7 @@ namespace crime_project {
 			this->button_helpdel->TabIndex = 17;
 			this->button_helpdel->Text = L"Help";
 			this->button_helpdel->UseVisualStyleBackColor = true;
+			this->button_helpdel->Click += gcnew System::EventHandler(this, &Form_users::button_helpdel_Click);
 			// 
 			// maskedTextBox_useriddel
 			// 
@@ -525,5 +526,6 @@ private: System::Void button_canceldel_Click(System::Object^  sender, System::Ev
 private: System::Void Form_users_Load(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void button_helpadd_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void button_helpdel_Click(System::Object^  sender, System::EventArgs^  e) ;
 };
 }
