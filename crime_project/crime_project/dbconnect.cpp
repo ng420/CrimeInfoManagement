@@ -10,7 +10,7 @@ dbconnect::dbconnect(void)
 		con->ConnectionString = "server=localhost;user id=root;password=pass;persistsecurityinfo=True;database=crimedb";
 		if(con->State==ConnectionState::Closed)
 			con->Open();
-		MessageBox::Show("Connected!");
+		//MessageBox::Show("Connected!");
 	}
 	catch(Exception^ e)
 	{
