@@ -28,7 +28,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 		stationid = din->ReadLine();
 	}
 	catch (Exception^ e)
-	{ ;}
+	{}
 	verified=false;
 	if ( sql_con_estb == 1 ) {
 		if ( userid == "Ranu" ) {
