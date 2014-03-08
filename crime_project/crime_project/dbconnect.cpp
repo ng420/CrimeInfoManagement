@@ -44,3 +44,22 @@ void dbconnect::add(String^ cat, String^ date,String^ time, String^ loc, String^
 	//MessageBox::Show(query);
 	cmd->ExecuteNonQuery();
 }
+
+void dbconnect::add_user(String^ stationid, String^ userid, String^ pass)
+{
+	String^ query="INSERT INTO usertable (`Station ID`, `User ID`, `Password`) VALUES ( \'"+stationid+"\', \'"+userid+"\', \'"+pass+"\')";
+	MySqlCommand^ cmd = gcnew MySqlCommand;
+	cmd->Connection = con;
+    cmd->CommandText = query;
+	//MessageBox::Show(query);
+	cmd->ExecuteNonQuery();
+}
+void dbconnect::del_user(String^ stationid, String^ userid)
+{
+	String^ query="DELETE FROM usertable WHERE `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
+	MySqlCommand^ cmd = gcnew MySqlCommand;
+	cmd->Connection = con;
+    cmd->CommandText = query;
+	//MessageBox::Show(query);
+	cmd->ExecuteNonQuery();
+}
