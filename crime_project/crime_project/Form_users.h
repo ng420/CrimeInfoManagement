@@ -52,14 +52,14 @@ namespace crime_project {
 	private: System::Windows::Forms::Label^  label_viewrepass;
 	private: System::Windows::Forms::Label^  label_viewpassword;
 	private: System::Windows::Forms::Label^  label_viewusername;
-	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox_policeidadd;
+
 
 
 
 	private: System::Windows::Forms::Label^  label_viewuseridadd;
 	private: System::Windows::Forms::Label^  label_viewpoliceidadd;
 
-	private: System::Windows::Forms::Label^  label_useridadd;
+
 	private: System::Windows::Forms::GroupBox^  groupBox_deleteuser;
 	private: System::Windows::Forms::Button^  button_canceldel;
 	private: System::Windows::Forms::Button^  button_userdelfinal;
@@ -73,6 +73,9 @@ namespace crime_project {
 	private: System::Windows::Forms::ComboBox^  comboBox_utype;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::TextBox^  police_station_id;
+	private: System::Windows::Forms::TextBox^  user__id;
+
 
 
 
@@ -107,7 +110,6 @@ namespace crime_project {
 			this->groupBox_allusers = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox_adduser = (gcnew System::Windows::Forms::GroupBox());
 			this->comboBox_utype = (gcnew System::Windows::Forms::ComboBox());
-			this->label_useridadd = (gcnew System::Windows::Forms::Label());
 			this->button_canceladd = (gcnew System::Windows::Forms::Button());
 			this->button_usraddfinal = (gcnew System::Windows::Forms::Button());
 			this->button_helpadd = (gcnew System::Windows::Forms::Button());
@@ -116,7 +118,6 @@ namespace crime_project {
 			this->label_viewrepass = (gcnew System::Windows::Forms::Label());
 			this->label_viewpassword = (gcnew System::Windows::Forms::Label());
 			this->label_viewusername = (gcnew System::Windows::Forms::Label());
-			this->maskedTextBox_policeidadd = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label_viewuseridadd = (gcnew System::Windows::Forms::Label());
 			this->label_viewpoliceidadd = (gcnew System::Windows::Forms::Label());
 			this->groupBox_deleteuser = (gcnew System::Windows::Forms::GroupBox());
@@ -129,6 +130,8 @@ namespace crime_project {
 			this->label_viewuseriddel = (gcnew System::Windows::Forms::Label());
 			this->maskedTextBox_policeiddel = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label_viewpoliceiddel = (gcnew System::Windows::Forms::Label());
+			this->user__id = (gcnew System::Windows::Forms::TextBox());
+			this->police_station_id = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox_options->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_users))->BeginInit();
 			this->groupBox_allusers->SuspendLayout();
@@ -209,8 +212,9 @@ namespace crime_project {
 			// 
 			// groupBox_adduser
 			// 
+			this->groupBox_adduser->Controls->Add(this->police_station_id);
+			this->groupBox_adduser->Controls->Add(this->user__id);
 			this->groupBox_adduser->Controls->Add(this->comboBox_utype);
-			this->groupBox_adduser->Controls->Add(this->label_useridadd);
 			this->groupBox_adduser->Controls->Add(this->button_canceladd);
 			this->groupBox_adduser->Controls->Add(this->button_usraddfinal);
 			this->groupBox_adduser->Controls->Add(this->button_helpadd);
@@ -219,7 +223,6 @@ namespace crime_project {
 			this->groupBox_adduser->Controls->Add(this->label_viewrepass);
 			this->groupBox_adduser->Controls->Add(this->label_viewpassword);
 			this->groupBox_adduser->Controls->Add(this->label_viewusername);
-			this->groupBox_adduser->Controls->Add(this->maskedTextBox_policeidadd);
 			this->groupBox_adduser->Controls->Add(this->label_viewuseridadd);
 			this->groupBox_adduser->Controls->Add(this->label_viewpoliceidadd);
 			this->groupBox_adduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
@@ -241,15 +244,6 @@ namespace crime_project {
 			this->comboBox_utype->Name = L"comboBox_utype";
 			this->comboBox_utype->Size = System::Drawing::Size(100, 25);
 			this->comboBox_utype->TabIndex = 16;
-			// 
-			// label_useridadd
-			// 
-			this->label_useridadd->AutoSize = true;
-			this->label_useridadd->Location = System::Drawing::Point(152, 139);
-			this->label_useridadd->Name = L"label_useridadd";
-			this->label_useridadd->Size = System::Drawing::Size(48, 17);
-			this->label_useridadd->TabIndex = 15;
-			this->label_useridadd->Text = L"12321";
 			// 
 			// button_canceladd
 			// 
@@ -339,17 +333,6 @@ namespace crime_project {
 			this->label_viewusername->Size = System::Drawing::Size(68, 17);
 			this->label_viewusername->TabIndex = 6;
 			this->label_viewusername->Text = L"User Type";
-			// 
-			// maskedTextBox_policeidadd
-			// 
-			this->maskedTextBox_policeidadd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->maskedTextBox_policeidadd->Location = System::Drawing::Point(155, 88);
-			this->maskedTextBox_policeidadd->Mask = L"00000";
-			this->maskedTextBox_policeidadd->Name = L"maskedTextBox_policeidadd";
-			this->maskedTextBox_policeidadd->Size = System::Drawing::Size(100, 24);
-			this->maskedTextBox_policeidadd->TabIndex = 6;
-			this->maskedTextBox_policeidadd->ValidatingType = System::Int32::typeid;
 			// 
 			// label_viewuseridadd
 			// 
@@ -480,6 +463,24 @@ namespace crime_project {
 			this->label_viewpoliceiddel->Size = System::Drawing::Size(109, 16);
 			this->label_viewpoliceiddel->TabIndex = 0;
 			this->label_viewpoliceiddel->Text = L"Police Station ID:";
+			// 
+			// user__id
+			// 
+			this->user__id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->user__id->Location = System::Drawing::Point(155, 132);
+			this->user__id->Name = L"user__id";
+			this->user__id->Size = System::Drawing::Size(100, 24);
+			this->user__id->TabIndex = 17;
+			// 
+			// police_station_id
+			// 
+			this->police_station_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->police_station_id->Location = System::Drawing::Point(155, 92);
+			this->police_station_id->Name = L"police_station_id";
+			this->police_station_id->Size = System::Drawing::Size(100, 24);
+			this->police_station_id->TabIndex = 18;
 			// 
 			// Form_users
 			// 

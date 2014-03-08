@@ -33,16 +33,16 @@ Void Form_users::button_canceladd_Click(System::Object^  sender, System::EventAr
 
 Void Form_users::button_usraddfinal_Click(System::Object^  sender, System::EventArgs^  e) {
 	
-	if (maskedTextBox_policeidadd->Text!="" && comboBox_utype->Text!="" && textBox_password->Text!="" && textBox_password->Text==textBox_repassword->Text)
+	if (user__id->Text!="" && police_station_id->Text!="" && comboBox_utype->Text!="" && textBox_password->Text!="" && textBox_password->Text==textBox_repassword->Text)
 	{
 		dbconnect db;
-		db.add_user(comboBox_utype->Text, Convert::ToString(maskedTextBox_policeidadd->Text), Convert::ToString(label_useridadd->Text), textBox_password->Text);
+		db.add_user(comboBox_utype->Text, police_station_id->Text, user__id->Text, textBox_password->Text);
 		MessageBox::Show("User Added Successfully into the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
 		button_adusrdel->Enabled = true;
 		groupBox_allusers->Visible = true;
 		groupBox_adduser->Visible = false;
-		groupBox_deleteuser->Visible = true;
+		groupBox_deleteuser->Visible = false;
 	}
 	else if(textBox_password->Text!=textBox_repassword->Text){
 		MessageBox::Show("Passwords don't match. Please Re-enter the password","Admin",MessageBoxButtons::OK,MessageBoxIcon::Exclamation);
