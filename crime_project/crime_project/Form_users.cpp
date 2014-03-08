@@ -4,6 +4,7 @@
 #include "Form_viewall.h"
 #include "Form_admin.h"
 #include "Form_users.h"
+#include "dbconnect.h"
 
 using namespace crime_project;
 
@@ -36,6 +37,9 @@ Void Form_users::button_usraddfinal_Click(System::Object^  sender, System::Event
 	
 	if (maskedTextBox_policeidadd->Text!="" && textBox_username->Text!="" && textBox_password->Text!="" && textBox_password->Text==textBox_repassword->Text)
 	{
+		dbconnect db;
+
+		db.add_user(Convert::ToString(maskedTextBox_policeidadd->Text), Convert::ToString(label_useridadd->Text), textBox_password->Text);
 		MessageBox::Show("User Added Successfully into the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
 		button_adusredit->Enabled = true;
@@ -64,7 +68,10 @@ Void Form_users::button_adusrdel_Click(System::Object^  sender, System::EventArg
 Void Form_users::button_userdelfinal_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	if (maskedTextBox_policeiddel->Text!="" &&  maskedTextBox_useriddel->Text!="")
-	{
+	{	
+		dbconnect db;
+
+		db.del_user(Convert::ToString(maskedTextBox_policeiddel->Text), Convert::ToString(maskedTextBox_useriddel->Text));
 		MessageBox::Show("User Deleted Successfully from the database.","Admin", MessageBoxButtons::OK);
 		button_adusradd->Enabled = true;
 		button_adusredit->Enabled = true;

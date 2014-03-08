@@ -415,9 +415,9 @@ namespace crime_project {
 			this->groupBox_deleteuser->Controls->Add(this->label_viewpoliceiddel);
 			this->groupBox_deleteuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_deleteuser->Location = System::Drawing::Point(6, 197);
+			this->groupBox_deleteuser->Location = System::Drawing::Point(8, 369);
 			this->groupBox_deleteuser->Name = L"groupBox_deleteuser";
-			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 137);
+			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 160);
 			this->groupBox_deleteuser->TabIndex = 9;
 			this->groupBox_deleteuser->TabStop = false;
 			this->groupBox_deleteuser->Text = L"Delete User:";
@@ -502,6 +502,7 @@ namespace crime_project {
 			this->Name = L"Form_users";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form_users";
+			this->Load += gcnew System::EventHandler(this, &Form_users::Form_users_Load);
 			this->groupBox_options->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_users))->EndInit();
 			this->groupBox_allusers->ResumeLayout(false);
@@ -520,5 +521,7 @@ private: System::Void button_canceladd_Click(System::Object^  sender, System::Ev
 private: System::Void button_usraddfinal_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_userdelfinal_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_canceldel_Click(System::Object^  sender, System::EventArgs^  e);
+private: System::Void Form_users_Load(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
