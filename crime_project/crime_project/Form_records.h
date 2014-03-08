@@ -30,7 +30,7 @@ namespace crime_project {
 			}
 		}
 	private: System::Windows::Forms::GroupBox^  groupBox_recopts;
-	private: System::Windows::Forms::Button^  button_editrec;
+
 
 	private: System::Windows::Forms::Button^  button_recadd;
 
@@ -68,7 +68,6 @@ namespace crime_project {
 		void InitializeComponent(void)
 		{
 			this->groupBox_recopts = (gcnew System::Windows::Forms::GroupBox());
-			this->button_editrec = (gcnew System::Windows::Forms::Button());
 			this->button_recadd = (gcnew System::Windows::Forms::Button());
 			this->button_recback = (gcnew System::Windows::Forms::Button());
 			this->label_allrecords = (gcnew System::Windows::Forms::Label());
@@ -79,7 +78,6 @@ namespace crime_project {
 			// 
 			// groupBox_recopts
 			// 
-			this->groupBox_recopts->Controls->Add(this->button_editrec);
 			this->groupBox_recopts->Controls->Add(this->button_recadd);
 			this->groupBox_recopts->Controls->Add(this->button_recback);
 			this->groupBox_recopts->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
@@ -91,19 +89,9 @@ namespace crime_project {
 			this->groupBox_recopts->TabStop = false;
 			this->groupBox_recopts->Text = L"Options";
 			// 
-			// button_editrec
-			// 
-			this->button_editrec->Location = System::Drawing::Point(718, 41);
-			this->button_editrec->Name = L"button_editrec";
-			this->button_editrec->Size = System::Drawing::Size(113, 32);
-			this->button_editrec->TabIndex = 2;
-			this->button_editrec->Text = L"Edit Record";
-			this->button_editrec->UseVisualStyleBackColor = true;
-			this->button_editrec->Click += gcnew System::EventHandler(this, &Form_records::button_editrec_Click);
-			// 
 			// button_recadd
 			// 
-			this->button_recadd->Location = System::Drawing::Point(566, 41);
+			this->button_recadd->Location = System::Drawing::Point(702, 41);
 			this->button_recadd->Name = L"button_recadd";
 			this->button_recadd->Size = System::Drawing::Size(113, 32);
 			this->button_recadd->TabIndex = 1;
