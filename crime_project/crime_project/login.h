@@ -137,7 +137,7 @@ namespace crime_project {
 			this->user_type_select->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
 			this->user_type_select->Location = System::Drawing::Point(251, 41);
 			this->user_type_select->Name = L"user_type_select";
-			this->user_type_select->Size = System::Drawing::Size(121, 29);
+			this->user_type_select->Size = System::Drawing::Size(121, 28);
 			this->user_type_select->TabIndex = 1;
 			this->user_type_select->SelectedIndexChanged += gcnew System::EventHandler(this, &login::user_type_select_SelectedIndexChanged);
 			// 
@@ -175,11 +175,12 @@ namespace crime_project {
 			// fail_status
 			// 
 			this->fail_status->AutoSize = true;
+			this->fail_status->BackColor = System::Drawing::Color::Red;
 			this->fail_status->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->fail_status->Location = System::Drawing::Point(300, 170);
 			this->fail_status->Name = L"fail_status";
-			this->fail_status->Size = System::Drawing::Size(0, 21);
+			this->fail_status->Size = System::Drawing::Size(0, 20);
 			this->fail_status->TabIndex = 7;
 			// 
 			// button_exit
@@ -216,7 +217,7 @@ namespace crime_project {
 			this->groupBox_login->Controls->Add(this->password);
 			this->groupBox_login->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->groupBox_login->Location = System::Drawing::Point(214, 214);
+			this->groupBox_login->Location = System::Drawing::Point(218, 214);
 			this->groupBox_login->Name = L"groupBox_login";
 			this->groupBox_login->Size = System::Drawing::Size(448, 272);
 			this->groupBox_login->TabIndex = 11;

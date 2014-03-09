@@ -112,6 +112,8 @@ namespace crime_project {
 			this->dataGridView_users = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox_allusers = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox_adduser = (gcnew System::Windows::Forms::GroupBox());
+			this->police_station_id = (gcnew System::Windows::Forms::TextBox());
+			this->user__id = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox_utype = (gcnew System::Windows::Forms::ComboBox());
 			this->button_canceladd = (gcnew System::Windows::Forms::Button());
 			this->button_usraddfinal = (gcnew System::Windows::Forms::Button());
@@ -124,6 +126,8 @@ namespace crime_project {
 			this->label_viewuseridadd = (gcnew System::Windows::Forms::Label());
 			this->label_viewpoliceidadd = (gcnew System::Windows::Forms::Label());
 			this->groupBox_deleteuser = (gcnew System::Windows::Forms::GroupBox());
+			this->us_id = (gcnew System::Windows::Forms::TextBox());
+			this->police_st_id = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button_canceldel = (gcnew System::Windows::Forms::Button());
@@ -131,10 +135,6 @@ namespace crime_project {
 			this->button_helpdel = (gcnew System::Windows::Forms::Button());
 			this->label_viewuseriddel = (gcnew System::Windows::Forms::Label());
 			this->label_viewpoliceiddel = (gcnew System::Windows::Forms::Label());
-			this->user__id = (gcnew System::Windows::Forms::TextBox());
-			this->police_station_id = (gcnew System::Windows::Forms::TextBox());
-			this->police_st_id = (gcnew System::Windows::Forms::TextBox());
-			this->us_id = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox_options->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_users))->BeginInit();
 			this->groupBox_allusers->SuspendLayout();
@@ -230,13 +230,31 @@ namespace crime_project {
 			this->groupBox_adduser->Controls->Add(this->label_viewpoliceidadd);
 			this->groupBox_adduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_adduser->Location = System::Drawing::Point(12, 143);
+			this->groupBox_adduser->Location = System::Drawing::Point(9, 143);
 			this->groupBox_adduser->Name = L"groupBox_adduser";
 			this->groupBox_adduser->Size = System::Drawing::Size(854, 203);
 			this->groupBox_adduser->TabIndex = 8;
 			this->groupBox_adduser->TabStop = false;
 			this->groupBox_adduser->Text = L"Add New User";
 			this->groupBox_adduser->Visible = false;
+			// 
+			// police_station_id
+			// 
+			this->police_station_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->police_station_id->Location = System::Drawing::Point(155, 92);
+			this->police_station_id->Name = L"police_station_id";
+			this->police_station_id->Size = System::Drawing::Size(100, 24);
+			this->police_station_id->TabIndex = 18;
+			// 
+			// user__id
+			// 
+			this->user__id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->user__id->Location = System::Drawing::Point(155, 132);
+			this->user__id->Name = L"user__id";
+			this->user__id->Size = System::Drawing::Size(100, 24);
+			this->user__id->TabIndex = 17;
 			// 
 			// comboBox_utype
 			// 
@@ -372,13 +390,31 @@ namespace crime_project {
 			this->groupBox_deleteuser->Controls->Add(this->label_viewpoliceiddel);
 			this->groupBox_deleteuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_deleteuser->Location = System::Drawing::Point(8, 356);
+			this->groupBox_deleteuser->Location = System::Drawing::Point(6, 166);
 			this->groupBox_deleteuser->Name = L"groupBox_deleteuser";
 			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 160);
 			this->groupBox_deleteuser->TabIndex = 9;
 			this->groupBox_deleteuser->TabStop = false;
 			this->groupBox_deleteuser->Text = L"Delete User:";
 			this->groupBox_deleteuser->Visible = false;
+			// 
+			// us_id
+			// 
+			this->us_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->us_id->Location = System::Drawing::Point(462, 65);
+			this->us_id->Name = L"us_id";
+			this->us_id->Size = System::Drawing::Size(100, 24);
+			this->us_id->TabIndex = 22;
+			// 
+			// police_st_id
+			// 
+			this->police_st_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->police_st_id->Location = System::Drawing::Point(159, 46);
+			this->police_st_id->Name = L"police_st_id";
+			this->police_st_id->Size = System::Drawing::Size(100, 24);
+			this->police_st_id->TabIndex = 21;
 			// 
 			// comboBox1
 			// 
@@ -448,42 +484,6 @@ namespace crime_project {
 			this->label_viewpoliceiddel->Size = System::Drawing::Size(109, 16);
 			this->label_viewpoliceiddel->TabIndex = 0;
 			this->label_viewpoliceiddel->Text = L"Police Station ID:";
-			// 
-			// user__id
-			// 
-			this->user__id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->user__id->Location = System::Drawing::Point(155, 132);
-			this->user__id->Name = L"user__id";
-			this->user__id->Size = System::Drawing::Size(100, 24);
-			this->user__id->TabIndex = 17;
-			// 
-			// police_station_id
-			// 
-			this->police_station_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->police_station_id->Location = System::Drawing::Point(155, 92);
-			this->police_station_id->Name = L"police_station_id";
-			this->police_station_id->Size = System::Drawing::Size(100, 24);
-			this->police_station_id->TabIndex = 18;
-			// 
-			// police_st_id
-			// 
-			this->police_st_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->police_st_id->Location = System::Drawing::Point(159, 46);
-			this->police_st_id->Name = L"police_st_id";
-			this->police_st_id->Size = System::Drawing::Size(100, 24);
-			this->police_st_id->TabIndex = 21;
-			// 
-			// us_id
-			// 
-			this->us_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->us_id->Location = System::Drawing::Point(462, 65);
-			this->us_id->Name = L"us_id";
-			this->us_id->Size = System::Drawing::Size(100, 24);
-			this->us_id->TabIndex = 22;
 			// 
 			// Form_users
 			// 

@@ -16,6 +16,7 @@ Void login::log_in_Click(System::Object^  sender, System::EventArgs^  e) {
 	String^ c = this->pass->Text;
 	if (user_type_select->Text == "Regular")
 	{
+		user_type_select->Text == "";
 		verifier^ vf = gcnew verifier(a, b, c);    // Create vf object of class verifier to verify against user credentials from database.
 		if (vf->verified == true) {
 			this->Visible = false;					// Hide login form
@@ -28,8 +29,9 @@ Void login::log_in_Click(System::Object^  sender, System::EventArgs^  e) {
 			this->pass->Text = "";
 		}
 	}
-	else 
+	else if(user_type_select->Text == "Admin")
 	{
+		user_type_select->Text == "";
 		verifier^ vf = gcnew verifier(a, b, c);    // Create vf object of class verifier to verify against user credentials from database.
 		if (vf->verified == true) {
 			this->Visible = false;					// Hide login form
@@ -42,6 +44,11 @@ Void login::log_in_Click(System::Object^  sender, System::EventArgs^  e) {
 			this->pass->Text = "";
 		}
 	}
+	else{
+		this->fail_status->Text = "Incorrect User Credentials! Please Login Again.";
+		this->user_id->Text = "";
+		this->pass->Text = "";
+	}
 				 
 }
 
@@ -51,9 +58,9 @@ Void login::button_exit_Click(System::Object^  sender, System::EventArgs^  e) {
 	Application::Exit();
 }
 
-Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) {
-	;		//to display the name
-}
+//Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) {
+			//to display the name
+//}
 
 //Void Form_admin::Form_admin_Load(System::Object^  sender, System::EventArgs^  e) {
 	//to display the name
@@ -68,6 +75,7 @@ Void login::pass_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPr
 		String^ c = this->pass->Text;
 		if (user_type_select->Text == "Regular")
 		{
+			user_type_select->Text == "";
 			verifier^ vf = gcnew verifier(a, b, c);    // Create vf object of class verifier to verify against user credentials from database.
 			if (vf->verified == true) {
 				this->Visible = false;					// Hide login form
@@ -80,8 +88,9 @@ Void login::pass_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPr
 				this->pass->Text = "";
 			}
 		}
-		else 
+		else if(user_type_select->Text == "Admin") 
 		{
+			user_type_select->Text == "";
 			verifier^ vf = gcnew verifier(a, b, c);    // Create vf object of class verifier to verify against user credentials from database.
 			if (vf->verified == true) {
 				this->Visible = false;					// Hide login form
@@ -93,6 +102,11 @@ Void login::pass_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPr
 				this->user_id->Text = "";
 				this->pass->Text = "";
 			}
+		}
+		else{
+			this->fail_status->Text = "Incorrect User Credentials! Please Login Again.";
+			this->user_id->Text = "";
+			this->pass->Text = "";
 		}
 	}
 }

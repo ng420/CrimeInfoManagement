@@ -116,7 +116,7 @@ namespace crime_project {
 			this->label_category->BackColor = System::Drawing::Color::Transparent;
 			this->label_category->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_category->Location = System::Drawing::Point(12, 41);
+			this->label_category->Location = System::Drawing::Point(29, 41);
 			this->label_category->Name = L"label_category";
 			this->label_category->Size = System::Drawing::Size(82, 20);
 			this->label_category->TabIndex = 0;
@@ -128,7 +128,7 @@ namespace crime_project {
 			this->label_description->BackColor = System::Drawing::Color::Transparent;
 			this->label_description->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_description->Location = System::Drawing::Point(12, 135);
+			this->label_description->Location = System::Drawing::Point(12, 182);
 			this->label_description->Name = L"label_description";
 			this->label_description->Size = System::Drawing::Size(99, 20);
 			this->label_description->TabIndex = 1;
@@ -140,7 +140,7 @@ namespace crime_project {
 			this->label_evidence->BackColor = System::Drawing::Color::Transparent;
 			this->label_evidence->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_evidence->Location = System::Drawing::Point(12, 334);
+			this->label_evidence->Location = System::Drawing::Point(14, 386);
 			this->label_evidence->Name = L"label_evidence";
 			this->label_evidence->Size = System::Drawing::Size(97, 20);
 			this->label_evidence->TabIndex = 2;
@@ -152,7 +152,7 @@ namespace crime_project {
 			this->label_suspect->BackColor = System::Drawing::Color::Transparent;
 			this->label_suspect->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_suspect->Location = System::Drawing::Point(12, 390);
+			this->label_suspect->Location = System::Drawing::Point(22, 442);
 			this->label_suspect->Name = L"label_suspect";
 			this->label_suspect->Size = System::Drawing::Size(89, 20);
 			this->label_suspect->TabIndex = 3;
@@ -164,7 +164,7 @@ namespace crime_project {
 			this->label_location->BackColor = System::Drawing::Color::Transparent;
 			this->label_location->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_location->Location = System::Drawing::Point(612, 87);
+			this->label_location->Location = System::Drawing::Point(654, 118);
 			this->label_location->Name = L"label_location";
 			this->label_location->Size = System::Drawing::Size(78, 20);
 			this->label_location->TabIndex = 4;
@@ -176,7 +176,7 @@ namespace crime_project {
 			this->label_time->BackColor = System::Drawing::Color::Transparent;
 			this->label_time->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_time->Location = System::Drawing::Point(341, 87);
+			this->label_time->Location = System::Drawing::Point(383, 118);
 			this->label_time->Name = L"label_time";
 			this->label_time->Size = System::Drawing::Size(50, 20);
 			this->label_time->TabIndex = 5;
@@ -188,7 +188,7 @@ namespace crime_project {
 			this->label_date->BackColor = System::Drawing::Color::Transparent;
 			this->label_date->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_date->Location = System::Drawing::Point(12, 87);
+			this->label_date->Location = System::Drawing::Point(62, 118);
 			this->label_date->Name = L"label_date";
 			this->label_date->Size = System::Drawing::Size(49, 20);
 			this->label_date->TabIndex = 6;
@@ -198,48 +198,48 @@ namespace crime_project {
 			// 
 			this->textBox_description->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox_description->Location = System::Drawing::Point(132, 135);
+			this->textBox_description->Location = System::Drawing::Point(132, 182);
 			this->textBox_description->Multiline = true;
 			this->textBox_description->Name = L"textBox_description";
-			this->textBox_description->Size = System::Drawing::Size(722, 173);
-			this->textBox_description->TabIndex = 8;
+			this->textBox_description->Size = System::Drawing::Size(842, 175);
+			this->textBox_description->TabIndex = 5;
 			// 
 			// textBox_place
 			// 
 			this->textBox_place->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_place->Location = System::Drawing::Point(723, 81);
+			this->textBox_place->Location = System::Drawing::Point(755, 112);
 			this->textBox_place->Name = L"textBox_place";
 			this->textBox_place->Size = System::Drawing::Size(136, 28);
-			this->textBox_place->TabIndex = 11;
+			this->textBox_place->TabIndex = 4;
 			// 
 			// textBox_evidence
 			// 
 			this->textBox_evidence->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_evidence->Location = System::Drawing::Point(132, 331);
+			this->textBox_evidence->Location = System::Drawing::Point(134, 383);
 			this->textBox_evidence->Name = L"textBox_evidence";
 			this->textBox_evidence->Size = System::Drawing::Size(129, 28);
-			this->textBox_evidence->TabIndex = 12;
+			this->textBox_evidence->TabIndex = 6;
 			// 
 			// textBox_suspect
 			// 
 			this->textBox_suspect->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_suspect->Location = System::Drawing::Point(132, 387);
+			this->textBox_suspect->Location = System::Drawing::Point(134, 439);
 			this->textBox_suspect->Name = L"textBox_suspect";
 			this->textBox_suspect->Size = System::Drawing::Size(129, 28);
-			this->textBox_suspect->TabIndex = 13;
+			this->textBox_suspect->TabIndex = 9;
 			// 
 			// button_done
 			// 
 			this->button_done->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button_done->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_done->Location = System::Drawing::Point(629, 454);
+			this->button_done->Location = System::Drawing::Point(755, 489);
 			this->button_done->Name = L"button_done";
 			this->button_done->Size = System::Drawing::Size(98, 32);
-			this->button_done->TabIndex = 14;
+			this->button_done->TabIndex = 12;
 			this->button_done->Text = L"Done";
 			this->button_done->UseVisualStyleBackColor = true;
 			this->button_done->Click += gcnew System::EventHandler(this, &Form_Add::button_done_Click);
@@ -249,10 +249,10 @@ namespace crime_project {
 			this->button_cancel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button_cancel->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_cancel->Location = System::Drawing::Point(750, 454);
+			this->button_cancel->Location = System::Drawing::Point(876, 489);
 			this->button_cancel->Name = L"button_cancel";
 			this->button_cancel->Size = System::Drawing::Size(98, 32);
-			this->button_cancel->TabIndex = 15;
+			this->button_cancel->TabIndex = 13;
 			this->button_cancel->Text = L"Cancel";
 			this->button_cancel->UseVisualStyleBackColor = true;
 			this->button_cancel->Click += gcnew System::EventHandler(this, &Form_Add::button_cancel_Click);
@@ -262,10 +262,10 @@ namespace crime_project {
 			this->button_addmore->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button_addmore->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_addmore->Location = System::Drawing::Point(470, 454);
+			this->button_addmore->Location = System::Drawing::Point(596, 489);
 			this->button_addmore->Name = L"button_addmore";
 			this->button_addmore->Size = System::Drawing::Size(136, 32);
-			this->button_addmore->TabIndex = 16;
+			this->button_addmore->TabIndex = 11;
 			this->button_addmore->Text = L"Add Another";
 			this->button_addmore->UseVisualStyleBackColor = true;
 			this->button_addmore->Click += gcnew System::EventHandler(this, &Form_Add::button_addmore_Click);
@@ -276,10 +276,10 @@ namespace crime_project {
 			this->datePicker->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->datePicker->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->datePicker->Location = System::Drawing::Point(67, 81);
+			this->datePicker->Location = System::Drawing::Point(132, 112);
 			this->datePicker->Name = L"datePicker";
-			this->datePicker->Size = System::Drawing::Size(88, 28);
-			this->datePicker->TabIndex = 17;
+			this->datePicker->Size = System::Drawing::Size(106, 28);
+			this->datePicker->TabIndex = 2;
 			this->datePicker->Value = System::DateTime(2014, 2, 17, 0, 0, 0, 0);
 			// 
 			// timePicker
@@ -287,11 +287,11 @@ namespace crime_project {
 			this->timePicker->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->timePicker->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->timePicker->Location = System::Drawing::Point(415, 81);
+			this->timePicker->Location = System::Drawing::Point(457, 112);
 			this->timePicker->Name = L"timePicker";
 			this->timePicker->ShowUpDown = true;
-			this->timePicker->Size = System::Drawing::Size(114, 28);
-			this->timePicker->TabIndex = 18;
+			this->timePicker->Size = System::Drawing::Size(117, 28);
+			this->timePicker->TabIndex = 3;
 			this->timePicker->Value = System::DateTime(2014, 3, 5, 19, 47, 0, 0);
 			// 
 			// comboBox_category
@@ -304,21 +304,21 @@ namespace crime_project {
 			this->comboBox_category->FormattingEnabled = true;
 			this->comboBox_category->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Arms Trafficking", L"Corruption", L"Cyber Crime", 
 				L"Dowry", L"Illegal Drug Trade", L"Kidnapping", L"Murder", L"Rape"});
-			this->comboBox_category->Location = System::Drawing::Point(100, 38);
+			this->comboBox_category->Location = System::Drawing::Point(132, 38);
 			this->comboBox_category->Name = L"comboBox_category";
 			this->comboBox_category->Size = System::Drawing::Size(150, 28);
 			this->comboBox_category->Sorted = true;
-			this->comboBox_category->TabIndex = 19;
+			this->comboBox_category->TabIndex = 0;
 			this->comboBox_category->SelectedIndexChanged += gcnew System::EventHandler(this, &Form_Add::comboBox_category_SelectedIndexChanged);
 			// 
 			// button_addevidence
 			// 
 			this->button_addevidence->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button_addevidence->Location = System::Drawing::Point(284, 328);
+			this->button_addevidence->Location = System::Drawing::Point(333, 380);
 			this->button_addevidence->Name = L"button_addevidence";
 			this->button_addevidence->Size = System::Drawing::Size(117, 31);
-			this->button_addevidence->TabIndex = 20;
+			this->button_addevidence->TabIndex = 7;
 			this->button_addevidence->Text = L"Add more";
 			this->button_addevidence->UseVisualStyleBackColor = true;
 			this->button_addevidence->Click += gcnew System::EventHandler(this, &Form_Add::button_addevidence_Click);
@@ -327,10 +327,10 @@ namespace crime_project {
 			// 
 			this->button_upload->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_upload->Location = System::Drawing::Point(429, 329);
+			this->button_upload->Location = System::Drawing::Point(485, 381);
 			this->button_upload->Name = L"button_upload";
 			this->button_upload->Size = System::Drawing::Size(136, 31);
-			this->button_upload->TabIndex = 21;
+			this->button_upload->TabIndex = 8;
 			this->button_upload->Text = L"Upload a File";
 			this->button_upload->UseVisualStyleBackColor = true;
 			this->button_upload->Click += gcnew System::EventHandler(this, &Form_Add::button_upload_Click);
@@ -339,10 +339,10 @@ namespace crime_project {
 			// 
 			this->button_addsuspect->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_addsuspect->Location = System::Drawing::Point(335, 390);
+			this->button_addsuspect->Location = System::Drawing::Point(333, 436);
 			this->button_addsuspect->Name = L"button_addsuspect";
 			this->button_addsuspect->Size = System::Drawing::Size(112, 31);
-			this->button_addsuspect->TabIndex = 22;
+			this->button_addsuspect->TabIndex = 10;
 			this->button_addsuspect->Text = L"Add more";
 			this->button_addsuspect->UseVisualStyleBackColor = true;
 			this->button_addsuspect->Click += gcnew System::EventHandler(this, &Form_Add::button_addsuspect_Click);
@@ -352,7 +352,7 @@ namespace crime_project {
 			this->label_viewid->AutoSize = true;
 			this->label_viewid->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_viewid->Location = System::Drawing::Point(585, 38);
+			this->label_viewid->Location = System::Drawing::Point(627, 38);
 			this->label_viewid->Name = L"label_viewid";
 			this->label_viewid->Size = System::Drawing::Size(105, 25);
 			this->label_viewid->TabIndex = 23;
@@ -362,17 +362,17 @@ namespace crime_project {
 			// 
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(723, 38);
+			this->label1->Location = System::Drawing::Point(755, 38);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(136, 28);
-			this->label1->TabIndex = 24;
+			this->label1->TabIndex = 1;
 			// 
 			// Form_Add
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(889, 498);
+			this->ClientSize = System::Drawing::Size(1015, 533);
 			this->ControlBox = false;
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->label_viewid);

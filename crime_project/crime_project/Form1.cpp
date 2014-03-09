@@ -2,7 +2,14 @@
 #include "Form_Add.h"
 #include "Form1.h"
 #include "Form_viewall.h"
+#include "login.h" 
 using namespace crime_project;
+
+
+
+Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e){
+	label_welcomeuser->Text = "Welcome: " + login::username;
+}
 
 //add button allows user to go to a new form- Form_Add, various crime related can be stored in that form.
 Void Form1::button_add_Click(System::Object^  sender, System::EventArgs^  e) {
