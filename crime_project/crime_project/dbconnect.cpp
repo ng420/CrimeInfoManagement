@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "dbconnect.h"
-#include "crypto.h"
+
 
 dbconnect::dbconnect(void)
 {
@@ -29,14 +29,6 @@ DataSet^ dbconnect::search(String^ query,String^ field)
 		da=gcnew MySqlDataAdapter("Select * from usertable where `User ID` like \'%"+query+"%\'",con);
 	auto ds=gcnew DataSet;
 	da->Fill(ds,"std");
-	int count = ds.tables[0].Rows.Count;
-	for(int i=0;i<Count;i++){
-	ds.tables[0].row[i]["Category"] = decrypt1(decrypt(ds.tables[0].row[i]["Category"]));
-	ds.tables[0].row[i]["Location"] = decrypt1(decrypt(ds.tables[0].row[i]["Location"]));
-	ds.tables[0].row[i]["Description"] = decrypt1(decrypt(ds.tables[0].row[i]["Description"]));
-	ds.tables[0].row[i]["Evidence"] = decrypt1(decrypt(ds.tables[0].row[i]["Evidence"]));
-	ds.tables[0].row[i]["Suspects"] = decrypt1(decrypt(ds.tables[0].row[i]["Suspects"]));
-	}
 	return ds;
 }
 
@@ -45,14 +37,6 @@ DataSet^ dbconnect::viewall()
 	auto da=gcnew MySqlDataAdapter("Select * from crimetable",con);
 	auto ds=gcnew DataSet;
 	da->Fill(ds,"std");
-	int count = ds.tables[0].Rows.Count;
-	for(int i=0;i<Count;i++){
-	ds.tables[0].row[i]["Category"] = decrypt1(decrypt(ds.tables[0].row[i]["Category"]));
-	ds.tables[0].row[i]["Location"] = decrypt1(decrypt(ds.tables[0].row[i]["Location"]));
-	ds.tables[0].row[i]["Description"] = decrypt1(decrypt(ds.tables[0].row[i]["Description"]));
-	ds.tables[0].row[i]["Evidence"] = decrypt1(decrypt(ds.tables[0].row[i]["Evidence"]));
-	ds.tables[0].row[i]["Suspects"] = decrypt1(decrypt(ds.tables[0].row[i]["Suspects"]));
-	}
 	return ds;
 }
 
@@ -66,11 +50,6 @@ DataSet^ dbconnect::viewalluser()
 
 void dbconnect::add(String^ cat, String^ date,String^ time, String^ loc, String^ des,String^ evi,String^ susp)
 {
-	string cat = encrypt(encrypt1(cat1));
-	string loc = encrypt(encrypt1(loc1));
-	string des = encrypt(encrypt1(des1));
-	string evi = encrypt(encrypt1(evi1));
-	string susp = encrypt(encrypt1(susp1));
 	String^ query="INSERT INTO crimetable (`Category`, `Date`, `Time`, `Location`, `Description`, `Evidence`, `Suspects`) VALUES ( \'"+cat+"\', \'"+date+"\', \'"+time+"\', \'"+loc+"\', \'"+des+"\', \'"+evi+"\', \'"+susp+"\')";
 	MySqlCommand^ cmd = gcnew MySqlCommand;
 	cmd->Connection = con;
