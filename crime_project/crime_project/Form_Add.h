@@ -319,6 +319,7 @@ namespace crime_project {
 			this->button_addevidence->TabIndex = 7;
 			this->button_addevidence->Text = L"Add more";
 			this->button_addevidence->UseVisualStyleBackColor = true;
+			this->button_addevidence->Visible = false;
 			this->button_addevidence->Click += gcnew System::EventHandler(this, &Form_Add::button_addevidence_Click);
 			// 
 			// button_upload
@@ -331,6 +332,7 @@ namespace crime_project {
 			this->button_upload->TabIndex = 8;
 			this->button_upload->Text = L"Upload a File";
 			this->button_upload->UseVisualStyleBackColor = true;
+			this->button_upload->Visible = false;
 			this->button_upload->Click += gcnew System::EventHandler(this, &Form_Add::button_upload_Click);
 			// 
 			// button_addsuspect
@@ -343,6 +345,7 @@ namespace crime_project {
 			this->button_addsuspect->TabIndex = 10;
 			this->button_addsuspect->Text = L"Add more";
 			this->button_addsuspect->UseVisualStyleBackColor = true;
+			this->button_addsuspect->Visible = false;
 			this->button_addsuspect->Click += gcnew System::EventHandler(this, &Form_Add::button_addsuspect_Click);
 			// 
 			// Form_Add

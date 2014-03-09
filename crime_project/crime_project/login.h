@@ -111,13 +111,14 @@ namespace crime_project {
 			// 
 			// user_name
 			// 
+			this->user_name->AutoSize = true;
 			this->user_name->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->user_name->Location = System::Drawing::Point(74, 103);
+			this->user_name->Location = System::Drawing::Point(82, 103);
 			this->user_name->Name = L"user_name";
-			this->user_name->Size = System::Drawing::Size(143, 20);
+			this->user_name->Size = System::Drawing::Size(73, 21);
 			this->user_name->TabIndex = 1;
-			this->user_name->Text = L"User Id        :";
+			this->user_name->Text = L"User Id :";
 			// 
 			// user_id
 			// 
@@ -143,23 +144,25 @@ namespace crime_project {
 			// 
 			// password
 			// 
+			this->password->AutoSize = true;
 			this->password->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->password->Location = System::Drawing::Point(74, 162);
+			this->password->Location = System::Drawing::Point(64, 162);
 			this->password->Name = L"password";
-			this->password->Size = System::Drawing::Size(143, 20);
+			this->password->Size = System::Drawing::Size(91, 21);
 			this->password->TabIndex = 4;
-			this->password->Text = L"Password           :";
+			this->password->Text = L"Password :";
 			// 
 			// user_type
 			// 
+			this->user_type->AutoSize = true;
 			this->user_type->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->user_type->Location = System::Drawing::Point(74, 44);
+			this->user_type->Location = System::Drawing::Point(66, 44);
 			this->user_type->Name = L"user_type";
-			this->user_type->Size = System::Drawing::Size(143, 20);
+			this->user_type->Size = System::Drawing::Size(94, 21);
 			this->user_type->TabIndex = 5;
-			this->user_type->Text = L"User Type           :";
+			this->user_type->Text = L"User Type :";
 			// 
 			// pass
 			// 
@@ -234,6 +237,7 @@ namespace crime_project {
 			this->Controls->Add(this->groupBox_login);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->fail_status);
+			this->MaximizeBox = false;
 			this->Name = L"login";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Login";

@@ -224,6 +224,7 @@ namespace crime_project {
 			this->Controls->Add(this->button_viewall);
 			this->Controls->Add(this->button_search);
 			this->Controls->Add(this->button_add);
+			this->MaximizeBox = false;
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Welcome";

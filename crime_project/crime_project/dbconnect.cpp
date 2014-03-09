@@ -40,7 +40,7 @@ DataSet^ dbconnect::search(String^ query,String^ field)
 		if(field!="Users")
 			da=gcnew MySqlDataAdapter("Select * from crimetable where "+field+" like \'%"+query+"%\'",con);
 		else
-			da=gcnew MySqlDataAdapter("Select * from usertable where `User ID` like \'%"+query+"%\'",con);
+			da=gcnew MySqlDataAdapter("Select `Station ID`,`User ID`,`User Type` from usertable where `User ID` like \'%"+query+"%\'",con);
 	
 		//fill retrieved results into dataset. 
 		da->Fill(ds,"std");
@@ -67,7 +67,7 @@ DataSet^ dbconnect::viewall()
 //Returns dataset.
 DataSet^ dbconnect::viewalluser()
 {
-	auto da=gcnew MySqlDataAdapter("Select * from usertable",con);
+	auto da=gcnew MySqlDataAdapter("Select `Station ID`,`User ID`,`User Type` from usertable ",con);
 	auto ds=gcnew DataSet;
 	da->Fill(ds,"std");
 	return ds;
@@ -91,7 +91,8 @@ void dbconnect::add(String^ cat, String^ date,String^ time, String^ loc, String^
 //Runs SQL query using ExecuteNonQuery.
 void dbconnect::add_user(String^ utype,String^ stationid, String^ userid, String^ pass)
 {
-	String^ query="INSERT INTO usertable (`User Type`,`Station ID`, `User ID`, `Password`) VALUES (\'"+utype+"\', \'"+stationid+"\', \'"+userid+"\', \'"+pass+"\')";
+	//MessageBox::Show("INSERT INTO usertable (`User Type`,`Station ID`, `User ID`, `Password`) VALUES (\'"+utype+"\', \'"+stationid+"\', \'"+userid+"\', aes_encrypt\(\'"+pass+"\',\'crime\'\))");
+	String^ query="INSERT INTO usertable (`User Type`,`Station ID`, `User ID`, `Password`) VALUES (\'"+utype+"\', \'"+stationid+"\', \'"+userid+"\', aes_encrypt\(\'"+pass+"\',\'crime\'\))";
 	
 	//Make Query
 	MySqlCommand^ cmd = gcnew MySqlCommand;

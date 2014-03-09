@@ -47,6 +47,11 @@ void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e)
 //		add(String^ cat, String^ date,String^ time, String^ loc, String^ des,String^ evi,String^ susp)
 		db.add(comboBox_category->SelectedItem->ToString(),datePicker->Value.ToString("yyyy-MM-dd"),timePicker->Value.ToString("hh:mm:ss"),textBox_place->Text,textBox_evidence->Text,textBox_description->Text,textBox_suspect->Text);
 		MessageBox::Show("Record Added.");
+		comboBox_category->Text = "";
+		textBox_place->Text = "";
+		textBox_description->Text = "";
+		textBox_evidence->Text = "";
+		textBox_suspect->Text = "";
 		if (login::usertype=="Regular")
 		{
 			this->Hide();
@@ -72,20 +77,20 @@ void Form_Add::button_done_Click(System::Object^  sender, System::EventArgs^  e)
 	}
 }
 
-//this button event allows to upload any file that can be used as an evidence on single click.
+//this button event allows to upload any file that can be used as an evidence on single click. This button's visibility is set to false.
 void Form_Add::button_upload_Click(System::Object^  sender, System::EventArgs^  e){
 	OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;			//open the dialog box and allows to select which file to upload
 	openFileDialog1->ShowDialog();
 	textBox_evidence->Text = openFileDialog1->FileName;				//file path and its name are stored and displayed in textBox_evidence
 }
 
-//this button event allows user to add evidences of the crime activity on single click.
+//this button event allows user to add evidences of the crime activity on single click. This button's visibility is set to false.
 void Form_Add::button_addevidence_Click(System::Object^  sender, System::EventArgs^  e){
 	//first assign textBox_evidence.Text to the database.
 	textBox_evidence->Text = "";     //clear the textBox_evidence's text field.
 }
 
-//this button event allows user to add suspects to the database on single click.
+//this button event allows user to add suspects to the database on single click. This button's visibility is set to false.
 void Form_Add::button_addsuspect_Click(System::Object^  sender, System::EventArgs^  e){
 	//first assign textBox_suspect.Text to the database.
 	textBox_suspect->Text = "";		//clear the textBox_suspect's text field.
@@ -104,12 +109,12 @@ void Form_Add::button_addmore_Click(System::Object^  sender, System::EventArgs^ 
 	{   // if all fields are filled perform below operations.
 		dbconnect db;
 		db.add(comboBox_category->SelectedItem->ToString(),datePicker->Value.ToString("yyyy-MM-dd"),timePicker->Value.ToString("HH:MM"),textBox_place->Text,textBox_evidence->Text,textBox_description->Text,textBox_suspect->Text);
-		MessageBox::Show("Record Added. New Record to be added.");
 		//clear all the following fields before entering new a record.
 		comboBox_category->Text = "";
 		textBox_place->Text = "";
 		textBox_evidence->Text = "";
 		textBox_suspect->Text = "";
 		textBox_description->Text = "";
+		MessageBox::Show("Record Added. New Record to be added.");
 	}
 }

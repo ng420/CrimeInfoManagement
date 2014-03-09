@@ -1,6 +1,8 @@
 #include "StdAfx.h"
 #include "verifier.h"
 #include "dbconnect.h"
+#include <ctime>
+#include <cstdlib>
 #pragma once
 
 using namespace System::IO;
@@ -30,13 +32,29 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 	String^ stationid = "";
 //Station ID is Embodied with software copy, written in station_id.txt
 	String^ fileName = "station_id.txt";
+
 	try 
 	{
 		StreamReader^ din = File::OpenText(fileName);
 		stationid = din->ReadLine();
+		if ( stationid == "" ) {
+			srand((unsigned) time(NULL));
+			int i = rand()%99991;
+			din->Close();
+			StreamWriter^ pin = gcnew StreamWriter(fileName);
+			pin->Write(Convert::ToString(i));
+			pin->Close();
+		}
 	}
 	catch (Exception^ e)
-	{MessageBox::Show(e->ToString());}
+	{
+		e->ToString();
+		srand((unsigned) time(NULL));
+		int i = rand()%99991;
+		StreamWriter^ pin = gcnew StreamWriter(fileName);
+		pin->Write(Convert::ToString(i));
+		pin->Close();
+	}
 //IF SQL Connection  is not established, Uname Ranu and Pwd Vikram are valid for development and debugging purposes.
 	if ( sql_con_estb == 1 ) {
 		if ( userid == "Ranu" ) {
@@ -49,7 +67,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 // Prevention for SQL injection.
 		if(userid->IndexOf('\'')!=-1 || stationid->IndexOf('\'')!=-1 || pwd->IndexOf('\'')!=-1) {verified=0;}
 		else{
-		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=\'"+pwd+"\'" ;
+		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=aes_encrypt\(\'"+pwd+"\',\'crime\'\)" ;
 		MySqlCommand^ cmd = gcnew MySqlCommand(query, con);
 		MySqlDataReader^ rdr = cmd->ExecuteReader();
 		if(rdr->Read()) {

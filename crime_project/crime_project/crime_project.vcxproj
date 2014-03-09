@@ -91,7 +91,6 @@
   <ItemGroup>
     <None Include="app.ico" />
     <None Include="ReadMe.txt" />
-    <None Include="station_id.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />

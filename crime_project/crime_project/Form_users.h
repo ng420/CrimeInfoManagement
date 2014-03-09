@@ -199,7 +199,7 @@ namespace crime_project {
 			this->dataGridView_users->Location = System::Drawing::Point(6, 32);
 			this->dataGridView_users->Name = L"dataGridView_users";
 			this->dataGridView_users->ReadOnly = true;
-			this->dataGridView_users->Size = System::Drawing::Size(834, 295);
+			this->dataGridView_users->Size = System::Drawing::Size(834, 328);
 			this->dataGridView_users->TabIndex = 6;
 			this->dataGridView_users->VisibleChanged += gcnew System::EventHandler(this, &Form_users::dataGridView_users_VisibleChanged);
 			// 
@@ -211,7 +211,7 @@ namespace crime_project {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->groupBox_allusers->Location = System::Drawing::Point(12, 120);
 			this->groupBox_allusers->Name = L"groupBox_allusers";
-			this->groupBox_allusers->Size = System::Drawing::Size(850, 356);
+			this->groupBox_allusers->Size = System::Drawing::Size(850, 383);
 			this->groupBox_allusers->TabIndex = 5;
 			this->groupBox_allusers->TabStop = false;
 			this->groupBox_allusers->Text = L"All Users";
@@ -233,9 +233,9 @@ namespace crime_project {
 			this->groupBox_adduser->Controls->Add(this->label_viewpoliceidadd);
 			this->groupBox_adduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_adduser->Location = System::Drawing::Point(18, 222);
+			this->groupBox_adduser->Location = System::Drawing::Point(2, 134);
 			this->groupBox_adduser->Name = L"groupBox_adduser";
-			this->groupBox_adduser->Size = System::Drawing::Size(854, 203);
+			this->groupBox_adduser->Size = System::Drawing::Size(854, 179);
 			this->groupBox_adduser->TabIndex = 8;
 			this->groupBox_adduser->TabStop = false;
 			this->groupBox_adduser->Text = L"Add New User";
@@ -245,7 +245,7 @@ namespace crime_project {
 			// 
 			this->police_station_id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->police_station_id->Location = System::Drawing::Point(155, 92);
+			this->police_station_id->Location = System::Drawing::Point(149, 52);
 			this->police_station_id->Name = L"police_station_id";
 			this->police_station_id->Size = System::Drawing::Size(100, 24);
 			this->police_station_id->TabIndex = 18;
@@ -254,7 +254,7 @@ namespace crime_project {
 			// 
 			this->user__id->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->user__id->Location = System::Drawing::Point(155, 132);
+			this->user__id->Location = System::Drawing::Point(149, 92);
 			this->user__id->Name = L"user__id";
 			this->user__id->Size = System::Drawing::Size(100, 24);
 			this->user__id->TabIndex = 17;
@@ -264,7 +264,7 @@ namespace crime_project {
 			this->comboBox_utype->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_utype->FormattingEnabled = true;
 			this->comboBox_utype->Items->AddRange(gcnew cli::array< System::Object^  >(2) {L"Admin", L"Regular"});
-			this->comboBox_utype->Location = System::Drawing::Point(478, 86);
+			this->comboBox_utype->Location = System::Drawing::Point(472, 46);
 			this->comboBox_utype->Name = L"comboBox_utype";
 			this->comboBox_utype->Size = System::Drawing::Size(100, 25);
 			this->comboBox_utype->TabIndex = 16;
@@ -273,7 +273,7 @@ namespace crime_project {
 			// 
 			this->button_canceladd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button_canceladd->Location = System::Drawing::Point(700, 162);
+			this->button_canceladd->Location = System::Drawing::Point(694, 122);
 			this->button_canceladd->Name = L"button_canceladd";
 			this->button_canceladd->Size = System::Drawing::Size(75, 23);
 			this->button_canceladd->TabIndex = 12;
@@ -285,7 +285,7 @@ namespace crime_project {
 			// 
 			this->button_usraddfinal->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button_usraddfinal->Location = System::Drawing::Point(700, 125);
+			this->button_usraddfinal->Location = System::Drawing::Point(694, 85);
 			this->button_usraddfinal->Name = L"button_usraddfinal";
 			this->button_usraddfinal->Size = System::Drawing::Size(75, 23);
 			this->button_usraddfinal->TabIndex = 11;
@@ -297,7 +297,7 @@ namespace crime_project {
 			// 
 			this->button_helpadd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_helpadd->Location = System::Drawing::Point(700, 88);
+			this->button_helpadd->Location = System::Drawing::Point(694, 48);
 			this->button_helpadd->Name = L"button_helpadd";
 			this->button_helpadd->Size = System::Drawing::Size(75, 23);
 			this->button_helpadd->TabIndex = 10;
@@ -309,7 +309,7 @@ namespace crime_project {
 			// 
 			this->textBox_repassword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox_repassword->Location = System::Drawing::Point(478, 160);
+			this->textBox_repassword->Location = System::Drawing::Point(472, 120);
 			this->textBox_repassword->Name = L"textBox_repassword";
 			this->textBox_repassword->PasswordChar = '*';
 			this->textBox_repassword->Size = System::Drawing::Size(100, 24);
@@ -319,7 +319,7 @@ namespace crime_project {
 			// 
 			this->textBox_password->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox_password->Location = System::Drawing::Point(478, 124);
+			this->textBox_password->Location = System::Drawing::Point(472, 84);
 			this->textBox_password->Name = L"textBox_password";
 			this->textBox_password->PasswordChar = '*';
 			this->textBox_password->Size = System::Drawing::Size(100, 24);
@@ -330,7 +330,7 @@ namespace crime_project {
 			this->label_viewrepass->AutoSize = true;
 			this->label_viewrepass->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewrepass->Location = System::Drawing::Point(342, 167);
+			this->label_viewrepass->Location = System::Drawing::Point(336, 127);
 			this->label_viewrepass->Name = L"label_viewrepass";
 			this->label_viewrepass->Size = System::Drawing::Size(122, 17);
 			this->label_viewrepass->TabIndex = 8;
@@ -341,7 +341,7 @@ namespace crime_project {
 			this->label_viewpassword->AutoSize = true;
 			this->label_viewpassword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewpassword->Location = System::Drawing::Point(387, 131);
+			this->label_viewpassword->Location = System::Drawing::Point(381, 91);
 			this->label_viewpassword->Name = L"label_viewpassword";
 			this->label_viewpassword->Size = System::Drawing::Size(69, 17);
 			this->label_viewpassword->TabIndex = 7;
@@ -352,7 +352,7 @@ namespace crime_project {
 			this->label_viewusername->AutoSize = true;
 			this->label_viewusername->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewusername->Location = System::Drawing::Point(383, 95);
+			this->label_viewusername->Location = System::Drawing::Point(377, 55);
 			this->label_viewusername->Name = L"label_viewusername";
 			this->label_viewusername->Size = System::Drawing::Size(68, 17);
 			this->label_viewusername->TabIndex = 6;
@@ -363,7 +363,7 @@ namespace crime_project {
 			this->label_viewuseridadd->AutoSize = true;
 			this->label_viewuseridadd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewuseridadd->Location = System::Drawing::Point(75, 139);
+			this->label_viewuseridadd->Location = System::Drawing::Point(69, 99);
 			this->label_viewuseridadd->Name = L"label_viewuseridadd";
 			this->label_viewuseridadd->Size = System::Drawing::Size(56, 17);
 			this->label_viewuseridadd->TabIndex = 2;
@@ -374,7 +374,7 @@ namespace crime_project {
 			this->label_viewpoliceidadd->AutoSize = true;
 			this->label_viewpoliceidadd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_viewpoliceidadd->Location = System::Drawing::Point(22, 95);
+			this->label_viewpoliceidadd->Location = System::Drawing::Point(16, 55);
 			this->label_viewpoliceidadd->Name = L"label_viewpoliceidadd";
 			this->label_viewpoliceidadd->Size = System::Drawing::Size(109, 17);
 			this->label_viewpoliceidadd->TabIndex = 1;
@@ -393,9 +393,9 @@ namespace crime_project {
 			this->groupBox_deleteuser->Controls->Add(this->label_viewpoliceiddel);
 			this->groupBox_deleteuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_deleteuser->Location = System::Drawing::Point(2, 352);
+			this->groupBox_deleteuser->Location = System::Drawing::Point(2, 319);
 			this->groupBox_deleteuser->Name = L"groupBox_deleteuser";
-			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 160);
+			this->groupBox_deleteuser->Size = System::Drawing::Size(869, 150);
 			this->groupBox_deleteuser->TabIndex = 9;
 			this->groupBox_deleteuser->TabStop = false;
 			this->groupBox_deleteuser->Text = L"Delete User:";
