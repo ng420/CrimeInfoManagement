@@ -129,6 +129,7 @@ void dbconnect::del_user(String^ user_id,String^ stationid,String^ utype)
 
 //Verify whether correct User Login received.
 //Uses SQL Result>0 for verification
+//Returns boolean to indicate success.
 bool dbconnect::verify_user(String^ utype, String^ userid, String^ stationid,String^ password)
 {
 	if(userid->IndexOf('\'')!=-1 || stationid->IndexOf('\'')!=-1 || password->IndexOf('\'')!=-1) {MessageBox::Show("Invalid Query");return 0;}
