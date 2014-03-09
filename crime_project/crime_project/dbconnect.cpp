@@ -59,13 +59,13 @@ DataSet^ dbconnect::viewalluser()
 	return ds;
 }
 
-void dbconnect::add(String^ cat, String^ date,String^ time, String^ loc, String^ des,String^ evi,String^ susp)
+void dbconnect::add(String^ cat1, String^ date,String^ time, String^ loc1, String^ des1,String^ evi1,String^ susp1)
 {
-	string cat = encrypt(encrypt1(cat1));
-	string loc = encrypt(encrypt1(loc1));
-	string des = encrypt(encrypt1(des1));
-	string evi = encrypt(encrypt1(evi1));
-	string susp = encrypt(encrypt1(susp1));
+	string^ cat = encrypt(encrypt1(cat1));
+	string^ loc = encrypt(encrypt1(loc1));
+	string^ des = encrypt(encrypt1(des1));
+	string^ evi = encrypt(encrypt1(evi1));
+	string^ susp = encrypt(encrypt1(susp1));
 	String^ query="INSERT INTO crimetable (`Category`, `Date`, `Time`, `Location`, `Description`, `Evidence`, `Suspects`) VALUES ( \'"+cat+"\', \'"+date+"\', \'"+time+"\', \'"+loc+"\', \'"+des+"\', \'"+evi+"\', \'"+susp+"\')";
 	MySqlCommand^ cmd = gcnew MySqlCommand;
 	cmd->Connection = con;
