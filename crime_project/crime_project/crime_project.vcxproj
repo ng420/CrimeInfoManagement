@@ -96,6 +96,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="crime_project.cpp" />
+    <ClCompile Include="crypto.cpp" />
     <ClCompile Include="dbconnect.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="Form_Add.cpp" />
@@ -111,6 +112,7 @@
     <ClCompile Include="verifier.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="crypto.h" />
     <ClInclude Include="dbconnect.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
