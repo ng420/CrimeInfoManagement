@@ -9,6 +9,7 @@ namespace crime_project {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+
 	/// <summary>
 	/// Summary for Form_users
 	/// </summary>
@@ -18,9 +19,6 @@ namespace crime_project {
 		Form_users(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -194,21 +192,26 @@ namespace crime_project {
 			// 
 			// dataGridView_users
 			// 
+			this->dataGridView_users->AllowUserToAddRows = false;
+			this->dataGridView_users->AllowUserToDeleteRows = false;
 			this->dataGridView_users->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView_users->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView_users->Location = System::Drawing::Point(6, 32);
 			this->dataGridView_users->Name = L"dataGridView_users";
-			this->dataGridView_users->Size = System::Drawing::Size(834, 46);
+			this->dataGridView_users->ReadOnly = true;
+			this->dataGridView_users->Size = System::Drawing::Size(834, 295);
 			this->dataGridView_users->TabIndex = 6;
+			this->dataGridView_users->VisibleChanged += gcnew System::EventHandler(this, &Form_users::dataGridView_users_VisibleChanged);
 			// 
 			// groupBox_allusers
 			// 
+			this->groupBox_allusers->AutoSize = true;
 			this->groupBox_allusers->Controls->Add(this->dataGridView_users);
 			this->groupBox_allusers->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->groupBox_allusers->Location = System::Drawing::Point(12, 120);
 			this->groupBox_allusers->Name = L"groupBox_allusers";
-			this->groupBox_allusers->Size = System::Drawing::Size(850, 96);
+			this->groupBox_allusers->Size = System::Drawing::Size(850, 356);
 			this->groupBox_allusers->TabIndex = 5;
 			this->groupBox_allusers->TabStop = false;
 			this->groupBox_allusers->Text = L"All Users";
@@ -230,7 +233,7 @@ namespace crime_project {
 			this->groupBox_adduser->Controls->Add(this->label_viewpoliceidadd);
 			this->groupBox_adduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_adduser->Location = System::Drawing::Point(9, 143);
+			this->groupBox_adduser->Location = System::Drawing::Point(18, 222);
 			this->groupBox_adduser->Name = L"groupBox_adduser";
 			this->groupBox_adduser->Size = System::Drawing::Size(854, 203);
 			this->groupBox_adduser->TabIndex = 8;
@@ -390,7 +393,7 @@ namespace crime_project {
 			this->groupBox_deleteuser->Controls->Add(this->label_viewpoliceiddel);
 			this->groupBox_deleteuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->groupBox_deleteuser->Location = System::Drawing::Point(6, 166);
+			this->groupBox_deleteuser->Location = System::Drawing::Point(2, 352);
 			this->groupBox_deleteuser->Name = L"groupBox_deleteuser";
 			this->groupBox_deleteuser->Size = System::Drawing::Size(850, 160);
 			this->groupBox_deleteuser->TabIndex = 9;
@@ -508,6 +511,7 @@ namespace crime_project {
 			this->groupBox_deleteuser->ResumeLayout(false);
 			this->groupBox_deleteuser->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -522,5 +526,6 @@ private: System::Void Form_users_Load(System::Object^  sender, System::EventArgs
 		 }
 private: System::Void button_helpadd_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void button_helpdel_Click(System::Object^  sender, System::EventArgs^  e) ;
+private: System::Void dataGridView_users_VisibleChanged(System::Object^  sender, System::EventArgs^  e); 
 };
 }

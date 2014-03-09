@@ -7,7 +7,13 @@
 #include "dbconnect.h"
 
 using namespace crime_project;
-
+System::Void Form_users::dataGridView_users_VisibleChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	dbconnect db;
+	dataGridView_users->DataSource = db.viewalluser();
+	dataGridView_users->DataMember = "std";
+	dataGridView_users->Refresh();
+}
 
 Void Form_users::button_adback_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
@@ -66,8 +72,7 @@ Void Form_users::button_userdelfinal_Click(System::Object^  sender, System::Even
 	{	
 		dbconnect db;
 
-		db.del_user(us_id->Text);
-		MessageBox::Show("User Deleted Successfully from the database.","Admin", MessageBoxButtons::OK);
+		db.del_user(us_id->Text,police_st_id->Text,comboBox1->Text);
 		button_adusradd->Enabled = true;
 		button_adusrdel->Enabled = true;
 		groupBox_allusers->Visible = true;

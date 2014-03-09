@@ -12,7 +12,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 	MySqlConnection^ con = gcnew MySqlConnection();
 		try
 		{
-			con->ConnectionString = "server=localhost;user id=root;password=pass;persistsecurityinfo=True;database=crimedb";
+			con->ConnectionString = "server=localhost;user id=root;password=r00tpass;persistsecurityinfo=True;database=crimedb";
 			if(con->State==ConnectionState::Closed)
 				con->Open();
 			//MessageBox::Show("Connected!");
