@@ -38,11 +38,13 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 		}
 	}
 	else {
+		if(userid->IndexOf('\'')!=-1 || stationid->IndexOf('\'')!=-1 || pwd->IndexOf('\'')!=-1) {verified=0;}
+		else{
 		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=\'"+pwd+"\'" ;
 		MySqlCommand^ cmd = gcnew MySqlCommand(query, con);
 		MySqlDataReader^ rdr = cmd->ExecuteReader();
 		if(rdr->Read()) {
 			verified = true;
-		} 
+		} }
 	}
 }
