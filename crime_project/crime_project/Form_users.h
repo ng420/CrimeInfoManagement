@@ -501,7 +501,7 @@ namespace crime_project {
 			this->Controls->Add(this->groupBox_options);
 			this->Name = L"Form_users";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_users";
+			this->Text = L"Users";
 			this->Load += gcnew System::EventHandler(this, &Form_users::Form_users_Load);
 			this->groupBox_options->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_users))->EndInit();

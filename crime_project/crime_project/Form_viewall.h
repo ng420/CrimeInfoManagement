@@ -180,7 +180,7 @@ namespace crime_project {
 			this->Controls->Add(this->button_back);
 			this->Name = L"Form_viewall";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_viewall";
+			this->Text = L"View All Records";
 			this->Load += gcnew System::EventHandler(this, &Form_viewall::Form_viewall_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_records))->EndInit();
 			this->panel_viewall->ResumeLayout(false);
