@@ -144,7 +144,7 @@ namespace crime_project {
 			this->Controls->Add(this->groupBox_recopts);
 			this->Name = L"Form_records";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_records";
+			this->Text = L"View Records";
 			this->Load += gcnew System::EventHandler(this, &Form_records::Form_records_Load);
 			this->groupBox_recopts->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView1))->EndInit();

@@ -226,7 +226,7 @@ namespace crime_project {
 			this->Controls->Add(this->button_add);
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_main";
+			this->Text = L"Welcome";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

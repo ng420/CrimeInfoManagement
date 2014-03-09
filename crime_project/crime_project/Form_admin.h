@@ -213,7 +213,7 @@ namespace crime_project {
 			this->Location = System::Drawing::Point(509, 43);
 			this->Name = L"Form_admin";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_admin";
+			this->Text = L"Welcome";
 			this->Load += gcnew System::EventHandler(this, &Form_admin::Form_admin_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

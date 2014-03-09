@@ -398,7 +398,7 @@ namespace crime_project {
 			this->Controls->Add(this->label_category);
 			this->Name = L"Form_Add";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_Add";
+			this->Text = L"Add Record";
 			this->Load += gcnew System::EventHandler(this, &Form_Add::Form_Add_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

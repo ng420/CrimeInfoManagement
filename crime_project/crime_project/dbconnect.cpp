@@ -22,12 +22,20 @@ DataSet^ dbconnect::search(String^ query,String^ field)
 {
 	//MessageBox::Show("Select * from crimetable where "+field+" like \'%"+query+"%\'");
 	MySqlDataAdapter^ da;
+	auto ds=gcnew DataSet;
+	if(query->IndexOf('\'')!=-1) {MessageBox::Show("Invalid Query");da=gcnew MySqlDataAdapter("Select * from crimetable where 1=0",con);da->Fill(ds,"std");return ds;}
+	 try{
 	if(field!="Users")
 		da=gcnew MySqlDataAdapter("Select * from crimetable where "+field+" like \'%"+query+"%\'",con);
 	else
 		da=gcnew MySqlDataAdapter("Select * from usertable where `User ID` like \'%"+query+"%\'",con);
-	auto ds=gcnew DataSet;
+	
 	da->Fill(ds,"std");
+	}
+	catch(Exception^ e)
+	{
+		MessageBox::Show("Invalid Query");
+	}
 	return ds;
 }
 
@@ -91,6 +99,7 @@ void dbconnect::del_user(String^ user_id,String^ stationid,String^ utype)
 
 bool dbconnect::verify_user(String^ utype, String^ userid, String^ stationid,String^ password)
 {
+	if(userid->IndexOf('\'')!=-1 || stationid->IndexOf('\'')!=-1 || password->IndexOf('\'')!=-1) {MessageBox::Show("Invalid Query");return 0;}
 	String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\'" ;
 	MySqlCommand^ cmd = gcnew MySqlCommand;
 	cmd->Connection = con;
