@@ -22,7 +22,6 @@ DataSet^ dbconnect::search(String^ query,String^ field)
 {
 	//MessageBox::Show("Select * from crimetable where "+field+" like \'%"+query+"%\'");
 	MySqlDataAdapter^ da;
-	MessageBox::Show(field);
 	if(field!="Users")
 		da=gcnew MySqlDataAdapter("Select * from crimetable where "+field+" like \'%"+query+"%\'",con);
 	else

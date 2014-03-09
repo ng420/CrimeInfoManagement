@@ -12,24 +12,15 @@ namespace crime_project {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Summary for Form1
-	/// </summary>
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
 		Form1(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
 		~Form1()
 		{
 			if (components)
@@ -150,7 +141,7 @@ namespace crime_project {
 				L"Status", L"Suspects"});
 			this->comboBox_searchby->Location = System::Drawing::Point(156, 380);
 			this->comboBox_searchby->Name = L"comboBox_searchby";
-			this->comboBox_searchby->Size = System::Drawing::Size(179, 32);
+			this->comboBox_searchby->Size = System::Drawing::Size(179, 33);
 			this->comboBox_searchby->TabIndex = 4;
 			// 
 			// label_keyword
@@ -213,6 +204,7 @@ namespace crime_project {
 			this->label_welcomeuser->Size = System::Drawing::Size(315, 50);
 			this->label_welcomeuser->TabIndex = 12;
 			this->label_welcomeuser->Text = L"Welcome:  User";
+			this->label_welcomeuser->Click += gcnew System::EventHandler(this, &Form1::label_welcomeuser_Click);
 			// 
 			// Form1
 			// 
@@ -248,6 +240,8 @@ private: System::Void button_add_Click(System::Object^  sender, System::EventArg
 private: System::Void button_viewall_Click(System::Object^  sender, System::EventArgs^  e); //to view all records on criminal activities.
 private: System::Void button_logout_Click(System::Object^  sender, System::EventArgs^  e);  //to logout from the current session
 private: System::Void button_search_Click(System::Object^  sender, System::EventArgs^  e); //to search the keywords in textBox_keyword
+private: System::Void label_welcomeuser_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
 
