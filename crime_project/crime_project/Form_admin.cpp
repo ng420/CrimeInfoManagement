@@ -9,6 +9,10 @@
 using namespace crime_project;
 
 
+Void Form_admin::Form_admin_Load(System::Object^  sender, System::EventArgs^  e) {
+	label_welcomeadmin->Text = "Welcome: "+ login::username;
+}
+
 Void Form_admin::button_adsearch_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (comboBox_searchadmin->Text==""||textBox_adkeyword->Text=="")
 	{

@@ -48,6 +48,7 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_aduser;
 	private: System::Windows::Forms::Button^  button_adrecord;
 	private: System::Windows::Forms::Label^  label_adwarn;
+	private: System::Windows::Forms::Label^  label_welcomeadmin;
 
 
 
@@ -73,6 +74,7 @@ namespace crime_project {
 			this->button_aduser = (gcnew System::Windows::Forms::Button());
 			this->button_adrecord = (gcnew System::Windows::Forms::Button());
 			this->label_adwarn = (gcnew System::Windows::Forms::Label());
+			this->label_welcomeadmin = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label_adsearchby
@@ -80,7 +82,7 @@ namespace crime_project {
 			this->label_adsearchby->AutoSize = true;
 			this->label_adsearchby->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_adsearchby->Location = System::Drawing::Point(69, 139);
+			this->label_adsearchby->Location = System::Drawing::Point(12, 379);
 			this->label_adsearchby->Name = L"label_adsearchby";
 			this->label_adsearchby->Size = System::Drawing::Size(111, 25);
 			this->label_adsearchby->TabIndex = 2;
@@ -91,7 +93,7 @@ namespace crime_project {
 			this->label_adkeyword->AutoSize = true;
 			this->label_adkeyword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_adkeyword->Location = System::Drawing::Point(69, 222);
+			this->label_adkeyword->Location = System::Drawing::Point(12, 454);
 			this->label_adkeyword->Name = L"label_adkeyword";
 			this->label_adkeyword->Size = System::Drawing::Size(120, 25);
 			this->label_adkeyword->TabIndex = 3;
@@ -105,7 +107,7 @@ namespace crime_project {
 			this->comboBox_searchadmin->FormattingEnabled = true;
 			this->comboBox_searchadmin->Items->AddRange(gcnew cli::array< System::Object^  >(7) {L"Category", L"Date", L"Location", L"Description", 
 				L"Status", L"Suspects", L"Users"});
-			this->comboBox_searchadmin->Location = System::Drawing::Point(284, 139);
+			this->comboBox_searchadmin->Location = System::Drawing::Point(170, 371);
 			this->comboBox_searchadmin->Name = L"comboBox_searchadmin";
 			this->comboBox_searchadmin->Size = System::Drawing::Size(179, 33);
 			this->comboBox_searchadmin->TabIndex = 1;
@@ -114,7 +116,7 @@ namespace crime_project {
 			// 
 			this->textBox_adkeyword->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox_adkeyword->Location = System::Drawing::Point(284, 222);
+			this->textBox_adkeyword->Location = System::Drawing::Point(170, 446);
 			this->textBox_adkeyword->Name = L"textBox_adkeyword";
 			this->textBox_adkeyword->Size = System::Drawing::Size(179, 33);
 			this->textBox_adkeyword->TabIndex = 2;
@@ -123,7 +125,7 @@ namespace crime_project {
 			// 
 			this->button_adsearch->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_adsearch->Location = System::Drawing::Point(624, 225);
+			this->button_adsearch->Location = System::Drawing::Point(438, 449);
 			this->button_adsearch->Name = L"button_adsearch";
 			this->button_adsearch->Size = System::Drawing::Size(153, 30);
 			this->button_adsearch->TabIndex = 3;
@@ -135,7 +137,7 @@ namespace crime_project {
 			// 
 			this->button_adlogout->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_adlogout->Location = System::Drawing::Point(284, 441);
+			this->button_adlogout->Location = System::Drawing::Point(755, 305);
 			this->button_adlogout->Name = L"button_adlogout";
 			this->button_adlogout->Size = System::Drawing::Size(103, 33);
 			this->button_adlogout->TabIndex = 4;
@@ -147,7 +149,7 @@ namespace crime_project {
 			// 
 			this->button_aduser->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_aduser->Location = System::Drawing::Point(542, 441);
+			this->button_aduser->Location = System::Drawing::Point(755, 375);
 			this->button_aduser->Name = L"button_aduser";
 			this->button_aduser->Size = System::Drawing::Size(103, 33);
 			this->button_aduser->TabIndex = 5;
@@ -159,7 +161,7 @@ namespace crime_project {
 			// 
 			this->button_adrecord->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button_adrecord->Location = System::Drawing::Point(759, 441);
+			this->button_adrecord->Location = System::Drawing::Point(755, 445);
 			this->button_adrecord->Name = L"button_adrecord";
 			this->button_adrecord->Size = System::Drawing::Size(103, 33);
 			this->button_adrecord->TabIndex = 6;
@@ -170,14 +172,26 @@ namespace crime_project {
 			// label_adwarn
 			// 
 			this->label_adwarn->AutoSize = true;
+			this->label_adwarn->BackColor = System::Drawing::Color::Red;
 			this->label_adwarn->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label_adwarn->Location = System::Drawing::Point(70, 64);
+			this->label_adwarn->Location = System::Drawing::Point(12, 309);
 			this->label_adwarn->Name = L"label_adwarn";
 			this->label_adwarn->Size = System::Drawing::Size(201, 20);
 			this->label_adwarn->TabIndex = 10;
 			this->label_adwarn->Text = L"Please fill correctly below!";
 			this->label_adwarn->Visible = false;
+			// 
+			// label_welcomeadmin
+			// 
+			this->label_welcomeadmin->AutoSize = true;
+			this->label_welcomeadmin->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 30, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label_welcomeadmin->Location = System::Drawing::Point(295, 54);
+			this->label_welcomeadmin->Name = L"label_welcomeadmin";
+			this->label_welcomeadmin->Size = System::Drawing::Size(353, 50);
+			this->label_welcomeadmin->TabIndex = 11;
+			this->label_welcomeadmin->Text = L"Welcome:  Admin";
 			// 
 			// Form_admin
 			// 
@@ -186,6 +200,7 @@ namespace crime_project {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(889, 498);
 			this->ControlBox = false;
+			this->Controls->Add(this->label_welcomeadmin);
 			this->Controls->Add(this->label_adwarn);
 			this->Controls->Add(this->button_adrecord);
 			this->Controls->Add(this->button_aduser);
