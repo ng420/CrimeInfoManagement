@@ -66,7 +66,16 @@ void dbconnect::add_user(String^ utype,String^ stationid, String^ userid, String
 	cmd->Connection = con;
     cmd->CommandText = query;
 	//MessageBox::Show(query);
+	try{
 	cmd->ExecuteNonQuery();
+	}
+	catch(Exception^ e)
+	{
+		MessageBox::Show("Unable to add User\n");
+		e->ToString();
+		return;
+	}
+	MessageBox::Show("User Added Successfully into the database.","Admin", MessageBoxButtons::OK);
 }
 
 void dbconnect::del_user(String^ user_id,String^ stationid,String^ utype)

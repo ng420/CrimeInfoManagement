@@ -29,7 +29,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 		stationid = din->ReadLine();
 	}
 	catch (Exception^ e)
-	{}
+	{MessageBox::Show(e->ToString());}
 	if ( sql_con_estb == 1 ) {
 		if ( userid == "Ranu" ) {
 			if ( pwd == "Vikram" ) {
@@ -39,6 +39,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 	}
 	else {
 		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=\'"+pwd+"\'" ;
+		MessageBox::Show(query);
 		MySqlCommand^ cmd = gcnew MySqlCommand(query, con);
 		MySqlDataReader^ rdr = cmd->ExecuteReader();
 		if(rdr->Read()) {

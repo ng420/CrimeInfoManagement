@@ -43,7 +43,7 @@ Void Form_users::button_usraddfinal_Click(System::Object^  sender, System::Event
 	{
 		dbconnect db;
 		db.add_user(comboBox_utype->Text, police_station_id->Text, user__id->Text, textBox_password->Text);
-		MessageBox::Show("User Added Successfully into the database.","Admin", MessageBoxButtons::OK);
+		
 		button_adusradd->Enabled = true;
 		button_adusrdel->Enabled = true;
 		groupBox_allusers->Visible = true;
