@@ -5,23 +5,30 @@
 
 using namespace System::IO;
 
+//Verifier
+//For Secure User Verification
+//Takes in User Type, User ID and Password, returns true if a user exists with such credentials
+
+
 verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user credentials against possible user_id and password combinations.
 {	
 	verified = false;
 	bool sql_con_estb = 0;
 	MySqlConnection^ con = gcnew MySqlConnection();
-		try
-		{
-			con->ConnectionString = "server=localhost;user id=root;password=r00tpass;persistsecurityinfo=True;database=crimedb";
-			if(con->State==ConnectionState::Closed)
-				con->Open();
-			//MessageBox::Show("Connected!");
-		}
-		catch(Exception^ e)
-		{
-			sql_con_estb = 1;
-		}
+	//Establish Secure Connection
+	try
+	{
+		con->ConnectionString = "server=localhost;user id=root;password=r00tpass;persistsecurityinfo=True;database=crimedb";
+		if(con->State==ConnectionState::Closed)
+			con->Open();
+		//MessageBox::Show("Connected!");
+	}
+	catch(Exception^ e)
+	{
+		sql_con_estb = 1;
+	}
 	String^ stationid = "";
+//Station ID is Embodied with software copy, written in station_id.txt
 	String^ fileName = "station_id.txt";
 	try 
 	{
@@ -30,6 +37,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 	}
 	catch (Exception^ e)
 	{MessageBox::Show(e->ToString());}
+//IF SQL Connection  is not established, Uname Ranu and Pwd Vikram are valid for development and debugging purposes.
 	if ( sql_con_estb == 1 ) {
 		if ( userid == "Ranu" ) {
 			if ( pwd == "Vikram" ) {
@@ -38,6 +46,7 @@ verifier::verifier(String^ utype, String^ userid, String^ pwd)  // Verifies user
 		}
 	}
 	else {
+// Prevention for SQL injection.
 		if(userid->IndexOf('\'')!=-1 || stationid->IndexOf('\'')!=-1 || pwd->IndexOf('\'')!=-1) {verified=0;}
 		else{
 		String^ query="SELECT * FROM usertable WHERE `User Type`=\'"+utype+"\' AND `Station ID`=\'"+stationid+"\' AND `User ID`=\'"+userid+"\' AND `Password`=\'"+pwd+"\'" ;
