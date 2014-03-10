@@ -66,8 +66,8 @@ namespace crime_project {
 	private: System::Windows::Forms::Button^  button_addevidence;
 	private: System::Windows::Forms::Button^  button_upload;
 	private: System::Windows::Forms::Button^  button_addsuspect;
-	private: System::Windows::Forms::Label^  label_viewid;
-	private: System::Windows::Forms::TextBox^  label1;
+
+
 
 
 
@@ -106,8 +106,6 @@ namespace crime_project {
 			this->button_addevidence = (gcnew System::Windows::Forms::Button());
 			this->button_upload = (gcnew System::Windows::Forms::Button());
 			this->button_addsuspect = (gcnew System::Windows::Forms::Button());
-			this->label_viewid = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label_category
@@ -347,26 +345,6 @@ namespace crime_project {
 			this->button_addsuspect->UseVisualStyleBackColor = true;
 			this->button_addsuspect->Click += gcnew System::EventHandler(this, &Form_Add::button_addsuspect_Click);
 			// 
-			// label_viewid
-			// 
-			this->label_viewid->AutoSize = true;
-			this->label_viewid->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label_viewid->Location = System::Drawing::Point(627, 38);
-			this->label_viewid->Name = L"label_viewid";
-			this->label_viewid->Size = System::Drawing::Size(105, 25);
-			this->label_viewid->TabIndex = 23;
-			this->label_viewid->Text = L"CRIME ID:";
-			// 
-			// label1
-			// 
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(755, 38);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(136, 28);
-			this->label1->TabIndex = 1;
-			// 
 			// Form_Add
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -374,8 +352,6 @@ namespace crime_project {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1015, 533);
 			this->ControlBox = false;
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->label_viewid);
 			this->Controls->Add(this->button_addsuspect);
 			this->Controls->Add(this->button_upload);
 			this->Controls->Add(this->button_addevidence);
